@@ -70,8 +70,8 @@ def pic(name, sizes_w, alt, sizes="100vw", loading="lazy", cls=""):
     return f'<picture><source type="image/webp" srcset="{webp}" sizes="{sizes}"><img src="assets/img/{name}-{ws[-1]}.jpg" srcset="{jpg}" sizes="{sizes}" alt="{alt}" loading="{loading}" width="{_w}" height="{_h}"{(" class=" + chr(34) + cls + chr(34)) if cls else ""}></picture>'
 
 def hero(crumbs, eyebrow, title, lead, meta, bg=None, bgalt=""):
-    SIZES = {"equipe-reunion-inspection": [768,1280,1600], "collecteur-visitable-profondeur": [536], "aep-raccordement-fonte": [768], "tranchee-blindee-monument": [529], "chantier-hydrocurage-equipe": [480,768,1024,1280,1920], "chantier-capitole-engins": [480,768,1024,1280,1920], "chantier-tranchee-centre-ville": [480,768,1024,1280,1920]}
-    bgh = f'<div class="hero-page__bg">{pic(bg, SIZES.get(bg, [480,768,1024,1280,1920]), bgalt, loading="eager")}</div>' if bg else ""
+    SIZES = {"equipe-reunion-inspection": [768,1280,1600], "collecteur-visitable-profondeur": [536], "aep-raccordement-fonte": [768], "tranchee-blindee-monument": [529], "chantier-hydrocurage-equipe": [480,768,1024,1280,1440,1920], "chantier-capitole-engins": [480,768,1024,1280,1440,1920], "chantier-tranchee-centre-ville": [480,768,1024,1280,1440,1920]}
+    bgh = f'<div class="hero-page__bg">{pic(bg, SIZES.get(bg, [480,768,1024,1280,1440,1920]), bgalt, loading="eager")}</div>' if bg else ""
     crumb_html = ' <span>/</span> '.join(crumbs)
     meta_html = "".join(f'<span class="strip-item">{k} <b>{v}</b></span>' for k, v in meta)
     return f'''<section class="hero-page">{bgh}{RINGS}<div class="container"><nav class="crumbs" aria-label="Fil d'Ariane"><a href="index.html">Accueil</a> <span>/</span> {crumb_html}</nav><p class="eyebrow eyebrow--light" style="margin-top:28px" data-reveal>{eyebrow}</p><h1 class="h1" data-split>{title}</h1><p class="lead" data-reveal>{lead}</p><div class="hero-page__meta" data-reveal>{meta_html}</div></div></section>'''

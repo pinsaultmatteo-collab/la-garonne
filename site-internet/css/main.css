@@ -889,3 +889,16 @@ html[lang="en"] .mono, html[lang="en"] .eyebrow { letter-spacing: .12em; }
 /* le libellé chinois du bouton d'appel est court : on garde le pictogramme plus lisible */
 html[lang="zh-Hans"] .nav__call, html[lang="zh-Hans"] .btn { white-space: nowrap; }
 html[lang="zh-Hans"] .brand__sub { letter-spacing: .3em; }
+
+/* ---------- 30. Vignettes floutées (LQIP) ----------
+   Chaque conteneur d'image porte en style une miniature de 16 px encodée dans le HTML
+   (~400 octets). Le bloc affiche donc les couleurs de la photo dès le premier rendu,
+   au lieu d'une zone vide pendant le téléchargement. Le navigateur lisse l'agrandissement. */
+.mask, .work, .scan, .hq__img, .hero-page__bg, .hero__media, .band {
+  background-image: var(--lqip); background-size: cover; background-position: center; background-repeat: no-repeat;
+}
+.work--text { background-image: none; }
+/* l'image réelle apparaît en fondu par-dessus la vignette */
+.work img, .scan img, .hq__img img, .band img { opacity: 0; transition: opacity .5s var(--ease); }
+.work.img-ready img, .scan.img-ready img, .hq__img.img-ready img, .band.img-ready img,
+.no-js .work img, .no-js .scan img, .no-js .hq__img img, .no-js .band img { opacity: 1; }

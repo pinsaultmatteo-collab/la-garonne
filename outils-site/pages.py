@@ -38,7 +38,7 @@ body += f'''<section class="section section--tight bg-white"><div class="contain
  ("chemisage", "Réhabilitation d'ouvrages existants", "Réhabilitation de collecteurs et de regards, par tranchée ouverte ou par techniques sans tranchée selon le diagnostic."),
  ("controle", "Contrôles et remise en état", "Essais d'étanchéité, inspection télévisée, remblaiement contrôlé et réfection de voirie à l'identique."),
 ])}</div></section>'''
-body += band("chantier-tranchee-centre-ville", "Tranchée d'assainissement en centre-ville de Toulouse", [480,768,1024,1280,1920], "Toulouse · centre-ville", "Renouvellement de réseau en secteur piéton")
+body += band("chantier-tranchee-centre-ville", "Tranchée d'assainissement en centre-ville de Toulouse", [480,768,1024,1280,1440,1920], "Toulouse · centre-ville", "Renouvellement de réseau en secteur piéton")
 body += f'''<section class="section bg-navy"><div class="container">{section_head("Méthode", "Quatre étapes, aucune approximation.", "Chaque chantier d'assainissement suit une méthode éprouvée, du diagnostic à la remise en état de la voirie.", light=True)}{process([
  ("inspection", "Diagnostic et préparation", "Inspection de l'existant, repérage des réseaux, déclarations réglementaires (DT-DICT), phasage et plan de circulation."),
  ("securite", "Sécurisation de l'emprise", "Balisage, blindage de tranchée, gestion des flux piétons et véhicules, protection des riverains et des équipes."),
@@ -74,7 +74,7 @@ body += f'''<section class="section section--tight bg-white"><div class="contain
  ("controle", "Essais et désinfection", "Essais de pression, rinçage, désinfection et analyses avant remise en service."),
  ("chantier", "Réfection et remise en état", "Remblaiement contrôlé, réfection de voirie et de trottoirs à l'identique, dossier de récolement."),
 ])}</div></section>'''
-body += band("chantier-capitole-engins", "Engins SA LA GARONNE en intervention en hypercentre de Toulouse", [480,768,1024,1280,1920], "Toulouse · hypercentre", "Intervenir sans interrompre la ville")
+body += band("chantier-capitole-engins", "Engins SA LA GARONNE en intervention en hypercentre de Toulouse", [480,768,1024,1280,1440,1920], "Toulouse · hypercentre", "Intervenir sans interrompre la ville")
 body += f'''<section class="section bg-navy"><div class="container">{section_head("Méthode", "Une remise en eau préparée dès le premier jour.", "La qualité de l'eau et la continuité du service guident chaque phase du chantier.", light=True)}{process([
  ("phasage", "Préparation et coordination", "Repérage des réseaux, déclarations réglementaires, phasage des coupures avec l'exploitant, information des riverains."),
  ("securite", "Sécurisation", "Balisage, blindage, gestion des accès et des flux, protection des conduites voisines et des équipes."),
@@ -143,7 +143,7 @@ body += f'''<section class="section section--tight bg-white"><div class="contain
  ("reseau", "Coordination multi-réseaux", "Chantiers en présence de réseaux concessionnaires denses : repérage, protection, dévoiements et coordination des intervenants."),
  ("phasage", "Chantiers à fortes contraintes de délai", "Travaux de nuit, phases courtes, interventions planifiées autour d'événements ou de contraintes d'exploitation."),
 ])}</div></section>'''
-body += band("chantier-hydrocurage-equipe", "Équipe SA LA GARONNE en intervention sur réseau en service en centre-ville", [480,768,1024,1280,1920], "Toulouse · réseau en service", "Continuité de service, quelles que soient les conditions")
+body += band("chantier-hydrocurage-equipe", "Équipe SA LA GARONNE en intervention sur réseau en service en centre-ville", [480,768,1024,1280,1440,1920], "Toulouse · réseau en service", "Continuité de service, quelles que soient les conditions")
 body += f'''<section class="section bg-navy"><div class="container">{section_head("Méthode", "Préparer, sécuriser, exécuter, contrôler.", "Une méthode unique appliquée à chaque chantier complexe, quelle que soit sa taille.", light=True)}{process([
  ("phasage", "Études et phasage", "Analyse des contraintes, études d'exécution, phasage détaillé, plan de circulation et plan de prévention."),
  ("securite", "Sécurisation", "Blindages dimensionnés, balisage, gestion des accès et des flux, protection des ouvrages voisins et des équipes."),

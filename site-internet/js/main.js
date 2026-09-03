@@ -354,6 +354,37 @@
   }
 
   /* ------------------------------------------------------------------
+     8bis. Chargement anticipé des images
+     `loading="lazy"` ne déclenche le téléchargement qu'à l'approche immédiate du
+     bloc : sur une page longue avec sections épinglées, l'image arrive trop tard.
+     On repasse en chargement immédiat dès que le bloc est à 1400 px du viewport.
+  ------------------------------------------------------------------ */
+  (() => {
+    const lazies = $$('img[loading="lazy"]');
+    if (!lazies.length) return;
+    if (!('IntersectionObserver' in window)) { lazies.forEach(i => { i.loading = 'eager'; }); return; }
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (!e.isIntersecting) return;
+        const img = e.target;
+        img.loading = 'eager';
+        img.decoding = 'async';
+        if (img.dataset.pending !== undefined) return;
+        img.dataset.pending = '1';
+        const ready = () => {
+          const holder = img.closest('.mask, .work, .scan, .band, .hq__img, .feature__media');
+          if (holder) holder.classList.add('img-ready');
+        };
+        img.addEventListener('load', ready, { once: true });
+        img.addEventListener('error', ready, { once: true });
+        if (img.complete) ready();
+        io.unobserve(img);
+      });
+    }, { rootMargin: '1400px 0px 1400px 0px' });
+    lazies.forEach(i => io.observe(i));
+  })();
+
+  /* ------------------------------------------------------------------
      9. Médias & divers
   ------------------------------------------------------------------ */
   $$('.hero__media img').forEach(img => {
@@ -361,6 +392,14 @@
     img.complete ? done() : img.addEventListener('load', done);
   });
   $$('[data-year]').forEach(el => { el.textContent = new Date().getFullYear(); });
+
+  // Images déjà présentes en cache : on lève tout de suite le fondu
+  $$('.work img, .scan img, .hq__img img, .band img').forEach(img => {
+    if (img.complete && img.naturalWidth) {
+      const h = img.closest('.work, .scan, .hq__img, .band');
+      if (h) h.classList.add('img-ready');
+    }
+  });
 
   // Filtres de galerie
   const filters = $$('[data-filter]');

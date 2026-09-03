@@ -23,7 +23,10 @@ une police chinoise auto-hébergée pèserait plusieurs centaines de kilo-octets
 ```bash
 python3 outils-site/build.py      # régénère les 9 pages internes françaises depuis index.html
 python3 outils-site/translate.py  # régénère en/ et zh/ depuis les pages françaises
+python3 outils-site/lqip.py       # réinjecte les vignettes floutées dans les 30 pages
 ```
+
+Les trois commandes s'enchaînent toujours dans cet ordre.
 
 `outils-site/i18n.py` contient le dictionnaire de traduction (668 entrées, français → anglais → chinois).
 Toute phrase française absente du dictionnaire est signalée en fin d'exécution de `translate.py` : le site
@@ -82,6 +85,22 @@ uniquement la variable `--font-display` en tête de `css/main.css` et adapter le
 
 - Fiche contexte (PDF) et charte graphique V2.0 (`Design.pdf`).
 - « Introduction au DA - 2026.docx » (dossier de candidature transmis par le client) : trois générations Pascual (1956 Eloy, 1987 Michel, 2017 Nicolas), 35 salariés en 4 équipes + atelier + bureau d'études (géomètre-dessinateur et chargé d'études), répartition d'activité (assainissement 75 %, eau potable 15 %, sans tranchée 10 %) — le montant de CA cité dans le document n'est pas repris sur le site à la demande de Mattéo, identifications FNTP 5118 / 5141 / 5161 / 5221, labels Canalisateur, RSE TP, Engagé RSE AFNOR (2023), Qualibat, NF, Amiante SS3, robot RIC breveté en 2018 (4K, 360°, + de 120 km inspectés), démarche RSE et objectifs 2026. Les photos et logos de ce document sont intégrés dans `assets/img/` et `assets/labels/`.
+
+## Chargement des images
+
+Trois mécanismes se combinent pour qu'aucun bloc n'apparaisse vide :
+
+1. **Vignette floutée intégrée au HTML.** `outils-site/lqip.py` encode une miniature de 16 px
+   (environ 400 octets) dans l'attribut `style` de chaque conteneur d'image. Le bloc affiche les
+   couleurs de la photo dès le premier rendu, sans requête supplémentaire.
+2. **Chargement anticipé.** `loading="lazy"` ne déclenche le téléchargement qu'à l'approche
+   immédiate du bloc, ce qui est trop tard sur une page longue avec sections épinglées. Le script
+   repasse les images en chargement immédiat dès qu'elles sont à 1400 px du viewport.
+3. **Variantes dimensionnées.** Chaque photo existe en plusieurs largeurs, et l'attribut `sizes`
+   déclare la largeur réelle d'affichage pour que le navigateur choisisse le bon fichier.
+
+Le préchargement de l'image du hero utilise `imagesrcset` et `imagesizes` identiques à ceux de la
+balise `img` : sans cela le navigateur télécharge deux variantes de la même photo.
 
 ## Éléments à valider avec le client
 
