@@ -6,3 +6,9 @@ Site statique (HTML / CSS / JavaScript vanilla) conçu par PMC Marketing pour SA
 - `outils-site/` : assembleur des pages internes (`python3 outils-site/build.py`) à relancer après modification de l'en-tête, du pied de page ou de `pages.py`.
 
 Hébergement : définir `site-internet` comme dossier de publication (Netlify, Vercel, Cloudflare Pages), ou copier son contenu à la racine du serveur.
+
+## Déploiement Vercel
+
+Le site se trouve dans `site-internet/`, pas à la racine. Le fichier `vercel.json` indique ce dossier
+à Vercel (`outputDirectory`), aucune commande de build n'est nécessaire. Même principe sur Netlify ou
+Cloudflare Pages : définir `site-internet` comme dossier de publication.
