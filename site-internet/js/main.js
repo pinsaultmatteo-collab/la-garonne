@@ -359,7 +359,7 @@
      bloc : sur une page longue avec sections épinglées, l'image arrive trop tard.
      On repasse en chargement immédiat dès que le bloc est à 1400 px du viewport.
   ------------------------------------------------------------------ */
-  (() => {
+  const startEarlyLoading = () => {
     const lazies = $$('img[loading="lazy"]');
     if (!lazies.length) return;
     if (!('IntersectionObserver' in window)) { lazies.forEach(i => { i.loading = 'eager'; }); return; }
@@ -380,9 +380,14 @@
         if (img.complete) ready();
         io.unobserve(img);
       });
-    }, { rootMargin: '1400px 0px 1400px 0px' });
+    }, { rootMargin: '1000px 0px 1000px 0px' });
     lazies.forEach(i => io.observe(i));
-  })();
+  };
+  // Après le chargement initial seulement : sinon ces images se disputent la bande
+  // passante avec l'image du hero et retardent le premier affichage utile.
+  const idle = window.requestIdleCallback || (fn => setTimeout(fn, 200));
+  if (document.readyState === 'complete') idle(startEarlyLoading);
+  else addEventListener('load', () => idle(startEarlyLoading), { once: true });
 
   /* ------------------------------------------------------------------
      9. Médias & divers
