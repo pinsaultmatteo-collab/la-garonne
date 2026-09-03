@@ -707,6 +707,7 @@ body.cur-view .cursor-ring span { opacity: 1; }
 
 /* Bande photo parallaxe pleine largeur */
 .band { position: relative; height: clamp(360px, 60vh, 640px); overflow: hidden; }
+.band picture { position: absolute; inset: 0; }
 .band img { width: 100%; height: 130%; object-fit: cover; position: absolute; top: -15%; left: 0; will-change: transform; }
 .band__cap { position: absolute; left: var(--gutter); bottom: 32px; color: var(--white); z-index: 2; display: grid; gap: 8px; }
 .band::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(8,39,67,.1), rgba(8,39,67,.6)); }

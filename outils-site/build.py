@@ -79,7 +79,8 @@ def hero(crumbs, eyebrow, title, lead, meta, bg=None, bgalt=""):
 def band(name, alt, sizes_w, cap_mono, cap_title):
     from PIL import Image as _I
     _w, _h = _I.open(os.path.join(ROOT, f"assets/img/{name}-{max(sizes_w)}.jpg")).size
-    return f'<div class="band"><img src="assets/img/{name}-{max(sizes_w)}.jpg" srcset="{", ".join(f"assets/img/{name}-{w}.jpg {w}w" for w in sorted(sizes_w))}" sizes="100vw" alt="{alt}" loading="lazy" width="{_w}" height="{_h}" data-parallax="0.12"><div class="band__cap"><span class="mono">{cap_mono}</span><strong class="display" style="font-size:clamp(1.6rem,3vw,2.6rem)">{cap_title}</strong></div></div>'
+    ws = sorted(sizes_w)
+    return f'<div class="band"><picture><source type="image/webp" srcset="{", ".join(f"assets/img/{name}-{w}.webp {w}w" for w in ws)}" sizes="100vw"><img src="assets/img/{name}-{ws[-1]}.jpg" srcset="{", ".join(f"assets/img/{name}-{w}.jpg {w}w" for w in ws)}" sizes="100vw" alt="{alt}" loading="lazy" width="{_w}" height="{_h}" data-parallax="0.12"></picture><div class="band__cap"><span class="mono">{cap_mono}</span><strong class="display" style="font-size:clamp(1.6rem,3vw,2.6rem)">{cap_title}</strong></div></div>'
 
 def services(items):
     html = '<div class="services stagger">'
