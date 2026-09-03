@@ -94,6 +94,17 @@ def process(items):
         html += f'<div class="process__item"><span class="mono">Étape {i:02d}</span><strong>{title}</strong><p>{text}</p>{picto(ico)}</div>'
     return html + '</div>'
 
+
+def lang_links(html, filename, prefix=""):
+    """Fait pointer chaque drapeau vers la même page dans l'autre langue."""
+    def fix(m):
+        block = m.group(0)
+        block = re.sub(r'href="(?:\.\./)*index\.html"', f'href="{prefix}{filename}"', block, count=1)
+        block = re.sub(r'href="(?:\.\./)*en/index\.html"', f'href="{prefix}en/{filename}"', block, count=1)
+        block = re.sub(r'href="(?:\.\./)*zh/index\.html"', f'href="{prefix}zh/{filename}"', block, count=1)
+        return block
+    return re.sub(r'<div class="langs[^"]*"[^>]*>.*?</div>', fix, html, flags=re.S)
+
 SITE = "https://www.sa-la-garonne.fr/"
 def ld_breadcrumb(crumbs):
     items = [{"@type": "ListItem", "position": 1, "name": "Accueil", "item": SITE}]
@@ -112,6 +123,11 @@ def page(filename, title, description, body, og_image="chantier-capitole-engins-
     if crumbs: lds.append(ld_breadcrumb(crumbs))
     if service: lds.append(ld_service(service, description, filename))
     LD = "".join(f'<script type="application/ld+json">{json.dumps(l, ensure_ascii=False)}</script>\n' for l in lds)
+    ALT = (f'  <link rel="alternate" hreflang="fr" href="{SITE}{filename}">\n'
+           f'  <link rel="alternate" hreflang="en" href="{SITE}en/{filename}">\n'
+           f'  <link rel="alternate" hreflang="zh-Hans" href="{SITE}zh/{filename}">\n'
+           f'  <link rel="alternate" hreflang="x-default" href="{SITE}{filename}">\n')
+    header = lang_links(HEADER, filename)
     html = f'''<!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -120,6 +136,7 @@ def page(filename, title, description, body, og_image="chantier-capitole-engins-
   <title>{title}</title>
   <meta name="description" content="{description}">
   <link rel="canonical" href="https://www.sa-la-garonne.fr/{filename}">
+{ALT}
   <meta property="og:type" content="website">
   <meta property="og:title" content="{title}">
   <meta property="og:description" content="{description}">
@@ -134,7 +151,7 @@ def page(filename, title, description, body, og_image="chantier-capitole-engins-
 
 {LOADER}
 
-{HEADER}
+{header}
 
   <main id="contenu">
 {body}

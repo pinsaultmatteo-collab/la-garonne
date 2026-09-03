@@ -3,6 +3,32 @@
 Site statique (HTML / CSS / JavaScript vanilla, aucune dépendance ni framework), conçu par PMC Marketing
 sur la base de la charte graphique V2.0 (09.2026).
 
+## Langues
+
+Le site existe en trois langues, chacune dans son propre dossier, avec des URL distinctes et indexables :
+
+| Langue | URL | Dossier |
+|---|---|---|
+| Français (source) | `/` | racine de `site-internet/` |
+| Anglais | `/en/` | `site-internet/en/` |
+| Chinois simplifié | `/zh/` | `site-internet/zh/` |
+
+Chaque page porte ses balises `hreflang` (fr, en, zh-Hans, x-default) et son `canonical`. Le `sitemap.xml`
+liste les 27 URL avec leurs alternates. Le sélecteur à drapeaux de l'en-tête pointe vers la même page dans
+l'autre langue. Le chinois utilise la pile de polices système (PingFang SC, Microsoft YaHei, Noto Sans CJK) :
+une police chinoise auto-hébergée pèserait plusieurs centaines de kilo-octets par page.
+
+**Le français est la seule source à modifier.** Pour répercuter un changement :
+
+```bash
+python3 outils-site/build.py      # régénère les 9 pages internes françaises depuis index.html
+python3 outils-site/translate.py  # régénère en/ et zh/ depuis les pages françaises
+```
+
+`outils-site/i18n.py` contient le dictionnaire de traduction (668 entrées, français → anglais → chinois).
+Toute phrase française absente du dictionnaire est signalée en fin d'exécution de `translate.py` : le site
+ne peut pas partir en ligne avec du texte non traduit sans que l'outil le dise.
+
 ## Arborescence
 
 | Fichier | Rôle |
@@ -18,6 +44,7 @@ sur la base de la charte graphique V2.0 (09.2026).
 | `assets/img/` | Photos optimisées en WebP + JPEG, 3 tailles (768 / 1280 / 1920) |
 | `assets/logo/` | Logos et monogrammes issus de la charte |
 | `404.html` | Page d'erreur personnalisée (servie automatiquement par Vercel) |
+| `en/` · `zh/` | Versions anglaise et chinoise, générées par `outils-site/translate.py` (ne pas éditer à la main) |
 | `sitemap.xml` · `robots.txt` · `site.webmanifest` · favicons | SEO et icônes |
 
 ## Mise en ligne
@@ -43,7 +70,8 @@ Le formulaire envoie alors un JSON (nom, organisation, email, telephone, objet, 
 
 L'en-tête, le menu mobile et le pied de page sont dupliqués dans chaque page. Le dossier `../outils-site/`
 contient un assembleur : modifier `index.html` (source de vérité de l'en-tête / pied de page) et/ou `pages.py`
-(contenus des pages internes), puis lancer `python3 ../outils-site/build.py` pour régénérer les 8 pages internes.
+(contenus des pages internes), puis lancer `python3 ../outils-site/build.py`, et enfin
+`python3 ../outils-site/translate.py` pour répercuter en anglais et en chinois.
 
 ## Changer la police de titrage
 
@@ -62,5 +90,6 @@ uniquement la variable `--font-display` en tête de `css/main.css` et adapter le
 - Photos issues du dossier de candidature (RIC, collecteur visitable, tranchée blindée devant le monument aux morts, raccordement AEP, pelle) : définition moyenne (530 à 1024 px), à remplacer par les originaux si le client les possède.
 - Légendes des photos de chantier (rédigées d'après ce que montrent les images, à ajuster avec les vrais noms de chantiers si le client le souhaite).
 - Liste des prestations, matériaux (fonte ductile, PEHD…) et moyens matériels sur les pages expertises et entreprise.
+- Traductions anglaise et chinoise : terminologie métier posée dans l'en-tête de `outils-site/i18n.py`. À faire relire par le client s'il a des interlocuteurs anglophones ou sinophones.
 - Frise historique (accueil et page entreprise) : dates issues du dossier de candidature (1956, 1987, 2017, 2018, 2022/2023, 2026).
 - Directeur de la publication : Nicolas Pascual.

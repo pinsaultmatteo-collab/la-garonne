@@ -12,3 +12,10 @@ Hébergement : définir `site-internet` comme dossier de publication (Netlify, V
 Le site se trouve dans `site-internet/`, pas à la racine. Le fichier `vercel.json` indique ce dossier
 à Vercel (`outputDirectory`), aucune commande de build n'est nécessaire. Même principe sur Netlify ou
 Cloudflare Pages : définir `site-internet` comme dossier de publication.
+
+## Langues
+
+Le site est trilingue : français (racine), anglais (`/en/`), chinois simplifié (`/zh/`).
+Le français est la seule source à modifier ; `python3 outils-site/build.py` puis
+`python3 outils-site/translate.py` régénèrent les deux autres langues à partir du dictionnaire
+`outils-site/i18n.py`.

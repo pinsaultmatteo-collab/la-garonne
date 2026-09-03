@@ -14,6 +14,23 @@
   const easeOutExpo = t => (t === 1 ? 1 : 1 - Math.pow(2, -10 * t));
   const CONFIG = Object.assign({ formEndpoint: '', email: 'contact@lagaronnetp.org' }, window.SLG_CONFIG || {});
 
+  /* Chaînes produites par le script, selon la langue du document */
+  const LANG = (document.documentElement.lang || 'fr').toLowerCase().split('-')[0];
+  const STR = ({
+    fr: { sending: 'Envoi en cours…', sent: 'Merci, votre message a bien été envoyé. Nous revenons vers vous rapidement.',
+          error: 'Une erreur est survenue. Vous pouvez nous écrire directement à ', mail: 'Votre messagerie va s’ouvrir avec le message pré-rempli.',
+          subject: '[Site web] ', defaultSubject: 'Demande de contact',
+          lName: 'Nom', lOrg: 'Organisation', lEmail: 'Email', lPhone: 'Téléphone', lSubject: 'Objet' },
+    en: { sending: 'Sending…', sent: 'Thank you, your message has been sent. We will get back to you shortly.',
+          error: 'Something went wrong. You can also write to us directly at ', mail: 'Your email client will open with the message pre-filled.',
+          subject: '[Website] ', defaultSubject: 'Contact enquiry',
+          lName: 'Name', lOrg: 'Organisation', lEmail: 'Email', lPhone: 'Phone', lSubject: 'Subject' },
+    zh: { sending: '正在发送……', sent: '感谢您的留言，我们已收到并将尽快回复。',
+          error: '发送失败。您也可以直接发送邮件至 ', mail: '系统将打开您的邮件客户端，内容已自动填好。',
+          subject: '［网站留言］', defaultSubject: '联系咨询',
+          lName: '姓名', lOrg: '单位', lEmail: '电子邮箱', lPhone: '电话', lSubject: '主题' }
+  })[LANG] || null;
+
   /* ------------------------------------------------------------------
      1. Préchargeur
   ------------------------------------------------------------------ */
@@ -247,6 +264,13 @@
   ------------------------------------------------------------------ */
   const handlers = {};
 
+  // Libellés de la coupe animée « sans tranchée », selon la langue du document
+  const COUPE_LABELS = ({
+    fr: ['INSPECTION CAMÉRA', 'FRAISAGE ROBOTISÉ', 'CHEMISAGE EN COURS', 'CONDUITE RÉHABILITÉE'],
+    en: ['CCTV INSPECTION', 'ROBOTIC MILLING', 'LINING IN PROGRESS', 'PIPE REHABILITATED'],
+    zh: ['闭路电视检测', '机器人铣削', '内衬施工中', '管道已修复']
+  })[(document.documentElement.lang || 'fr').toLowerCase().split('-')[0]] || ['INSPECTION CAMÉRA', 'FRAISAGE ROBOTISÉ', 'CHEMISAGE EN COURS', 'CONDUITE RÉHABILITÉE'];
+
   // 7a. Défilement horizontal des réalisations
   handlers.hscroll = (el, p) => {
     const track = $('.hscroll__track', el);
@@ -305,7 +329,7 @@
       // Remise en service : phase 4
       flow.style.opacity = phase === 3 ? clamp(lp * 1.6, 0, 1) : 0;
       if (lblLive) lblLive.style.opacity = phase === 3 ? 1 : 0;
-      if (lblState) lblState.textContent = ['INSPECTION CAMÉRA', 'FRAISAGE ROBOTISÉ', 'CHEMISAGE EN COURS', 'CONDUITE RÉHABILITÉE'][phase];
+      if (lblState) lblState.textContent = COUPE_LABELS[phase];
     };
   })();
 
@@ -362,22 +386,22 @@
       const btn = $('button[type="submit"]', form);
       btn.disabled = true;
       if (CONFIG.formEndpoint) {
-        status.textContent = 'Envoi en cours…';
+        status.textContent = STR.sending;
         try {
           const r = await fetch(CONFIG.formEndpoint, { method: 'POST', headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' }, body: JSON.stringify(data) });
           if (!r.ok) throw new Error();
-          status.textContent = 'Merci, votre message a bien été envoyé. Nous revenons vers vous rapidement.';
+          status.textContent = STR.sent;
           form.reset();
         } catch (err) {
-          status.textContent = 'Une erreur est survenue. Vous pouvez nous écrire directement à ' + CONFIG.email + '.';
+          status.textContent = STR.error + CONFIG.email + '.';
         }
       } else {
-        const subject = encodeURIComponent('[Site web] ' + (data.objet || 'Demande de contact') + ' — ' + (data.organisation || data.nom || ''));
+        const subject = encodeURIComponent(STR.subject + (data.objet || STR.defaultSubject) + ' — ' + (data.organisation || data.nom || ''));
         const body = encodeURIComponent(
-          `Nom : ${data.nom || ''}\nOrganisation : ${data.organisation || ''}\nEmail : ${data.email || ''}\nTéléphone : ${data.telephone || ''}\nObjet : ${data.objet || ''}\n\n${data.message || ''}`
+          `${STR.lName} : ${data.nom || ''}\n${STR.lOrg} : ${data.organisation || ''}\n${STR.lEmail} : ${data.email || ''}\n${STR.lPhone} : ${data.telephone || ''}\n${STR.lSubject} : ${data.objet || ''}\n\n${data.message || ''}`
         );
         location.href = `mailto:${CONFIG.email}?subject=${subject}&body=${body}`;
-        status.textContent = 'Votre messagerie va s’ouvrir avec le message pré-rempli.';
+        status.textContent = STR.mail;
       }
       btn.disabled = false;
     });

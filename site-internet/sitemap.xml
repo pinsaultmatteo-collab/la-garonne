@@ -1,12 +1,273 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://www.sa-la-garonne.fr/</loc><lastmod>2026-09-03</lastmod><changefreq>monthly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://www.sa-la-garonne.fr/assainissement.html</loc><lastmod>2026-09-03</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.sa-la-garonne.fr/eau-potable.html</loc><lastmod>2026-09-03</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.sa-la-garonne.fr/rehabilitation-sans-tranchee.html</loc><lastmod>2026-09-03</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.sa-la-garonne.fr/travaux-complexes.html</loc><lastmod>2026-09-03</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.sa-la-garonne.fr/realisations.html</loc><lastmod>2026-09-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.sa-la-garonne.fr/entreprise.html</loc><lastmod>2026-09-03</lastmod><changefreq>yearly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.sa-la-garonne.fr/contact.html</loc><lastmod>2026-09-03</lastmod><changefreq>yearly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.sa-la-garonne.fr/mentions-legales.html</loc><lastmod>2026-09-03</lastmod><changefreq>yearly</changefreq><priority>0.2</priority></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://www.sa-la-garonne.fr/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.sa-la-garonne.fr/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.sa-la-garonne.fr/en/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.sa-la-garonne.fr/zh/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.sa-la-garonne.fr/"/>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.sa-la-garonne.fr/assainissement.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.sa-la-garonne.fr/assainissement.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.sa-la-garonne.fr/en/assainissement.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.sa-la-garonne.fr/zh/assainissement.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.sa-la-garonne.fr/assainissement.html"/>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.sa-la-garonne.fr/eau-potable.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.sa-la-garonne.fr/eau-potable.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.sa-la-garonne.fr/en/eau-potable.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.sa-la-garonne.fr/zh/eau-potable.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.sa-la-garonne.fr/eau-potable.html"/>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.sa-la-garonne.fr/rehabilitation-sans-tranchee.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.sa-la-garonne.fr/rehabilitation-sans-tranchee.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.sa-la-garonne.fr/en/rehabilitation-sans-tranchee.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.sa-la-garonne.fr/zh/rehabilitation-sans-tranchee.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.sa-la-garonne.fr/rehabilitation-sans-tranchee.html"/>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.sa-la-garonne.fr/travaux-complexes.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.sa-la-garonne.fr/travaux-complexes.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.sa-la-garonne.fr/en/travaux-complexes.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.sa-la-garonne.fr/zh/travaux-complexes.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.sa-la-garonne.fr/travaux-complexes.html"/>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.sa-la-garonne.fr/realisations.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.sa-la-garonne.fr/realisations.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.sa-la-garonne.fr/en/realisations.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.sa-la-garonne.fr/zh/realisations.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.sa-la-garonne.fr/realisations.html"/>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.sa-la-garonne.fr/entreprise.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.sa-la-garonne.fr/entreprise.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.sa-la-garonne.fr/en/entreprise.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.sa-la-garonne.fr/zh/entreprise.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.sa-la-garonne.fr/entreprise.html"/>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.sa-la-garonne.fr/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.sa-la-garonne.fr/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.sa-la-garonne.fr/en/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.sa-la-garonne.fr/zh/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.sa-la-garonne.fr/contact.html"/>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.sa-la-garonne.fr/mentions-legales.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.sa-la-garonne.fr/mentions-legales.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.sa-la-garonne.fr/en/mentions-legales.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.sa-la-garonne.fr/zh/mentions-legales.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.sa-la-garonne.fr/mentions-legales.html"/>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  <url>
+    <loc>https://www.sa-la-garonne.fr/en/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.sa-la-garonne.fr/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.sa-la-garonne.fr/en/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.sa-la-garonne.fr/zh/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.sa-la-garonne.fr/"/>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.sa-la-garonne.fr/en/assainissement.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.sa-la-garonne.fr/assainissement.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.sa-la-garonne.fr/en/assainissement.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.sa-la-garonne.fr/zh/assainissement.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.sa-la-garonne.fr/assainissement.html"/>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.sa-la-garonne.fr/en/eau-potable.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.sa-la-garonne.fr/eau-potable.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.sa-la-garonne.fr/en/eau-potable.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.sa-la-garonne.fr/zh/eau-potable.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.sa-la-garonne.fr/eau-potable.html"/>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.sa-la-garonne.fr/en/rehabilitation-sans-tranchee.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.sa-la-garonne.fr/rehabilitation-sans-tranchee.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.sa-la-garonne.fr/en/rehabilitation-sans-tranchee.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.sa-la-garonne.fr/zh/rehabilitation-sans-tranchee.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.sa-la-garonne.fr/rehabilitation-sans-tranchee.html"/>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.sa-la-garonne.fr/en/travaux-complexes.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.sa-la-garonne.fr/travaux-complexes.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.sa-la-garonne.fr/en/travaux-complexes.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.sa-la-garonne.fr/zh/travaux-complexes.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.sa-la-garonne.fr/travaux-complexes.html"/>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.sa-la-garonne.fr/en/realisations.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.sa-la-garonne.fr/realisations.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.sa-la-garonne.fr/en/realisations.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.sa-la-garonne.fr/zh/realisations.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.sa-la-garonne.fr/realisations.html"/>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.sa-la-garonne.fr/en/entreprise.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.sa-la-garonne.fr/entreprise.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.sa-la-garonne.fr/en/entreprise.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.sa-la-garonne.fr/zh/entreprise.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.sa-la-garonne.fr/entreprise.html"/>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.sa-la-garonne.fr/en/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.sa-la-garonne.fr/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.sa-la-garonne.fr/en/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.sa-la-garonne.fr/zh/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.sa-la-garonne.fr/contact.html"/>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.sa-la-garonne.fr/en/mentions-legales.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.sa-la-garonne.fr/mentions-legales.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.sa-la-garonne.fr/en/mentions-legales.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.sa-la-garonne.fr/zh/mentions-legales.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.sa-la-garonne.fr/mentions-legales.html"/>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  <url>
+    <loc>https://www.sa-la-garonne.fr/zh/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.sa-la-garonne.fr/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.sa-la-garonne.fr/en/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.sa-la-garonne.fr/zh/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.sa-la-garonne.fr/"/>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.sa-la-garonne.fr/zh/assainissement.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.sa-la-garonne.fr/assainissement.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.sa-la-garonne.fr/en/assainissement.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.sa-la-garonne.fr/zh/assainissement.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.sa-la-garonne.fr/assainissement.html"/>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.sa-la-garonne.fr/zh/eau-potable.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.sa-la-garonne.fr/eau-potable.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.sa-la-garonne.fr/en/eau-potable.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.sa-la-garonne.fr/zh/eau-potable.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.sa-la-garonne.fr/eau-potable.html"/>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.sa-la-garonne.fr/zh/rehabilitation-sans-tranchee.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.sa-la-garonne.fr/rehabilitation-sans-tranchee.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.sa-la-garonne.fr/en/rehabilitation-sans-tranchee.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.sa-la-garonne.fr/zh/rehabilitation-sans-tranchee.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.sa-la-garonne.fr/rehabilitation-sans-tranchee.html"/>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.sa-la-garonne.fr/zh/travaux-complexes.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.sa-la-garonne.fr/travaux-complexes.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.sa-la-garonne.fr/en/travaux-complexes.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.sa-la-garonne.fr/zh/travaux-complexes.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.sa-la-garonne.fr/travaux-complexes.html"/>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.sa-la-garonne.fr/zh/realisations.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.sa-la-garonne.fr/realisations.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.sa-la-garonne.fr/en/realisations.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.sa-la-garonne.fr/zh/realisations.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.sa-la-garonne.fr/realisations.html"/>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.sa-la-garonne.fr/zh/entreprise.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.sa-la-garonne.fr/entreprise.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.sa-la-garonne.fr/en/entreprise.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.sa-la-garonne.fr/zh/entreprise.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.sa-la-garonne.fr/entreprise.html"/>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.sa-la-garonne.fr/zh/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.sa-la-garonne.fr/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.sa-la-garonne.fr/en/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.sa-la-garonne.fr/zh/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.sa-la-garonne.fr/contact.html"/>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.sa-la-garonne.fr/zh/mentions-legales.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.sa-la-garonne.fr/mentions-legales.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.sa-la-garonne.fr/en/mentions-legales.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.sa-la-garonne.fr/zh/mentions-legales.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.sa-la-garonne.fr/mentions-legales.html"/>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+  </url>
 </urlset>
