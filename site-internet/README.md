@@ -17,6 +17,7 @@ sur la base de la charte graphique V2.0 (09.2026).
 | `js/main.js` | Animations et interactions (préchargeur, révélations au scroll, sections épinglées, curseur, menu, formulaire) |
 | `assets/img/` | Photos optimisées en WebP + JPEG, 3 tailles (768 / 1280 / 1920) |
 | `assets/logo/` | Logos et monogrammes issus de la charte |
+| `404.html` | Page d'erreur personnalisée (servie automatiquement par Vercel) |
 | `sitemap.xml` · `robots.txt` · `site.webmanifest` · favicons | SEO et icônes |
 
 ## Mise en ligne
@@ -24,7 +25,7 @@ sur la base de la charte graphique V2.0 (09.2026).
 1. Déposer tout le contenu de `site-internet/` à la racine de l'hébergement (aucune compilation nécessaire).
 2. Remplacer le domaine `https://www.sa-la-garonne.fr/` (balises `canonical`, `og:*`, JSON-LD, `sitemap.xml`, `robots.txt`) par le domaine définitif si différent.
 3. Compléter l'hébergeur dans `mentions-legales.html`.
-4. Les polices (Archivo Narrow, Inter, JetBrains Mono) sont chargées depuis Google Fonts. Pour un hébergement 100 % local, télécharger les fichiers et remplacer le `<link>` Google Fonts par des `@font-face`.
+4. Les polices (Archivo Narrow, Inter, JetBrains Mono) sont auto-hébergées dans `assets/fonts/` et déclarées dans `css/fonts.css` : aucun appel à Google Fonts (RGPD, performance).
 
 ## Formulaire de contact
 

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Assemble les pages internes du site SA LA GARONNE à partir de l'en-tête / pied de page de index.html.
 Usage : python3 outils-site/build.py  (à relancer après toute modification de l'en-tête, du pied de page ou de pages.py)"""
-import re, os, sys, importlib.util
+import re, os, sys, json, importlib.util
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "site-internet")
 index = open(os.path.join(ROOT, "index.html"), encoding="utf-8").read()
 
@@ -10,9 +10,9 @@ def between(s, a, b):
     return s[i:j]
 
 LOADER = between(index, "  <!-- Préchargeur -->", '<div class="page-veil" aria-hidden="true"></div>')
-HEADER = between(index, "  <!-- Navigation -->", "  </nav>\n\n  <main>").replace("\n\n  <main>", "")
+HEADER = between(index, "  <!-- Navigation -->", "  </nav>\n\n  <main id=\"contenu\">").replace("\n\n  <main id=\"contenu\">", "")
 FOOTER = between(index, "  <!-- ============ FOOTER ============ -->", "</footer>")
-FONTS = between(index, '  <link rel="preconnect" href="https://fonts.googleapis.com">', '</noscript>')
+FONTS = between(index, '  <link rel="preload" as="font"', '</noscript>')
 ICONS = between(index, '  <link rel="icon" href="favicon.ico" sizes="any">', '<link rel="manifest" href="site.webmanifest">')
 
 ARROW = '<svg class="btn__arrow" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9h12M10 4l5 5-5 5"/></svg>'
@@ -63,19 +63,23 @@ CTA = f'''<section class="section"><div class="container"><div class="cta-band" 
 
 def pic(name, sizes_w, alt, sizes="100vw", loading="lazy", cls=""):
     ws = sorted(sizes_w)
+    from PIL import Image as _I
+    _w, _h = _I.open(os.path.join(ROOT, f"assets/img/{name}-{ws[-1]}.jpg")).size
     webp = ", ".join(f"assets/img/{name}-{w}.webp {w}w" for w in ws)
     jpg = ", ".join(f"assets/img/{name}-{w}.jpg {w}w" for w in ws)
-    return f'<picture><source type="image/webp" srcset="{webp}" sizes="{sizes}"><img src="assets/img/{name}-{ws[-1]}.jpg" srcset="{jpg}" sizes="{sizes}" alt="{alt}" loading="{loading}"{(" class=" + chr(34) + cls + chr(34)) if cls else ""}></picture>'
+    return f'<picture><source type="image/webp" srcset="{webp}" sizes="{sizes}"><img src="assets/img/{name}-{ws[-1]}.jpg" srcset="{jpg}" sizes="{sizes}" alt="{alt}" loading="{loading}" width="{_w}" height="{_h}"{(" class=" + chr(34) + cls + chr(34)) if cls else ""}></picture>'
 
 def hero(crumbs, eyebrow, title, lead, meta, bg=None, bgalt=""):
-    SIZES = {"equipe-reunion-inspection": [768,1280,1600], "collecteur-visitable-profondeur": [536], "aep-raccordement-fonte": [768], "tranchee-blindee-monument": [529]}
-    bgh = f'<div class="hero-page__bg">{pic(bg, SIZES.get(bg, [768,1280,1920]), bgalt, loading="eager")}</div>' if bg else ""
+    SIZES = {"equipe-reunion-inspection": [768,1280,1600], "collecteur-visitable-profondeur": [536], "aep-raccordement-fonte": [768], "tranchee-blindee-monument": [529], "chantier-hydrocurage-equipe": [480,768,1024,1280,1920], "chantier-capitole-engins": [480,768,1024,1280,1920], "chantier-tranchee-centre-ville": [480,768,1024,1280,1920]}
+    bgh = f'<div class="hero-page__bg">{pic(bg, SIZES.get(bg, [480,768,1024,1280,1920]), bgalt, loading="eager")}</div>' if bg else ""
     crumb_html = ' <span>/</span> '.join(crumbs)
     meta_html = "".join(f'<span class="strip-item">{k} <b>{v}</b></span>' for k, v in meta)
     return f'''<section class="hero-page">{bgh}{RINGS}<div class="container"><nav class="crumbs" aria-label="Fil d'Ariane"><a href="index.html">Accueil</a> <span>/</span> {crumb_html}</nav><p class="eyebrow eyebrow--light" style="margin-top:28px" data-reveal>{eyebrow}</p><h1 class="h1" data-split>{title}</h1><p class="lead" data-reveal>{lead}</p><div class="hero-page__meta" data-reveal>{meta_html}</div></div></section>'''
 
 def band(name, alt, sizes_w, cap_mono, cap_title):
-    return f'<div class="band"><img src="assets/img/{name}-{max(sizes_w)}.jpg" srcset="{", ".join(f"assets/img/{name}-{w}.jpg {w}w" for w in sorted(sizes_w))}" sizes="100vw" alt="{alt}" loading="lazy" data-parallax="0.12"><div class="band__cap"><span class="mono">{cap_mono}</span><strong class="display" style="font-size:clamp(1.6rem,3vw,2.6rem)">{cap_title}</strong></div></div>'
+    from PIL import Image as _I
+    _w, _h = _I.open(os.path.join(ROOT, f"assets/img/{name}-{max(sizes_w)}.jpg")).size
+    return f'<div class="band"><img src="assets/img/{name}-{max(sizes_w)}.jpg" srcset="{", ".join(f"assets/img/{name}-{w}.jpg {w}w" for w in sorted(sizes_w))}" sizes="100vw" alt="{alt}" loading="lazy" width="{_w}" height="{_h}" data-parallax="0.12"><div class="band__cap"><span class="mono">{cap_mono}</span><strong class="display" style="font-size:clamp(1.6rem,3vw,2.6rem)">{cap_title}</strong></div></div>'
 
 def services(items):
     html = '<div class="services stagger">'
@@ -89,7 +93,24 @@ def process(items):
         html += f'<div class="process__item"><span class="mono">Étape {i:02d}</span><strong>{title}</strong><p>{text}</p>{picto(ico)}</div>'
     return html + '</div>'
 
-def page(filename, title, description, body, og_image="chantier-capitole-engins-1280.jpg"):
+SITE = "https://www.sa-la-garonne.fr/"
+def ld_breadcrumb(crumbs):
+    items = [{"@type": "ListItem", "position": 1, "name": "Accueil", "item": SITE}]
+    for i, (name, url) in enumerate(crumbs, 2):
+        it = {"@type": "ListItem", "position": i, "name": name}
+        if url: it["item"] = SITE + url
+        items.append(it)
+    return {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": items}
+def ld_service(name, desc, url):
+    return {"@context": "https://schema.org", "@type": "Service", "name": name, "description": desc, "url": SITE + url, "serviceType": name,
+            "provider": {"@type": "GeneralContractor", "name": "SA LA GARONNE", "url": SITE, "telephone": "+33562130780",
+                         "address": {"@type": "PostalAddress", "streetAddress": "63 chemin de Guilhermy", "postalCode": "31100", "addressLocality": "Toulouse", "addressCountry": "FR"}},
+            "areaServed": {"@type": "City", "name": "Toulouse"}}
+def page(filename, title, description, body, og_image="chantier-capitole-engins-1280.jpg", crumbs=None, service=None):
+    lds = []
+    if crumbs: lds.append(ld_breadcrumb(crumbs))
+    if service: lds.append(ld_service(service, description, filename))
+    LD = "".join(f'<script type="application/ld+json">{json.dumps(l, ensure_ascii=False)}</script>\n' for l in lds)
     html = f'''<!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -106,14 +127,15 @@ def page(filename, title, description, body, og_image="chantier-capitole-engins-
   <meta name="theme-color" content="#052F56">
 {ICONS}
 {FONTS}
-</head>
+{LD}</head>
 <body>
+  <a class="skip" href="#contenu">Aller au contenu</a>
 
 {LOADER}
 
 {HEADER}
 
-  <main>
+  <main id="contenu">
 {body}
   </main>
 
