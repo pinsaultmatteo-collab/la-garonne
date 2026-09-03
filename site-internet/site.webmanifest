@@ -1,0 +1,13 @@
+{
+  "name": "SA LA GARONNE — Travaux Publics",
+  "short_name": "La Garonne TP",
+  "icons": [
+    { "src": "assets/logo/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ],
+  "theme_color": "#052F56",
+  "background_color": "#F3F1EC",
+  "display": "browser",
+  "start_url": "/",
+  "lang": "fr"
+}

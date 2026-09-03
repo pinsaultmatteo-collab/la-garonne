@@ -1,0 +1,10 @@
+# Documents internes du client (non publiés)
+*.pdf
+*.docx
+contenu-visuel/
+Introduction au DA*
+
+# Système / outils locaux
+.DS_Store
+.claude/
+__pycache__/
