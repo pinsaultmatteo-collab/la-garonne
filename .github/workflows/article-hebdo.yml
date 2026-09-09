@@ -1,0 +1,54 @@
+name: Article hebdomadaire du blog
+
+# Chaque mardi à 06:00 UTC (08:00 à Toulouse en heure d'été, 07:00 en heure d'hiver),
+# ou à la demande depuis l'onglet Actions (sujet imposé facultatif).
+on:
+  schedule:
+    - cron: "0 6 * * 2"
+  workflow_dispatch:
+    inputs:
+      sujet:
+        description: "Sujet imposé (facultatif : sinon le prochain de contenu-blog/sujets.json)"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: article-hebdo
+  cancel-in-progress: false
+
+jobs:
+  rediger-et-publier:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Récupérer le dépôt
+        uses: actions/checkout@v4
+
+      - name: Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Dépendances
+        run: pip install --quiet "anthropic>=0.125" markdown pillow
+
+      - name: Rédiger l'article avec Claude
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python outils-site/generer_article.py --sujet "${{ github.event.inputs.sujet }}"
+
+      - name: Régénérer le site
+        run: bash outils-site/publier.sh
+
+      - name: Publier (le push déclenche le déploiement Vercel)
+        run: |
+          git config user.name "Blog SA LA GARONNE"
+          git config user.email "blog@sa-la-garonne.fr"
+          TITRE="$(cat .dernier-article.txt 2>/dev/null || echo 'article hebdomadaire')"
+          rm -f .dernier-article.txt
+          git add -A
+          git commit -m "Blog : ${TITRE}" -m "Article rédigé et publié automatiquement (workflow article-hebdo)." || { echo "rien à publier"; exit 0; }
+          git push

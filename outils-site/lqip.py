@@ -55,7 +55,7 @@ def process(page):
 if __name__ == "__main__":
     total = 0
     for page in sorted(glob.glob(os.path.join(ROOT, "*.html")) + glob.glob(os.path.join(ROOT, "*", "*.html"))):
-        if os.path.basename(os.path.dirname(page)) not in ("site-internet", "en", "zh"):
+        if os.path.basename(os.path.dirname(page)) not in ("site-internet", "en", "zh", "blog"):
             continue
         n = process(page); total += n
         print(f"  {os.path.relpath(page, ROOT)} : {n} vignettes")

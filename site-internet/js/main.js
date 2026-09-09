@@ -169,6 +169,8 @@
   });
   const expertisePages = ['assainissement.html', 'eau-potable.html', 'rehabilitation-sans-tranchee.html', 'travaux-complexes.html'];
   if (expertisePages.includes(path)) $$('.nav__link[data-group="expertises"]').forEach(a => a.classList.add('is-active'));
+  if (['entreprise.html', 'recrutement.html'].includes(path)) $$('.nav__link[data-group="entreprise"]').forEach(a => a.classList.add('is-active'));
+  if (location.pathname.includes('/blog/')) $$('.nav__link[data-group="blog"]').forEach(a => a.classList.add('is-active'));
 
   /* ------------------------------------------------------------------
      5. Curseur personnalisé & boutons magnétiques
@@ -398,12 +400,11 @@
   });
   $$('[data-year]').forEach(el => { el.textContent = new Date().getFullYear(); });
 
-  // Images déjà présentes en cache : on lève tout de suite le fondu
+  // Images non différées (couvertures d'articles, cache) : fondu dès qu'elles sont prêtes
   $$('.work img, .scan img, .hq__img img, .band img').forEach(img => {
-    if (img.complete && img.naturalWidth) {
-      const h = img.closest('.work, .scan, .hq__img, .band');
-      if (h) h.classList.add('img-ready');
-    }
+    const ready = () => { const h = img.closest('.work, .scan, .hq__img, .band'); if (h) h.classList.add('img-ready'); };
+    if (img.complete && img.naturalWidth) ready();
+    else { img.addEventListener('load', ready, { once: true }); img.addEventListener('error', ready, { once: true }); }
   });
 
   // Filtres de galerie

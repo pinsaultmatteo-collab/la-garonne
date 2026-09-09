@@ -17,7 +17,7 @@ T, SPECIAL, LANGS = i18n.T, i18n.SPECIAL, i18n.LANGS
 
 PAGES = ["index.html", "assainissement.html", "eau-potable.html", "rehabilitation-sans-tranchee.html",
          "travaux-complexes.html", "entreprise.html", "realisations.html", "contact.html",
-         "mentions-legales.html", "404.html"]
+         "mentions-legales.html", "404.html", "recrutement.html"]
 ATTRS = ("alt", "placeholder", "aria-label", "title", "data-cursor", "data-desc")
 missing = {}
 
@@ -119,7 +119,10 @@ def build(page, lang):
         return blk
     out = re.sub(r'<div class="langs[^"]*"[^>]*>.*?</div>', fix_langs, out, flags=re.S)
 
-    # 8. chemins des ressources (les pages vivent dans un sous-dossier)
+    # 8. blog (français uniquement) et version Markdown : liens depuis un sous-dossier
+    out = re.sub(r'href="blog/', 'href="../blog/', out)
+    out = re.sub(r'  <link rel="alternate" type="text/markdown"[^>]*>\n', '', out)
+    # 8bis. chemins des ressources (les pages vivent dans un sous-dossier)
     out = re.sub(r'(href|src)="(css/|js/|assets/|favicon|apple-touch-icon|site\.webmanifest|sitemap\.xml|robots\.txt)', r'\1="../\2', out)
     out = re.sub(r'srcset="([^"]+)"', lambda m: 'srcset="' + re.sub(r'(^|,\s*)assets/', r'\1../assets/', m.group(1)) + '"', out)
 

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog SA LA GARONNE</title>
+    <link>https://www.sa-la-garonne.fr/blog/</link>
+    <atom:link href="https://www.sa-la-garonne.fr/blog/feed.xml" rel="self" type="application/rss+xml"/>
+    <description>Conseils et méthodes sur les réseaux d'eau et d'assainissement, par SA LA GARONNE, Toulouse.</description>
+    <language>fr-FR</language>
+    <lastBuildDate>Wed, 09 Sep 2026 08:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Travaux d&#x27;assainissement en centre-ville : limiter les nuisances pour riverains et commerçants</title>
+      <link>https://www.sa-la-garonne.fr/blog/travaux-assainissement-centre-ville-limiter-les-nuisances.html</link>
+      <guid isPermaLink="true">https://www.sa-la-garonne.fr/blog/travaux-assainissement-centre-ville-limiter-les-nuisances.html</guid>
+      <pubDate>Wed, 09 Sep 2026 08:00:00 +0000</pubDate>
+      <category>Assainissement</category>
+      <description>Phasage, emprises réduites, travaux de nuit, information des riverains, techniques sans tranchée : les leviers concrets pour réaliser des travaux d&#x27;assainissement en centre-ville tout en préservant la vie du quartier.</description>
+    </item>
+    <item>
+      <title>Tranchée à grande profondeur : blindage, sécurité et méthode de pose</title>
+      <link>https://www.sa-la-garonne.fr/blog/tranchee-grande-profondeur-blindage-securite-methode.html</link>
+      <guid isPermaLink="true">https://www.sa-la-garonne.fr/blog/tranchee-grande-profondeur-blindage-securite-methode.html</guid>
+      <pubDate>Wed, 09 Sep 2026 08:00:00 +0000</pubDate>
+      <category>Travaux complexes</category>
+      <description>Comment se réalise une tranchée de 6 à 7 mètres de profondeur en milieu urbain : blindages, gestion de la nappe, pose de canalisations de grand diamètre, sécurité des équipes et organisation du chantier.</description>
+    </item>
+    <item>
+      <title>Renouvellement d&#x27;une conduite d&#x27;eau potable : garantir la continuité de service</title>
+      <link>https://www.sa-la-garonne.fr/blog/renouvellement-conduite-eau-potable-continuite-de-service.html</link>
+      <guid isPermaLink="true">https://www.sa-la-garonne.fr/blog/renouvellement-conduite-eau-potable-continuite-de-service.html</guid>
+      <pubDate>Wed, 09 Sep 2026 08:00:00 +0000</pubDate>
+      <category>Eau potable</category>
+      <description>Renouveler une conduite d&#x27;eau potable sans priver les abonnés d&#x27;eau : coordination avec l&#x27;exploitant, phasage des coupures, raccordements, désinfection et essais avant remise en eau. La méthode appliquée à Toulouse.</description>
+    </item>
+    <item>
+      <title>Réhabilitation sans tranchée : rénover un réseau d&#x27;assainissement sans ouvrir la rue</title>
+      <link>https://www.sa-la-garonne.fr/blog/rehabilitation-sans-tranchee-renover-un-reseau-sans-ouvrir-la-rue.html</link>
+      <guid isPermaLink="true">https://www.sa-la-garonne.fr/blog/rehabilitation-sans-tranchee-renover-un-reseau-sans-ouvrir-la-rue.html</guid>
+      <pubDate>Wed, 09 Sep 2026 08:00:00 +0000</pubDate>
+      <category>Réhabilitation sans tranchée</category>
+      <description>Comment la réhabilitation sans tranchée permet de rénover un collecteur d&#x27;assainissement depuis l&#x27;intérieur, sans ouvrir la chaussée : techniques, étapes, cas d&#x27;usage et limites, vus de Toulouse.</description>
+    </item>
+    <item>
+      <title>Inspection télévisée des réseaux d&#x27;assainissement : pourquoi, quand et comment</title>
+      <link>https://www.sa-la-garonne.fr/blog/inspection-televisee-reseau-assainissement-pourquoi-quand-comment.html</link>
+      <guid isPermaLink="true">https://www.sa-la-garonne.fr/blog/inspection-televisee-reseau-assainissement-pourquoi-quand-comment.html</guid>
+      <pubDate>Wed, 09 Sep 2026 08:00:00 +0000</pubDate>
+      <category>Assainissement</category>
+      <description>L&#x27;inspection télévisée (ITV) est la base de toute décision sur un réseau d&#x27;assainissement. Ce qu&#x27;elle révèle, quand la programmer, comment elle se déroule, et ce qu&#x27;apporte un robot d&#x27;inspection 4K à 360° comme le RIC.</description>
+    </item>
+    <item>
+      <title>Chemisage de canalisation : principe, étapes et durée de vie</title>
+      <link>https://www.sa-la-garonne.fr/blog/chemisage-canalisation-principe-etapes-duree-de-vie.html</link>
+      <guid isPermaLink="true">https://www.sa-la-garonne.fr/blog/chemisage-canalisation-principe-etapes-duree-de-vie.html</guid>
+      <pubDate>Wed, 09 Sep 2026 08:00:00 +0000</pubDate>
+      <category>Réhabilitation sans tranchée</category>
+      <description>Le chemisage de canalisation expliqué simplement : comment une gaine polymérisée en place forme une conduite neuve dans l&#x27;ancienne, les étapes du chantier, les contrôles et la durée de vie attendue.</description>
+    </item>
+  </channel>
+</rss>

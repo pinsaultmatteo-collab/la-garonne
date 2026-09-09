@@ -1,0 +1,35 @@
+# SA LA GARONNE
+
+> SA LA GARONNE est une PME familiale de travaux publics fondée à Toulouse en 1956, spécialisée dans les réseaux d'eau et d'assainissement : construction, renouvellement et réhabilitation de réseaux d'assainissement, adduction d'eau potable, réhabilitation sans tranchée (chemisage, gainage, fraisage robotisé) et travaux complexes (réseaux en service, tranchées jusqu'à 7 m, canalisations jusqu'à Ø 2000 mm). 35 collaborateurs, quatre équipes de chantier, un atelier et un bureau d'études intégré (géomètre-dessinateur et chargé d'études). Dirigée par Nicolas Pascual, troisième génération. Robot d'inspection RIC (4K, 360°) breveté en 2018. Zone d'intervention : Toulouse Métropole et son agglomération. Clients : collectivités, exploitants de réseaux, acteurs publics, professionnels du cycle de l'eau.
+
+Site principal en français ; versions anglaise (https://www.sa-la-garonne.fr/en/) et chinoise (https://www.sa-la-garonne.fr/zh/) des pages principales. Coordonnées : 63 chemin de Guilhermy, 31100 Toulouse, France · +33 5 62 13 07 80 · contact@lagaronnetp.org. Dernière génération : 2026-09-09.
+
+## Pages
+
+- [Accueil](https://www.sa-la-garonne.fr/md/index.md): Présentation de SA LA GARONNE : expertises, savoir-faire signature, bureau d'études, engagements
+- [Assainissement](https://www.sa-la-garonne.fr/md/assainissement.md): Construction, renouvellement et réhabilitation des réseaux d'eaux usées et pluviales
+- [Adduction d'eau potable](https://www.sa-la-garonne.fr/md/eau-potable.md): Pose et renouvellement de conduites, branchements, ouvrages hydrauliques
+- [Réhabilitation sans tranchée](https://www.sa-la-garonne.fr/md/rehabilitation-sans-tranchee.md): Chemisage, gainage, fraisage robotisé, inspection par robot RIC
+- [Travaux complexes](https://www.sa-la-garonne.fr/md/travaux-complexes.md): Réseaux en service, grande profondeur, grand diamètre, secteurs très fréquentés
+- [Réalisations](https://www.sa-la-garonne.fr/md/realisations.md): Chantiers documentés à Toulouse et dans son agglomération
+- [L'entreprise](https://www.sa-la-garonne.fr/md/entreprise.md): Histoire familiale depuis 1956, valeurs, équipe, bureau d'études, qualifications
+- [Recrutement](https://www.sa-la-garonne.fr/md/recrutement.md): Métiers recrutés, raisons de nous rejoindre, candidature
+- [Contact](https://www.sa-la-garonne.fr/md/contact.md): Coordonnées, formulaire et plan d'accès
+- [Mentions légales](https://www.sa-la-garonne.fr/md/mentions-legales.md): Éditeur, hébergement, données personnelles
+
+## Blog (un article par semaine)
+
+- [Travaux d'assainissement en centre-ville : limiter les nuisances pour riverains et commerçants](https://www.sa-la-garonne.fr/blog/travaux-assainissement-centre-ville-limiter-les-nuisances.md): Phasage, emprises réduites, travaux de nuit, information des riverains, techniques sans tranchée : les leviers concrets pour réaliser des travaux d'assainissement en centre-ville tout en préservant la vie du quartier.
+- [Tranchée à grande profondeur : blindage, sécurité et méthode de pose](https://www.sa-la-garonne.fr/blog/tranchee-grande-profondeur-blindage-securite-methode.md): Comment se réalise une tranchée de 6 à 7 mètres de profondeur en milieu urbain : blindages, gestion de la nappe, pose de canalisations de grand diamètre, sécurité des équipes et organisation du chantier.
+- [Renouvellement d'une conduite d'eau potable : garantir la continuité de service](https://www.sa-la-garonne.fr/blog/renouvellement-conduite-eau-potable-continuite-de-service.md): Renouveler une conduite d'eau potable sans priver les abonnés d'eau : coordination avec l'exploitant, phasage des coupures, raccordements, désinfection et essais avant remise en eau. La méthode appliquée à Toulouse.
+- [Réhabilitation sans tranchée : rénover un réseau d'assainissement sans ouvrir la rue](https://www.sa-la-garonne.fr/blog/rehabilitation-sans-tranchee-renover-un-reseau-sans-ouvrir-la-rue.md): Comment la réhabilitation sans tranchée permet de rénover un collecteur d'assainissement depuis l'intérieur, sans ouvrir la chaussée : techniques, étapes, cas d'usage et limites, vus de Toulouse.
+- [Inspection télévisée des réseaux d'assainissement : pourquoi, quand et comment](https://www.sa-la-garonne.fr/blog/inspection-televisee-reseau-assainissement-pourquoi-quand-comment.md): L'inspection télévisée (ITV) est la base de toute décision sur un réseau d'assainissement. Ce qu'elle révèle, quand la programmer, comment elle se déroule, et ce qu'apporte un robot d'inspection 4K à 360° comme le RIC.
+- [Chemisage de canalisation : principe, étapes et durée de vie](https://www.sa-la-garonne.fr/blog/chemisage-canalisation-principe-etapes-duree-de-vie.md): Le chemisage de canalisation expliqué simplement : comment une gaine polymérisée en place forme une conduite neuve dans l'ancienne, les étapes du chantier, les contrôles et la durée de vie attendue.
+- [Flux RSS](https://www.sa-la-garonne.fr/blog/feed.xml): derniers articles
+
+## Optional
+
+- [Version anglaise](https://www.sa-la-garonne.fr/en/): pages principales en anglais
+- [中文版](https://www.sa-la-garonne.fr/zh/): pages principales en chinois simplifié
+- [Plan du site](https://www.sa-la-garonne.fr/sitemap.xml): toutes les URL
+- [Contenu complet](https://www.sa-la-garonne.fr/llms-full.txt): l'ensemble des pages et articles en un seul fichier Markdown

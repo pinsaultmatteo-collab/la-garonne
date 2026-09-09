@@ -21,12 +21,12 @@ une police chinoise auto-hébergée pèserait plusieurs centaines de kilo-octets
 **Le français est la seule source à modifier.** Pour répercuter un changement :
 
 ```bash
-python3 outils-site/build.py      # régénère les 9 pages internes françaises depuis index.html
-python3 outils-site/translate.py  # régénère en/ et zh/ depuis les pages françaises
-python3 outils-site/lqip.py       # réinjecte les vignettes floutées dans les 30 pages
+bash outils-site/publier.sh
 ```
 
-Les trois commandes s'enchaînent toujours dans cet ordre.
+Ce script enchaîne, dans l'ordre : `build.py` (pages internes françaises depuis `index.html`),
+`translate.py` (anglais et chinois), `blog.py` (articles, index, RSS, copies Markdown), `lqip.py` (vignettes
+floutées), `sitemap.py` et `llms.py` (fichiers pour les LLM, `robots.txt`).
 
 `outils-site/i18n.py` contient le dictionnaire de traduction (668 entrées, français → anglais → chinois).
 Toute phrase française absente du dictionnaire est signalée en fin d'exécution de `translate.py` : le site
@@ -100,6 +100,50 @@ pour la couverture). Les photos sources restent dans `contenu-visuel/photos-real
 - Pour ajouter un chantier : déposer les photos, ajouter l'entrée dans le manifeste, générer les variantes
   (script d'origine dans l'historique git : redimensionnement 1400 / 800 / 1200, WebP q74-76, JPEG q80),
   ajouter les cinq textes dans `i18n.py`, puis relancer la chaîne `build.py` → `translate.py` → `lqip.py`.
+
+## Blog et générateur hebdomadaire
+
+Le blog est en français uniquement, dans `site-internet/blog/`. Les articles sont écrits en Markdown avec un
+en-tête (`title`, `slug`, `date`, `description`, `category`, `tags`, `keywords`, `cover`) dans
+`contenu-blog/AAAA-MM-JJ-<slug>.md`. `outils-site/blog.py` produit pour chaque article la page HTML
+(données structurées BlogPosting, FAQPage à partir de la section « Questions fréquentes », fil d'Ariane),
+une copie Markdown `blog/<slug>.md` pour les LLM, l'index paginé et le flux `blog/feed.xml`.
+
+**Un article par semaine, le mardi matin, sans intervention.** Le workflow GitHub Actions
+`.github/workflows/article-hebdo.yml` s'exécute chaque mardi à 06:00 UTC (08:00 à Toulouse en été,
+07:00 en hiver) : il lance `outils-site/generer_article.py`, qui prend le prochain sujet de
+`contenu-blog/sujets.json`, fait rédiger l'article par Claude (modèle `claude-opus-5`) en suivant
+`contenu-blog/BRIEF.md`, vérifie le résultat (en-tête complet, 750 mots minimum, au moins quatre
+sections, section FAQ, slug unique, pas de chiffres inventés puisque seuls ceux du brief sont fournis),
+puis régénère le site et pousse le commit. Vercel déploie automatiquement.
+
+- **Prérequis unique** : ajouter le secret `ANTHROPIC_API_KEY` dans le dépôt GitHub (Settings → Secrets and
+  variables → Actions). Sans ce secret, le workflow échoue proprement et rien n'est publié.
+- **Lancer un article à la demande** : onglet Actions → « Article hebdomadaire du blog » → Run workflow, avec un
+  sujet imposé facultatif.
+- **Piloter les sujets** : éditer `contenu-blog/sujets.json` (liste `a_faire`, 30 sujets en réserve). Quand la
+  liste est vide, le générateur demande huit nouvelles propositions à Claude et en prend une.
+- **Changer le ton ou les règles** : éditer `contenu-blog/BRIEF.md`, aucune modification de code.
+- **Coût indicatif** : quelques centimes par article.
+- **Relecture** : chaque article publié est un simple fichier Markdown ; le corriger et relancer
+  `outils-site/publier.sh` suffit.
+
+## Recrutement
+
+`recrutement.html` (traduit en anglais et chinois) : raisons de rejoindre l'entreprise, métiers recrutés,
+parcours de candidature et formulaire (objet « Candidature », pièce jointe par email). Accessible depuis le
+menu « L'entreprise », le menu mobile, le pied de page et la page entreprise.
+
+## Fichiers pour les assistants IA et les moteurs de réponse
+
+Générés par `outils-site/llms.py` à chaque publication :
+
+- `llms.txt` : présentation de l'entreprise et index des contenus au format llmstxt.org ;
+- `llms-full.txt` : tout le site et tous les articles en un seul fichier Markdown ;
+- `md/<page>.md` : version Markdown de chaque page française, déclarée dans chaque page HTML par
+  `<link rel="alternate" type="text/markdown">` ;
+- `blog/<slug>.md` : version Markdown de chaque article ;
+- `robots.txt` : autorise explicitement GPTBot, ClaudeBot, PerplexityBot, Google-Extended et les autres robots IA.
 
 ## Chargement des images
 

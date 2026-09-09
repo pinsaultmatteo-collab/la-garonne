@@ -118,16 +118,40 @@ def ld_service(name, desc, url):
             "provider": {"@type": "GeneralContractor", "name": "SA LA GARONNE", "url": SITE, "telephone": "+33562130780",
                          "address": {"@type": "PostalAddress", "streetAddress": "63 chemin de Guilhermy", "postalCode": "31100", "addressLocality": "Toulouse", "addressCountry": "FR"}},
             "areaServed": {"@type": "City", "name": "Toulouse"}}
-def page(filename, title, description, body, og_image="chantier-capitole-engins-1280.jpg", crumbs=None, service=None):
+def relocate(html, prefix):
+    """Préfixe toutes les URL relatives (pages écrites dans un sous-dossier)."""
+    skip = r'(?!https?:|mailto:|tel:|#|data:|//|javascript:)'
+    html = re.sub(r'\b(href|src|poster)="' + skip + r'([^"]+)"', lambda m: f'{m.group(1)}="{prefix}{m.group(2)}"', html)
+    def fix_set(m):
+        parts = [p.strip() for p in m.group(2).split(",")]
+        parts = [(prefix + p) if not re.match(r'https?:|data:|//', p) else p for p in parts]
+        return f'{m.group(1)}="' + ", ".join(parts) + '"'
+    html = re.sub(r'\b(srcset|imagesrcset)="([^"]+)"', fix_set, html)
+    return html
+
+def page(filename, title, description, body, og_image="chantier-capitole-engins-1280.jpg", crumbs=None, service=None,
+         translated=True, subdir="", md="auto", extra_head="", extra_ld=None):
     lds = []
     if crumbs: lds.append(ld_breadcrumb(crumbs))
     if service: lds.append(ld_service(service, description, filename))
     LD = "".join(f'<script type="application/ld+json">{json.dumps(l, ensure_ascii=False)}</script>\n' for l in lds)
-    ALT = (f'  <link rel="alternate" hreflang="fr" href="{SITE}{filename}">\n'
-           f'  <link rel="alternate" hreflang="en" href="{SITE}en/{filename}">\n'
-           f'  <link rel="alternate" hreflang="zh-Hans" href="{SITE}zh/{filename}">\n'
-           f'  <link rel="alternate" hreflang="x-default" href="{SITE}{filename}">\n')
-    header = lang_links(HEADER, filename)
+    if extra_ld:
+        lds.extend(extra_ld)
+        LD = "".join(f'<script type="application/ld+json">{json.dumps(l, ensure_ascii=False)}</script>\n' for l in lds)
+    url = SITE + subdir + filename
+    if translated:
+        ALT = (f'  <link rel="alternate" hreflang="fr" href="{SITE}{filename}">\n'
+               f'  <link rel="alternate" hreflang="en" href="{SITE}en/{filename}">\n'
+               f'  <link rel="alternate" hreflang="zh-Hans" href="{SITE}zh/{filename}">\n'
+               f'  <link rel="alternate" hreflang="x-default" href="{SITE}{filename}">\n')
+    else:
+        ALT = (f'  <link rel="alternate" hreflang="fr" href="{url}">\n'
+               f'  <link rel="alternate" hreflang="x-default" href="{url}">\n')
+    if md == "auto":
+        md = f"md/{filename[:-5]}.md"
+    MDL = f'  <link rel="alternate" type="text/markdown" href="{md}" title="Version Markdown">\n' if md else ""
+    ALT += MDL + extra_head
+    header = lang_links(HEADER, filename if translated else "index.html")
     html = f'''<!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -135,7 +159,8 @@ def page(filename, title, description, body, og_image="chantier-capitole-engins-
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{title}</title>
   <meta name="description" content="{description}">
-  <link rel="canonical" href="https://www.sa-la-garonne.fr/{filename}">
+  <link rel="canonical" href="{url}">
+  <meta property="og:url" content="{url}">
 {ALT}
   <meta property="og:type" content="website">
   <meta property="og:title" content="{title}">
@@ -163,11 +188,17 @@ def page(filename, title, description, body, og_image="chantier-capitole-engins-
 </body>
 </html>
 '''
-    open(os.path.join(ROOT, filename), "w", encoding="utf-8").write(html)
-    print("écrit", filename, len(html))
+    if subdir:
+        html = relocate(html, "../" * subdir.count("/"))
+        os.makedirs(os.path.join(ROOT, subdir), exist_ok=True)
+    open(os.path.join(ROOT, subdir, filename), "w", encoding="utf-8").write(html)
+    print("écrit", subdir + filename, len(html))
 
-# Charge les contenus de pages
-spec = importlib.util.spec_from_file_location("pages", os.path.join(os.path.dirname(__file__), "pages.py"))
-pages = importlib.util.module_from_spec(spec)
-pages.__dict__.update(dict(page=page, hero=hero, band=band, services=services, process=process, related=related, CTA=CTA, ARROW=ARROW, LARROW=LARROW, picto=picto, pic=pic, RINGS=RINGS, FLOW=FLOW))
-spec.loader.exec_module(pages)
+HELPERS = dict(page=page, hero=hero, band=band, services=services, process=process, related=related, CTA=CTA, ARROW=ARROW, LARROW=LARROW, picto=picto, pic=pic, RINGS=RINGS, FLOW=FLOW, relocate=relocate, SITE=SITE, ld_breadcrumb=ld_breadcrumb)
+
+if __name__ == "__main__":
+    # Charge les contenus de pages
+    spec = importlib.util.spec_from_file_location("pages", os.path.join(os.path.dirname(__file__), "pages.py"))
+    pages = importlib.util.module_from_spec(spec)
+    pages.__dict__.update(HELPERS)
+    spec.loader.exec_module(pages)
