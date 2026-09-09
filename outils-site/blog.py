@@ -81,12 +81,12 @@ def cover_pic(name, alt, sizes="100vw", loading="lazy", dims=True):
     webp = ", ".join(f"{base}-{x}.webp {x}w" for x in ws); jpg = ", ".join(f"{base}-{x}.jpg {x}w" for x in ws)
     return (f'<picture><source type="image/webp" srcset="{webp}" sizes="{sizes}"><img src="{base}-{ws[-1]}.jpg" srcset="{jpg}" sizes="{sizes}" alt="{H.escape(alt, quote=True)}" loading="{loading}" width="{w}" height="{h}"></picture>', f"{SITE}{base}-{ws[-1]}.jpg")
 
-def card(a, big=False):
+def card(a, big=False, tag="h3"):
     pic, _ = cover_pic(a["cover"], a["title"], "(max-width: 960px) 100vw, 60vw" if big else "(max-width: 960px) 100vw, 33vw")
     cat_href, _ = CATEGORIES[a["category"]]
     return (f'<article class="post{" post--big" if big else ""}" data-reveal><a class="post__media" href="blog/{a["slug"]}.html" data-cursor="Lire">{pic}</a>'
             f'<div class="post__body"><p class="post__meta"><span class="mono accent-blue">{H.escape(a["category"])}</span><span class="mono">{date_fr(a["date"])} · {a["minutes"]} min</span></p>'
-            f'<h3 class="post__title"><a href="blog/{a["slug"]}.html">{H.escape(a["title"])}</a></h3><p class="post__excerpt">{H.escape(a["description"])}</p>'
+            f'<{tag} class="post__title"><a href="blog/{a["slug"]}.html">{H.escape(a["title"])}</a></{tag}><p class="post__excerpt">{H.escape(a["description"])}</p>'
             f'<a class="link-arrow" href="blog/{a["slug"]}.html"><span>Lire l\'article</span>{B.LARROW}</a></div></article>')
 
 def article_page(a, all_articles):
@@ -140,7 +140,7 @@ def index_pages(articles):
     for p in range(1, pages + 1):
         chunk = articles[(p-1)*PAR_PAGE:p*PAR_PAGE]
         fname = "index.html" if p == 1 else f"page-{p}.html"
-        cards = "".join(card(a, big=(p == 1 and i == 0)) for i, a in enumerate(chunk))
+        cards = "".join(card(a, big=(p == 1 and i == 0), tag="h2") for i, a in enumerate(chunk))
         pager = ""
         if pages > 1:
             links = "".join(f'<a class="pager__link{" is-active" if q == p else ""}" href="blog/{"index.html" if q == 1 else f"page-{q}.html"}">{q}</a>' for q in range(1, pages + 1))
