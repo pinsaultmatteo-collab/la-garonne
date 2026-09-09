@@ -170,6 +170,7 @@ def page(filename, title, description, body, og_image="chantier-capitole-engins-
   <meta name="theme-color" content="#052F56">
 {ICONS}
 {FONTS}
+  <script type="speculationrules">{{"prerender":[{{"where":{{"and":[{{"href_matches":"/*"}},{{"not":{{"href_matches":"/*.(pdf|xml|txt|md)"}}}}]}},"eagerness":"moderate"}}]}}</script>
 {LD}</head>
 <body>
   <a class="skip" href="#contenu">Aller au contenu</a>

@@ -336,24 +336,29 @@
   })();
 
   /* ------------------------------------------------------------------
-     8. Transitions de page
+     8. Navigation instantanée
+     Le voile de transition a été retiré : le clic navigue immédiatement et le
+     navigateur enchaîne les pages par un fondu natif (View Transitions, CSS).
+     Les pages internes sont préchargées au survol des liens : sur les navigateurs
+     qui le permettent, elles sont même pré-rendues (règles de spéculation), sinon
+     on se contente d'un prefetch.
   ------------------------------------------------------------------ */
-  if (!reduced) {
-    document.addEventListener('click', e => {
-      const a = e.target.closest('a[href]');
-      if (!a) return;
+  (() => {
+    const canSpeculate = 'supports' in HTMLScriptElement && HTMLScriptElement.supports('speculationrules');
+    if (canSpeculate) return; // les règles de spéculation de la page s'en chargent
+    const done = new Set();
+    const prefetch = a => {
       const href = a.getAttribute('href');
-      if (!href || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:') || a.target === '_blank' || a.hasAttribute('download')) return;
-      if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+      if (!href || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:') || a.target === '_blank') return;
       const url = new URL(a.href, location.href);
-      if (url.origin !== location.origin) return;
-      if (url.pathname === location.pathname && url.hash) return;
-      e.preventDefault();
-      document.body.classList.add('is-leaving');
-      setTimeout(() => { location.href = a.href; }, 520);
-    });
-    addEventListener('pageshow', e => { if (e.persisted) document.body.classList.remove('is-leaving'); });
-  }
+      if (url.origin !== location.origin || url.pathname === location.pathname || done.has(url.href)) return;
+      done.add(url.href);
+      const l = document.createElement('link'); l.rel = 'prefetch'; l.href = url.href; l.as = 'document';
+      document.head.appendChild(l);
+    };
+    document.addEventListener('mouseover', e => { const a = e.target.closest('a[href]'); if (a) prefetch(a); }, { passive: true });
+    document.addEventListener('touchstart', e => { const a = e.target.closest('a[href]'); if (a) prefetch(a); }, { passive: true });
+  })();
 
   /* ------------------------------------------------------------------
      8bis. Chargement anticipé des images
