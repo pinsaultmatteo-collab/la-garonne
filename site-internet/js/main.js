@@ -413,7 +413,7 @@
     filters.forEach(btn => btn.addEventListener('click', () => {
       filters.forEach(b => b.classList.toggle('is-active', b === btn));
       const f = btn.dataset.filter;
-      $$('.gallery .work').forEach(w => {
+      $$('.gallery .work, .posts .post').forEach(w => {
         const show = f === 'all' || (w.dataset.cat || '').split(' ').includes(f);
         w.classList.toggle('is-hidden', !show);
       });
@@ -483,6 +483,24 @@
         setTimeout(() => { target.scrollIntoView({ behavior: reduced ? 'auto' : 'smooth', block: 'center' }); target.classList.add('is-target'); }, 500);
       }
     }
+  }
+
+  // Article : barre de lecture et sommaire actif
+  const art = $('.article');
+  if (art) {
+    const bar = $('.readbar');
+    const tocLinks = $$('.toc a');
+    const heads = $$('.article h2');
+    const onRead = () => {
+      const r = art.getBoundingClientRect();
+      const total = r.height - innerHeight * 0.6;
+      const p = clamp((innerHeight * 0.4 - r.top) / Math.max(1, total), 0, 1);
+      if (bar) bar.style.setProperty('--read', p.toFixed(3));
+      let current = null;
+      heads.forEach(h => { if (h.getBoundingClientRect().top < innerHeight * 0.35) current = h.id; });
+      tocLinks.forEach(a => a.classList.toggle('is-active', current && a.getAttribute('href') === '#' + current));
+    };
+    addEventListener('scroll', onRead, { passive: true }); onRead();
   }
 
   // Formulaire de contact

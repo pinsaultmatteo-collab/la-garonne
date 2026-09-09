@@ -81,28 +81,47 @@ def cover_pic(name, alt, sizes="100vw", loading="lazy", dims=True):
     webp = ", ".join(f"{base}-{x}.webp {x}w" for x in ws); jpg = ", ".join(f"{base}-{x}.jpg {x}w" for x in ws)
     return (f'<picture><source type="image/webp" srcset="{webp}" sizes="{sizes}"><img src="{base}-{ws[-1]}.jpg" srcset="{jpg}" sizes="{sizes}" alt="{H.escape(alt, quote=True)}" loading="{loading}" width="{w}" height="{h}"></picture>', f"{SITE}{base}-{ws[-1]}.jpg")
 
-def card(a, big=False, tag="h3"):
-    pic, _ = cover_pic(a["cover"], a["title"], "(max-width: 960px) 100vw, 60vw" if big else "(max-width: 960px) 100vw, 33vw")
-    cat_href, _ = CATEGORIES[a["category"]]
-    return (f'<article class="post{" post--big" if big else ""}" data-reveal><a class="post__media" href="blog/{a["slug"]}.html" data-cursor="Lire">{pic}</a>'
-            f'<div class="post__body"><p class="post__meta"><span class="mono accent-blue">{H.escape(a["category"])}</span><span class="mono">{date_fr(a["date"])} · {a["minutes"]} min</span></p>'
+def card(a, tag="h3"):
+    pic, _ = cover_pic(a["cover"], a["title"], "(max-width: 960px) 100vw, 33vw")
+    _, catslug = CATEGORIES[a["category"]]
+    return (f'<article class="post" data-cat="{catslug}" data-reveal><a class="post__media" href="blog/{a["slug"]}.html" data-cursor="Lire">{pic}<span class="post__kicker mono">{H.escape(a["category"])}</span></a>'
+            f'<div class="post__body"><p class="post__meta"><span class="mono"><time datetime="{a["date"].isoformat()}">{date_fr(a["date"])}</time></span><span class="mono">{a["minutes"]} min de lecture</span></p>'
             f'<{tag} class="post__title"><a href="blog/{a["slug"]}.html">{H.escape(a["title"])}</a></{tag}><p class="post__excerpt">{H.escape(a["description"])}</p>'
             f'<a class="link-arrow" href="blog/{a["slug"]}.html"><span>Lire l\'article</span>{B.LARROW}</a></div></article>')
+
+def featured(a):
+    pic, _ = cover_pic(a["cover"], a["title"], "100vw", loading="eager")
+    return (f'<a class="feature-post" href="blog/{a["slug"]}.html" data-reveal="scale" data-cursor="Lire">{pic}<div class="feature-post__body">'
+            f'<span class="mono feature-post__label">À la une · {H.escape(a["category"])}</span><h2 class="feature-post__title">{H.escape(a["title"])}</h2>'
+            f'<p>{H.escape(a["description"])}</p><span class="mono feature-post__meta">{date_fr(a["date"])} · {a["minutes"]} min de lecture</span>'
+            f'<span class="btn btn--light">Lire l\'article {B.ARROW}</span></div></a>')
+
+def enrich_body(html):
+    """FAQ en accordéon, encadré final « En résumé »."""
+    def faq_block(m):
+        head, inner = m.group(1), m.group(2)
+        inner = re.sub(r'<h3[^>]*>(.*?)</h3>\s*((?:(?!<h3)[\s\S])*?)(?=<h3|\Z)',
+                       lambda q: f'<details class="faq"><summary>{q.group(1)}</summary><div class="faq__a">{q.group(2).strip()}</div></details>', inner)
+        return head + inner
+    html = re.sub(r'(<h2 id="questions-frequentes">.*?</h2>)([\s\S]*?)(?=<h2 |\Z)', faq_block, html, count=1)
+    html = re.sub(r'(<h2 id="en-resume">[\s\S]*)$', r'<div class="article__summary">\1</div>', html, count=1)
+    return html
 
 def article_page(a, all_articles):
     body_html, toc = render_md(a["body_md"])
     faq = faq_from_md(a["body_md"])
     cat_href, _ = CATEGORIES[a["category"]]
     pic, img_url = cover_pic(a["cover"], a["title"], "100vw", loading="eager")
+    body_html = enrich_body(body_html)
     related = [x for x in all_articles if x["slug"] != a["slug"] and x["category"] == a["category"]]
     related += [x for x in all_articles if x["slug"] != a["slug"] and x not in related]
     related = related[:3]
     toc_html = "".join(f'<li><a href="#{i}">{H.escape(n)}</a></li>' for i, n in toc)
     tags_html = "".join(f'<span class="chip"><i></i>{H.escape(t)}</span>' for t in a["tags"])
-    body = f'''<section class="hero-page hero-page--article">{B.RINGS}<div class="container"><nav class="crumbs" aria-label="Fil d'Ariane"><a href="index.html">Accueil</a> <span>/</span> <a href="blog/index.html">Blog</a> <span>/</span> {H.escape(a["category"])}</nav>
+    body = f'''<div class="readbar" aria-hidden="true"><i></i></div>
+<section class="hero-page hero-page--article"><div class="hero-page__bg">{pic}</div>{B.RINGS}<div class="container"><nav class="crumbs" aria-label="Fil d'Ariane"><a href="index.html">Accueil</a> <span>/</span> <a href="blog/index.html">Blog</a> <span>/</span> {H.escape(a["category"])}</nav>
 <p class="eyebrow eyebrow--light" style="margin-top:28px" data-reveal>{H.escape(a["category"])}</p><h1 class="h1 article__title" data-split>{H.escape(a["title"])}</h1><p class="lead" data-reveal>{H.escape(a["description"])}</p>
 <div class="hero-page__meta" data-reveal><span class="strip-item">Publié le <b><time datetime="{a["date"].isoformat()}">{date_fr(a["date"])}</time></b></span><span class="strip-item">Lecture <b>{a["minutes"]} min</b></span><span class="strip-item">Par <b>{AUTEUR}</b></span></div></div></section>
-<div class="band band--article">{pic}</div>
 <section class="section"><div class="container article-grid">
 <article class="article prose" itemscope itemtype="https://schema.org/BlogPosting">{body_html}
 <footer class="article__foot"><p class="mono" style="color:var(--steel-text)">Mots-clés</p><div class="chips">{tags_html}</div><div class="article__share"><span class="mono" style="color:var(--steel-text)">Partager</span><a class="btn btn--ghost btn--sm" href="https://www.linkedin.com/sharing/share-offsite/?url={SITE}blog/{a["slug"]}.html" target="_blank" rel="noopener">LinkedIn</a><a class="btn btn--ghost btn--sm" href="mailto:?subject={H.escape(a["title"], quote=True)}&amp;body={SITE}blog/{a["slug"]}.html">Email</a></div></footer></article>
@@ -140,13 +159,20 @@ def index_pages(articles):
     for p in range(1, pages + 1):
         chunk = articles[(p-1)*PAR_PAGE:p*PAR_PAGE]
         fname = "index.html" if p == 1 else f"page-{p}.html"
-        cards = "".join(card(a, big=(p == 1 and i == 0), tag="h2") for i, a in enumerate(chunk))
+        cats = []
+        for a in articles:
+            if a["category"] not in cats: cats.append(a["category"])
+        filters = '<div class="filters"><button class="is-active" data-filter="all">Tous</button>' + "".join(f'<button data-filter="{CATEGORIES[cat][1]}">{H.escape(cat)}</button>' for cat in cats) + '</div>'
+        toolbar = f'<div class="blog-toolbar" data-reveal>{filters}<a class="blog-toolbar__rss" href="blog/feed.xml"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="5" cy="19" r="2"/><path d="M3 10a11 11 0 0 1 11 11h3A14 14 0 0 0 3 7zm0-6a17 17 0 0 1 17 17h3A20 20 0 0 0 3 1z"/></svg>Flux RSS</a></div>'
+        top = featured(chunk[0]) if (p == 1 and chunk) else ""
+        rest = chunk[1:] if p == 1 else chunk
+        cards = "".join(card(a, tag="h2") for a in rest)
         pager = ""
         if pages > 1:
             links = "".join(f'<a class="pager__link{" is-active" if q == p else ""}" href="blog/{"index.html" if q == 1 else f"page-{q}.html"}">{q}</a>' for q in range(1, pages + 1))
             pager = f'<nav class="pager" aria-label="Pagination">{links}</nav>'
         body = f'''{B.hero(["Blog"], "Blog", "Le blog des réseaux d'eau.", "Conseils, méthodes et retours de terrain sur l'assainissement, l'eau potable, la réhabilitation sans tranchée et les chantiers complexes, par les équipes de SA LA GARONNE. Un nouvel article chaque mardi.", [("Articles", str(n)), ("Rythme", "Un article par semaine"), ("Flux", '<a href="blog/feed.xml">RSS</a>')], bg="chantier-hydrocurage-equipe", bgalt="Équipe SA LA GARONNE en intervention")}
-<section class="section"><div class="container"><div class="posts posts--index">{cards}</div>{pager}</div></section>
+<section class="section"><div class="container">{top}{toolbar}<div class="posts posts--index">{cards}</div>{pager}</div></section>
 {B.CTA}'''
         title = "Blog — conseils et méthodes réseaux d'eau | SA LA GARONNE" if p == 1 else f"Blog — page {p} | SA LA GARONNE"
         B.page(fname, title, "Le blog de SA LA GARONNE : assainissement, eau potable, réhabilitation sans tranchée, chantiers complexes. Un article par semaine, par nos équipes de Toulouse.",

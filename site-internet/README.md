@@ -26,7 +26,8 @@ bash outils-site/publier.sh
 
 Ce script enchaîne, dans l'ordre : `build.py` (pages internes françaises depuis `index.html`),
 `translate.py` (anglais et chinois), `blog.py` (articles, index, RSS, copies Markdown), `lqip.py` (vignettes
-floutées), `sitemap.py` et `llms.py` (fichiers pour les LLM, `robots.txt`).
+floutées), `sitemap.py`, `llms.py` (fichiers pour les LLM, `robots.txt`) et `version.py`, qui ajoute une
+empreinte `?v=` aux liens vers `main.css` et `main.js` : chaque publication invalide le cache des navigateurs.
 
 `outils-site/i18n.py` contient le dictionnaire de traduction (668 entrées, français → anglais → chinois).
 Toute phrase française absente du dictionnaire est signalée en fin d'exécution de `translate.py` : le site

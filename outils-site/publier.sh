@@ -8,4 +8,5 @@ python3 outils-site/blog.py                    # articles, index, RSS, copies Ma
 python3 outils-site/lqip.py       >/dev/null   # vignettes floutées
 python3 outils-site/sitemap.py                 # plan du site
 python3 outils-site/llms.py                    # llms.txt, llms-full.txt, md/, robots.txt
+python3 outils-site/version.py                 # empreinte anti-cache sur main.css et main.js
 echo "site régénéré"
