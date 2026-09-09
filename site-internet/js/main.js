@@ -419,6 +419,71 @@
     }));
   }
 
+  // Galerie plein écran des réalisations
+  const lb = $('.lightbox');
+  if (lb) {
+    const slide = $('.lightbox__slide', lb), kick = $('.lightbox__kicker', lb), ttl = $('.lightbox__title', lb),
+          dsc = $('.lightbox__desc', lb), cnt = $('.lightbox__counter', lb),
+          prev = $('.lightbox__prev', lb), next = $('.lightbox__next', lb), closeBtn = $('.lightbox__close', lb);
+    let items = [], idx = 0, opener = null;
+    const render = dir => {
+      slide.innerHTML = '';
+      const im = items[idx].cloneNode(true);
+      im.loading = 'eager'; im.decoding = 'async';
+      im.className = 'lightbox__img' + (dir ? ' from-' + dir : '');
+      slide.appendChild(im);
+      cnt.textContent = (idx + 1) + ' / ' + items.length;
+      [idx + 1, idx - 1].forEach(i => { if (items[i]) { const p = new Image(); p.src = items[i].src; } });
+      prev.hidden = next.hidden = items.length < 2;
+    };
+    const open = card => {
+      const t = $('template.work__photos', card);
+      if (!t) return;
+      items = Array.from(t.content.querySelectorAll('img'));
+      if (!items.length) return;
+      idx = 0; opener = card;
+      kick.textContent = ($('.work__cap .mono', card) || {}).textContent || '';
+      ttl.textContent = card.getAttribute('aria-label') || '';
+      dsc.textContent = card.dataset.desc || '';
+      lb.hidden = false;
+      document.body.classList.add('is-locked');
+      requestAnimationFrame(() => lb.classList.add('is-open'));
+      render();
+      closeBtn.focus();
+    };
+    const close = () => {
+      lb.classList.remove('is-open');
+      document.body.classList.remove('is-locked');
+      setTimeout(() => { lb.hidden = true; slide.innerHTML = ''; }, 350);
+      if (opener) opener.focus({ preventScroll: true });
+    };
+    const step = d => { if (items.length < 2) return; idx = (idx + d + items.length) % items.length; render(d > 0 ? 'right' : 'left'); };
+    $$('.project').forEach(card => {
+      card.addEventListener('click', e => { e.preventDefault(); open(card); });
+      card.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(card); } });
+    });
+    closeBtn.addEventListener('click', close);
+    $('.lightbox__backdrop', lb).addEventListener('click', close);
+    prev.addEventListener('click', () => step(-1));
+    next.addEventListener('click', () => step(1));
+    document.addEventListener('keydown', e => {
+      if (lb.hidden) return;
+      if (e.key === 'Escape') close();
+      else if (e.key === 'ArrowRight') step(1);
+      else if (e.key === 'ArrowLeft') step(-1);
+    });
+    let tx = null;
+    lb.addEventListener('touchstart', e => { tx = e.touches[0].clientX; }, { passive: true });
+    lb.addEventListener('touchend', e => { if (tx === null) return; const dx = e.changedTouches[0].clientX - tx; if (Math.abs(dx) > 50) step(dx < 0 ? 1 : -1); tx = null; }, { passive: true });
+    // Arrivée depuis l'accueil avec une ancre : on amène la carte au centre et on la signale
+    if (location.hash) {
+      const target = document.getElementById(location.hash.slice(1));
+      if (target && target.classList.contains('project')) {
+        setTimeout(() => { target.scrollIntoView({ behavior: reduced ? 'auto' : 'smooth', block: 'center' }); target.classList.add('is-target'); }, 500);
+      }
+    }
+  }
+
   // Formulaire de contact
   const form = $('form[data-form]');
   if (form) {

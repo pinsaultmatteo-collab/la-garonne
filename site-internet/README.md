@@ -86,6 +86,21 @@ uniquement la variable `--font-display` en tête de `css/main.css` et adapter le
 - Fiche contexte (PDF) et charte graphique V2.0 (`Design.pdf`).
 - « Introduction au DA - 2026.docx » (dossier de candidature transmis par le client) : trois générations Pascual (1956 Eloy, 1987 Michel, 2017 Nicolas), 35 salariés en 4 équipes + atelier + bureau d'études (géomètre-dessinateur et chargé d'études), répartition d'activité (assainissement 75 %, eau potable 15 %, sans tranchée 10 %) — le montant de CA cité dans le document n'est pas repris sur le site à la demande de Mattéo, identifications FNTP 5118 / 5141 / 5161 / 5221, labels Canalisateur, RSE TP, Engagé RSE AFNOR (2023), Qualibat, NF, Amiante SS3, robot RIC breveté en 2018 (4K, 360°, + de 120 km inspectés), démarche RSE et objectifs 2026. Les photos et logos de ce document sont intégrés dans `assets/img/` et `assets/labels/`.
 
+## Réalisations (galerie client)
+
+Les chantiers documentés par le client sont décrits dans `outils-site/realisations.json` : un objet par
+chantier (identifiant, catégories, titre, titre court, accroche, description, focale de la couverture,
+liste des photos avec leurs dimensions). Les photos web sont dans `assets/img/realisations/`
+(`<identifiant>-<numéro>-1400.webp` pour la galerie plein écran, plus `-800` / `-1200` en WebP + JPEG
+pour la couverture). Les photos sources restent dans `contenu-visuel/photos-realisations/`.
+
+- La page réalisations est générée depuis ce manifeste par `pages.py` (`project_card`), avec la galerie
+  plein écran (`.lightbox` : clavier, balayage tactile, compteur, descriptif).
+- Le bloc 6 de l'accueil affiche six chantiers ; chaque carte renvoie vers `realisations.html#<identifiant>`.
+- Pour ajouter un chantier : déposer les photos, ajouter l'entrée dans le manifeste, générer les variantes
+  (script d'origine dans l'historique git : redimensionnement 1400 / 800 / 1200, WebP q74-76, JPEG q80),
+  ajouter les cinq textes dans `i18n.py`, puis relancer la chaîne `build.py` → `translate.py` → `lqip.py`.
+
 ## Chargement des images
 
 Trois mécanismes se combinent pour qu'aucun bloc n'apparaisse vide :

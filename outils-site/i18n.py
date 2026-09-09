@@ -1118,3 +1118,94 @@ LANGS = {
  "en": {"name": "English", "locale": "en_GB", "html": "en", "dir": "en/", "hreflang": "en"},
  "zh": {"name": "中文", "locale": "zh_CN", "html": "zh-Hans", "dir": "zh/", "hreflang": "zh-Hans"},
 }
+
+# ---------------------------------------------------------------- Réalisations du client (septembre 2026)
+add({
+"Génie civil": ("Civil engineering", "土建工程"),
+"photos": ("photos", "张照片"),
+"photo": ("photo", "张照片"),
+"Galerie photos": ("Photo gallery", "图片库"),
+"Fermer": ("Close", "关闭"),
+"Photo précédente": ("Previous photo", "上一张"),
+"Photo suivante": ("Next photo", "下一张"),
+"Voir les photos": ("View photos", "查看照片"),
+"Nos chantiers récents, photographiés par nos équipes : assainissement, eau potable, réhabilitation sans tranchée, génie civil et interventions complexes à Toulouse et dans son agglomération.":
+  ("Our recent worksites, photographed by our crews: sewerage, drinking water, trenchless rehabilitation, civil engineering and complex operations in Toulouse and its metropolitan area.",
+   "我们的近期工程，由施工班组实地拍摄：排水管网、饮用水、非开挖修复、土建工程以及图卢兹及周边地区的复杂作业。"),
+"Cliquez sur un chantier pour parcourir toutes ses photos.": ("Click a worksite to browse all its photos.", "点击任一工程即可浏览全部照片。"),
+"Parc d'engins SA LA GARONNE sur un chantier de terrassement": ("SA LA GARONNE plant fleet on an earthworks site", "SA LA GARONNE 土方工地上的机械设备"),
+"Chantiers documentés": ("Documented worksites", "已记录工程"),
+"Photos": ("Photos", "照片"),
+
+# 1. Génie civil
+"Génie civil · ouvrage hydraulique": ("Civil engineering · hydraulic structure", "土建工程 · 水工构筑物"),
+"Création d'ouvrages de génie civil pour travaux hydrauliques": ("Civil engineering structures for hydraulic works", "水利工程土建构筑物建设"),
+"Ouvrage hydraulique en béton armé": ("Reinforced concrete hydraulic structure", "钢筋混凝土水工构筑物"),
+"Chambre en béton armé coffrée, ferraillée et coulée sur place pour un ouvrage hydraulique.": ("A reinforced concrete chamber formed, reinforced and cast in place for a hydraulic structure.", "现场支模、绑扎钢筋并浇筑的钢筋混凝土井室，用于水工构筑物。"),
+"Construction d'une chambre en béton armé pour un ouvrage hydraulique : coffrage, ferraillage, coulage et mise en place des équipements. Le génie civil au service des réseaux d'eau.":
+  ("Construction of a reinforced concrete chamber for a hydraulic structure: formwork, reinforcement, pouring and installation of equipment. Civil engineering in the service of water networks.",
+   "为水工构筑物建造钢筋混凝土井室：支模、绑扎钢筋、浇筑及设备安装。以土建能力服务给排水管网。"),
+# 2. François-Verdier
+"Travaux complexes · Toulouse": ("Complex works · Toulouse", "复杂工程 · 图卢兹"),
+"Réseau en tranchée à forte profondeur, François-Verdier": ("Deep trench network at François-Verdier", "François-Verdier 深沟槽管网工程"),
+"Tranchée profonde à François-Verdier": ("Deep trench at François-Verdier", "François-Verdier 深沟槽施工"),
+"Blindage lourd entre le monument aux morts et la cathédrale Saint-Étienne, circulation maintenue.": ("Heavy shoring between the war memorial and Saint-Étienne cathedral, with traffic maintained.", "在阵亡将士纪念碑与圣艾蒂安大教堂之间实施重型支护，交通保持通畅。"),
+"Pose d'un réseau en tranchée blindée à forte profondeur au cœur de Toulouse, entre le monument aux morts et la cathédrale Saint-Étienne : logistique lourde, blindage et circulation maintenue.":
+  ("Laying a network in a deep shored trench in the heart of Toulouse, between the war memorial and Saint-Étienne cathedral: heavy logistics, shoring and traffic maintained.",
+   "在图卢兹市中心、阵亡将士纪念碑与圣艾蒂安大教堂之间，以深支护沟槽敷设管网：重型物流组织、沟槽支护，交通保持通畅。"),
+# 3. Sans tranchée
+"Sans tranchée · centre historique": ("Trenchless · historic centre", "非开挖 · 历史城区"),
+"Réparation d'un réseau d'assainissement par réhabilitation sans tranchée": ("Sewer network repair by trenchless rehabilitation", "非开挖修复排水管网"),
+"Réhabilitation sans tranchée en centre-ville": ("Trenchless rehabilitation in the city centre", "市中心非开挖修复"),
+"Gaine polymérisée aux UV depuis les regards existants, sans ouvrir la rue.": ("A UV-cured liner installed from the existing manholes, without opening the street.", "从既有检查井植入紫外光固化内衬，无需开挖街道。"),
+"Réhabilitation d'un collecteur en milieu urbain dense depuis les regards existants : gaine imprégnée de résine polymérisée aux UV, unité mobile stationnée dans une rue étroite du centre historique.":
+  ("Rehabilitation of a sewer main in a dense urban setting from the existing manholes: a resin-impregnated liner cured with UV light, with the mobile unit parked in a narrow street of the historic centre.",
+   "在密集城区从既有检查井修复排水干管：树脂浸渍软管经紫外光固化，移动作业车停驻于历史城区的狭窄街道。"),
+# 4. Canal du Midi
+"Assainissement · sous le canal du Midi": ("Sewerage · beneath the Canal du Midi", "排水管网 · 米迪运河下方"),
+"Réparation d'un égout semi-visitable sous le canal du Midi": ("Repair of a semi man-entry sewer beneath the Canal du Midi", "米迪运河下方半可通行排水管修复"),
+"Égout semi-visitable sous le canal du Midi": ("Semi man-entry sewer beneath the Canal du Midi", "米迪运河下方的半可通行排水管"),
+"Tronçons préfabriqués insérés depuis une fouille blindée, écoulement maintenu.": ("Prefabricated sections inserted from a shored excavation, with flow maintained.", "从支护基坑插入预制管段，保持排水畅通。"),
+"Réhabilitation d'un égout semi-visitable passant sous le canal du Midi : insertion de tronçons de conduite préfabriqués depuis une fouille blindée, sans interruption de l'écoulement.":
+  ("Rehabilitation of a semi man-entry sewer running beneath the Canal du Midi: prefabricated pipe sections inserted from a shored excavation, without interrupting the flow.",
+   "修复穿越米迪运河下方的半可通行排水管：从支护基坑插入预制管段，全程不中断排水。"),
+# 5. Gabriel-Koenigs
+"Assainissement · réseau visitable": ("Sewerage · man-entry network", "排水管网 · 可通行管道"),
+"Réparation d'un égout visitable sous le boulevard Gabriel-Koenigs": ("Repair of a man-entry sewer beneath Boulevard Gabriel-Koenigs", "Gabriel-Koenigs 大道下方可通行排水管修复"),
+"Égout visitable, boulevard Gabriel-Koenigs": ("Man-entry sewer, Boulevard Gabriel-Koenigs", "Gabriel-Koenigs 大道可通行排水管"),
+"Conduite de dérivation installée à l'intérieur du collecteur pour réparer sans interrompre le flux.": ("A bypass pipe installed inside the sewer to carry out repairs without interrupting the flow.", "在干管内部安装导流管道，修复期间不中断水流。"),
+"Intervention à l'intérieur d'un collecteur visitable sous un boulevard toulousain : mise en place d'une conduite de dérivation pour maintenir l'écoulement pendant la réparation.":
+  ("Work inside a man-entry sewer beneath a Toulouse boulevard: a bypass pipe installed to maintain the flow during the repair.",
+   "在图卢兹一条大道下方的可通行排水干管内作业：安装导流管道，修复期间保持排水畅通。"),
+# 6. Victor-Hugo
+"Réparation d'égouts visitables sous le marché Victor-Hugo": ("Repair of man-entry sewers beneath Victor-Hugo market", "Victor-Hugo 市场下方可通行排水管修复"),
+"Égouts visitables sous le marché Victor-Hugo": ("Man-entry sewers beneath Victor-Hugo market", "Victor-Hugo 市场下方的可通行排水管"),
+"Réparation des galeries en briques du réseau historique, marché en activité.": ("Repair of the historic network's brick galleries, with the market open for business.", "修复历史管网的砖砌廊道，市场照常营业。"),
+"Travaux dans les galeries en briques du réseau historique sous le marché Victor-Hugo : réparation de la cunette et des parois, en maintenant l'écoulement et l'activité du marché.":
+  ("Work in the brick galleries of the historic network beneath Victor-Hugo market: repair of the invert channel and walls, while maintaining the flow and the market's activity.",
+   "在 Victor-Hugo 市场下方历史管网的砖砌廊道中施工：修复流槽与侧壁，同时保持排水畅通与市场正常营业。"),
+# 7. Cugnaux
+"Grande profondeur · Cugnaux": ("Deep excavation · Cugnaux", "深基坑 · Cugnaux"),
+"Travaux à très forte profondeur, plus de 7 mètres, à Cugnaux": ("Very deep works, over 7 metres, at Cugnaux", "Cugnaux 超 7 米深基坑工程"),
+"Plus de 7 mètres de profondeur à Cugnaux": ("Over 7 metres deep at Cugnaux", "Cugnaux 超过 7 米的开挖深度"),
+"Caissons de blindage superposés, canalisation et regards de grand diamètre en fond de fouille.": ("Stacked trench boxes, with large-diameter pipe and manholes at the bottom of the excavation.", "叠置沟槽支护箱，基坑底部敷设大口径管道与检查井。"),
+"Tranchée de plus de sept mètres de profondeur réalisée en caissons de blindage superposés, pose de canalisation et de regards de grand diamètre en fond de fouille.":
+  ("A trench over seven metres deep built with stacked trench boxes, with large-diameter pipe and manholes laid at the bottom of the excavation.",
+   "采用叠置沟槽支护箱开挖超过七米深的沟槽，在基坑底部敷设大口径管道与检查井。"),
+# 8. Rue de Metz
+"Assainissement · hypercentre": ("Sewerage · city centre", "排水管网 · 核心城区"),
+"Réseaux pluvial et assainissement en centre-ville, rue de Metz": ("Stormwater and sewer networks in the city centre, Rue de Metz", "市中心 Rue de Metz 雨水与污水管网工程"),
+"Réseaux pluvial et assainissement rue de Metz": ("Stormwater and sewer networks, Rue de Metz", "Rue de Metz 雨水与污水管网"),
+"Collecteurs et regards posés en tranchée blindée, en pleine rue commerçante.": ("Sewer mains and manholes laid in a shored trench, in the middle of a shopping street.", "在商业街中央的支护沟槽内敷设排水干管与检查井。"),
+"Renouvellement d'un réseau d'eaux pluviales et d'un réseau d'assainissement rue de Metz, à Toulouse : tranchée blindée en pleine rue commerçante, pose de collecteurs et de regards, remblaiement et réfection.":
+  ("Renewal of a stormwater network and a sewer network on Rue de Metz, Toulouse: a shored trench in the middle of a shopping street, laying of sewer mains and manholes, backfilling and reinstatement.",
+   "更新图卢兹 Rue de Metz 的雨水管网与污水管网：在商业街中央开挖支护沟槽，敷设排水干管与检查井，回填并恢复路面。"),
+# 9. Saint-Michel
+"Réseau pluvial · Toulouse": ("Stormwater network · Toulouse", "雨水管网 · 图卢兹"),
+"Pose d'un réseau pluvial, Grande-Rue Saint-Michel": ("Laying a stormwater network, Grande-Rue Saint-Michel", "Grande-Rue Saint-Michel 雨水管网敷设"),
+"Réseau pluvial Grande-Rue Saint-Michel": ("Stormwater network, Grande-Rue Saint-Michel", "Grande-Rue Saint-Michel 雨水管网"),
+"Palplanches foncées au vibrofonceur et travaux de nuit sur un axe très fréquenté.": ("Sheet piles driven with a vibratory hammer and night work on a busy thoroughfare.", "以振动锤打入钢板桩，并在繁忙干道上夜间施工。"),
+"Pose d'un réseau d'eaux pluviales en milieu urbain : fonçage de palplanches au vibrofonceur, tranchée blindée et travaux de nuit pour limiter la gêne sur cet axe très fréquenté.":
+  ("Laying a stormwater network in an urban setting: sheet piles driven with a vibratory hammer, a shored trench and night work to limit disruption on this busy thoroughfare.",
+   "在城区敷设雨水管网：以振动锤打入钢板桩、开挖支护沟槽并夜间施工，以减少对这条繁忙干道的干扰。"),
+})

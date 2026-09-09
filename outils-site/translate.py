@@ -18,7 +18,7 @@ T, SPECIAL, LANGS = i18n.T, i18n.SPECIAL, i18n.LANGS
 PAGES = ["index.html", "assainissement.html", "eau-potable.html", "rehabilitation-sans-tranchee.html",
          "travaux-complexes.html", "entreprise.html", "realisations.html", "contact.html",
          "mentions-legales.html", "404.html"]
-ATTRS = ("alt", "placeholder", "aria-label", "title", "data-cursor")
+ATTRS = ("alt", "placeholder", "aria-label", "title", "data-cursor", "data-desc")
 missing = {}
 
 def tr(text, lang, page):

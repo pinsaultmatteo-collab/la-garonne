@@ -1,0 +1,810 @@
+[
+ {
+  "slug": "ouvrage-genie-civil-hydraulique",
+  "cats": "genie-civil assainissement",
+  "focus": "50% 70%",
+  "span": 4,
+  "mono": "Génie civil · ouvrage hydraulique",
+  "title": "Création d'ouvrages de génie civil pour travaux hydrauliques",
+  "desc": "Construction d'une chambre en béton armé pour un ouvrage hydraulique : coffrage, ferraillage, coulage et mise en place des équipements. Le génie civil au service des réseaux d'eau.",
+  "photos": [
+   {
+    "w": 1150,
+    "h": 1400,
+    "sizes": {
+     "1400": [
+      1150,
+      1400
+     ],
+     "800": [
+      657,
+      800
+     ],
+     "1200": [
+      986,
+      1200
+     ]
+    }
+   },
+   {
+    "w": 1050,
+    "h": 1400,
+    "sizes": {
+     "1400": [
+      1050,
+      1400
+     ]
+    }
+   },
+   {
+    "w": 1050,
+    "h": 1400,
+    "sizes": {
+     "1400": [
+      1050,
+      1400
+     ]
+    }
+   },
+   {
+    "w": 1050,
+    "h": 1400,
+    "sizes": {
+     "1400": [
+      1050,
+      1400
+     ]
+    }
+   },
+   {
+    "w": 1050,
+    "h": 1400,
+    "sizes": {
+     "1400": [
+      1050,
+      1400
+     ]
+    }
+   },
+   {
+    "w": 1050,
+    "h": 1400,
+    "sizes": {
+     "1400": [
+      1050,
+      1400
+     ]
+    }
+   }
+  ],
+  "count": 6,
+  "short": "Ouvrage hydraulique en béton armé",
+  "blurb": "Chambre en béton armé coffrée, ferraillée et coulée sur place pour un ouvrage hydraulique."
+ },
+ {
+  "slug": "francois-verdier-tranchee-profonde",
+  "cats": "complexes assainissement",
+  "focus": "50% 50%",
+  "span": 8,
+  "mono": "Travaux complexes · Toulouse",
+  "title": "Réseau en tranchée à forte profondeur, François-Verdier",
+  "desc": "Pose d'un réseau en tranchée blindée à forte profondeur au cœur de Toulouse, entre le monument aux morts et la cathédrale Saint-Étienne : logistique lourde, blindage et circulation maintenue.",
+  "photos": [
+   {
+    "w": 1400,
+    "h": 1050,
+    "sizes": {
+     "1400": [
+      1400,
+      1050
+     ],
+     "800": [
+      800,
+      600
+     ],
+     "1200": [
+      1200,
+      900
+     ]
+    }
+   },
+   {
+    "w": 1050,
+    "h": 1400,
+    "sizes": {
+     "1400": [
+      1050,
+      1400
+     ]
+    }
+   },
+   {
+    "w": 1050,
+    "h": 1400,
+    "sizes": {
+     "1400": [
+      1050,
+      1400
+     ]
+    }
+   },
+   {
+    "w": 1400,
+    "h": 1050,
+    "sizes": {
+     "1400": [
+      1400,
+      1050
+     ]
+    }
+   },
+   {
+    "w": 1050,
+    "h": 1400,
+    "sizes": {
+     "1400": [
+      1050,
+      1400
+     ]
+    }
+   },
+   {
+    "w": 768,
+    "h": 1024,
+    "sizes": {
+     "1400": [
+      768,
+      1024
+     ]
+    }
+   },
+   {
+    "w": 768,
+    "h": 1024,
+    "sizes": {
+     "1400": [
+      768,
+      1024
+     ]
+    }
+   },
+   {
+    "w": 677,
+    "h": 508,
+    "sizes": {
+     "1400": [
+      677,
+      508
+     ]
+    }
+   },
+   {
+    "w": 508,
+    "h": 677,
+    "sizes": {
+     "1400": [
+      508,
+      677
+     ]
+    }
+   },
+   {
+    "w": 677,
+    "h": 508,
+    "sizes": {
+     "1400": [
+      677,
+      508
+     ]
+    }
+   }
+  ],
+  "count": 10,
+  "short": "Tranchée profonde à François-Verdier",
+  "blurb": "Blindage lourd entre le monument aux morts et la cathédrale Saint-Étienne, circulation maintenue."
+ },
+ {
+  "slug": "rehabilitation-sans-tranchee-centre-ville",
+  "cats": "sans-tranchee assainissement",
+  "focus": "50% 50%",
+  "span": 4,
+  "mono": "Sans tranchée · centre historique",
+  "title": "Réparation d'un réseau d'assainissement par réhabilitation sans tranchée",
+  "desc": "Réhabilitation d'un collecteur en milieu urbain dense depuis les regards existants : gaine imprégnée de résine polymérisée aux UV, unité mobile stationnée dans une rue étroite du centre historique.",
+  "photos": [
+   {
+    "w": 1050,
+    "h": 1400,
+    "sizes": {
+     "1400": [
+      1050,
+      1400
+     ],
+     "800": [
+      600,
+      800
+     ],
+     "1200": [
+      900,
+      1200
+     ]
+    }
+   },
+   {
+    "w": 1050,
+    "h": 1400,
+    "sizes": {
+     "1400": [
+      1050,
+      1400
+     ]
+    }
+   },
+   {
+    "w": 1050,
+    "h": 1400,
+    "sizes": {
+     "1400": [
+      1050,
+      1400
+     ]
+    }
+   },
+   {
+    "w": 1050,
+    "h": 1400,
+    "sizes": {
+     "1400": [
+      1050,
+      1400
+     ]
+    }
+   },
+   {
+    "w": 1050,
+    "h": 1400,
+    "sizes": {
+     "1400": [
+      1050,
+      1400
+     ]
+    }
+   },
+   {
+    "w": 1050,
+    "h": 1400,
+    "sizes": {
+     "1400": [
+      1050,
+      1400
+     ]
+    }
+   },
+   {
+    "w": 1050,
+    "h": 1400,
+    "sizes": {
+     "1400": [
+      1050,
+      1400
+     ]
+    }
+   },
+   {
+    "w": 1050,
+    "h": 1400,
+    "sizes": {
+     "1400": [
+      1050,
+      1400
+     ]
+    }
+   },
+   {
+    "w": 1050,
+    "h": 1400,
+    "sizes": {
+     "1400": [
+      1050,
+      1400
+     ]
+    }
+   },
+   {
+    "w": 1050,
+    "h": 1400,
+    "sizes": {
+     "1400": [
+      1050,
+      1400
+     ]
+    }
+   },
+   {
+    "w": 1050,
+    "h": 1400,
+    "sizes": {
+     "1400": [
+      1050,
+      1400
+     ]
+    }
+   }
+  ],
+  "count": 11,
+  "short": "Réhabilitation sans tranchée en centre-ville",
+  "blurb": "Gaine polymérisée aux UV depuis les regards existants, sans ouvrir la rue."
+ },
+ {
+  "slug": "egout-semi-visitable-canal-du-midi",
+  "cats": "assainissement complexes",
+  "focus": "50% 50%",
+  "span": 4,
+  "mono": "Assainissement · sous le canal du Midi",
+  "title": "Réparation d'un égout semi-visitable sous le canal du Midi",
+  "desc": "Réhabilitation d'un égout semi-visitable passant sous le canal du Midi : insertion de tronçons de conduite préfabriqués depuis une fouille blindée, sans interruption de l'écoulement.",
+  "photos": [
+   {
+    "w": 1050,
+    "h": 1400,
+    "sizes": {
+     "1400": [
+      1050,
+      1400
+     ],
+     "800": [
+      600,
+      800
+     ],
+     "1200": [
+      900,
+      1200
+     ]
+    }
+   },
+   {
+    "w": 1050,
+    "h": 1400,
+    "sizes": {
+     "1400": [
+      1050,
+      1400
+     ]
+    }
+   },
+   {
+    "w": 1050,
+    "h": 1400,
+    "sizes": {
+     "1400": [
+      1050,
+      1400
+     ]
+    }
+   },
+   {
+    "w": 1050,
+    "h": 1400,
+    "sizes": {
+     "1400": [
+      1050,
+      1400
+     ]
+    }
+   }
+  ],
+  "count": 4,
+  "short": "Égout semi-visitable sous le canal du Midi",
+  "blurb": "Tronçons préfabriqués insérés depuis une fouille blindée, écoulement maintenu."
+ },
+ {
+  "slug": "egout-visitable-gabriel-koenigs",
+  "cats": "assainissement",
+  "focus": "50% 50%",
+  "span": 4,
+  "mono": "Assainissement · réseau visitable",
+  "title": "Réparation d'un égout visitable sous le boulevard Gabriel-Koenigs",
+  "desc": "Intervention à l'intérieur d'un collecteur visitable sous un boulevard toulousain : mise en place d'une conduite de dérivation pour maintenir l'écoulement pendant la réparation.",
+  "photos": [
+   {
+    "w": 1050,
+    "h": 1400,
+    "sizes": {
+     "1400": [
+      1050,
+      1400
+     ],
+     "800": [
+      600,
+      800
+     ],
+     "1200": [
+      900,
+      1200
+     ]
+    }
+   }
+  ],
+  "count": 1,
+  "short": "Égout visitable, boulevard Gabriel-Koenigs",
+  "blurb": "Conduite de dérivation installée à l'intérieur du collecteur pour réparer sans interrompre le flux."
+ },
+ {
+  "slug": "egouts-visitables-marche-victor-hugo",
+  "cats": "assainissement",
+  "focus": "50% 50%",
+  "span": 4,
+  "mono": "Assainissement · réseau visitable",
+  "title": "Réparation d'égouts visitables sous le marché Victor-Hugo",
+  "desc": "Travaux dans les galeries en briques du réseau historique sous le marché Victor-Hugo : réparation de la cunette et des parois, en maintenant l'écoulement et l'activité du marché.",
+  "photos": [
+   {
+    "w": 1400,
+    "h": 1050,
+    "sizes": {
+     "1400": [
+      1400,
+      1050
+     ],
+     "800": [
+      800,
+      600
+     ],
+     "1200": [
+      1200,
+      900
+     ]
+    }
+   },
+   {
+    "w": 1400,
+    "h": 1050,
+    "sizes": {
+     "1400": [
+      1400,
+      1050
+     ]
+    }
+   }
+  ],
+  "count": 2,
+  "short": "Égouts visitables sous le marché Victor-Hugo",
+  "blurb": "Réparation des galeries en briques du réseau historique, marché en activité."
+ },
+ {
+  "slug": "cugnaux-tres-forte-profondeur",
+  "cats": "complexes assainissement",
+  "focus": "50% 65%",
+  "span": 4,
+  "mono": "Grande profondeur · Cugnaux",
+  "title": "Travaux à très forte profondeur, plus de 7 mètres, à Cugnaux",
+  "desc": "Tranchée de plus de sept mètres de profondeur réalisée en caissons de blindage superposés, pose de canalisation et de regards de grand diamètre en fond de fouille.",
+  "photos": [
+   {
+    "w": 1050,
+    "h": 1400,
+    "sizes": {
+     "1400": [
+      1050,
+      1400
+     ],
+     "800": [
+      600,
+      800
+     ],
+     "1200": [
+      900,
+      1200
+     ]
+    }
+   },
+   {
+    "w": 1050,
+    "h": 1400,
+    "sizes": {
+     "1400": [
+      1050,
+      1400
+     ]
+    }
+   },
+   {
+    "w": 1050,
+    "h": 1400,
+    "sizes": {
+     "1400": [
+      1050,
+      1400
+     ]
+    }
+   },
+   {
+    "w": 645,
+    "h": 1400,
+    "sizes": {
+     "1400": [
+      645,
+      1400
+     ]
+    }
+   },
+   {
+    "w": 1050,
+    "h": 1400,
+    "sizes": {
+     "1400": [
+      1050,
+      1400
+     ]
+    }
+   },
+   {
+    "w": 1050,
+    "h": 1400,
+    "sizes": {
+     "1400": [
+      1050,
+      1400
+     ]
+    }
+   },
+   {
+    "w": 1050,
+    "h": 1400,
+    "sizes": {
+     "1400": [
+      1050,
+      1400
+     ]
+    }
+   },
+   {
+    "w": 1050,
+    "h": 1400,
+    "sizes": {
+     "1400": [
+      1050,
+      1400
+     ]
+    }
+   },
+   {
+    "w": 1050,
+    "h": 1400,
+    "sizes": {
+     "1400": [
+      1050,
+      1400
+     ]
+    }
+   }
+  ],
+  "count": 9,
+  "short": "Plus de 7 mètres de profondeur à Cugnaux",
+  "blurb": "Caissons de blindage superposés, canalisation et regards de grand diamètre en fond de fouille."
+ },
+ {
+  "slug": "rue-de-metz-pluvial-assainissement",
+  "cats": "assainissement complexes",
+  "focus": "50% 50%",
+  "span": 8,
+  "mono": "Assainissement · hypercentre",
+  "title": "Réseaux pluvial et assainissement en centre-ville, rue de Metz",
+  "desc": "Renouvellement d'un réseau d'eaux pluviales et d'un réseau d'assainissement rue de Metz, à Toulouse : tranchée blindée en pleine rue commerçante, pose de collecteurs et de regards, remblaiement et réfection.",
+  "photos": [
+   {
+    "w": 1400,
+    "h": 1050,
+    "sizes": {
+     "1400": [
+      1400,
+      1050
+     ],
+     "800": [
+      800,
+      600
+     ],
+     "1200": [
+      1200,
+      900
+     ]
+    }
+   },
+   {
+    "w": 1050,
+    "h": 1400,
+    "sizes": {
+     "1400": [
+      1050,
+      1400
+     ]
+    }
+   },
+   {
+    "w": 1050,
+    "h": 1400,
+    "sizes": {
+     "1400": [
+      1050,
+      1400
+     ]
+    }
+   },
+   {
+    "w": 1400,
+    "h": 1050,
+    "sizes": {
+     "1400": [
+      1400,
+      1050
+     ]
+    }
+   },
+   {
+    "w": 1050,
+    "h": 1400,
+    "sizes": {
+     "1400": [
+      1050,
+      1400
+     ]
+    }
+   },
+   {
+    "w": 1050,
+    "h": 1400,
+    "sizes": {
+     "1400": [
+      1050,
+      1400
+     ]
+    }
+   },
+   {
+    "w": 1050,
+    "h": 1400,
+    "sizes": {
+     "1400": [
+      1050,
+      1400
+     ]
+    }
+   },
+   {
+    "w": 1050,
+    "h": 1400,
+    "sizes": {
+     "1400": [
+      1050,
+      1400
+     ]
+    }
+   },
+   {
+    "w": 1050,
+    "h": 1400,
+    "sizes": {
+     "1400": [
+      1050,
+      1400
+     ]
+    }
+   },
+   {
+    "w": 1050,
+    "h": 1400,
+    "sizes": {
+     "1400": [
+      1050,
+      1400
+     ]
+    }
+   },
+   {
+    "w": 1050,
+    "h": 1400,
+    "sizes": {
+     "1400": [
+      1050,
+      1400
+     ]
+    }
+   },
+   {
+    "w": 1050,
+    "h": 1400,
+    "sizes": {
+     "1400": [
+      1050,
+      1400
+     ]
+    }
+   },
+   {
+    "w": 1400,
+    "h": 1050,
+    "sizes": {
+     "1400": [
+      1400,
+      1050
+     ]
+    }
+   },
+   {
+    "w": 1050,
+    "h": 1400,
+    "sizes": {
+     "1400": [
+      1050,
+      1400
+     ]
+    }
+   }
+  ],
+  "count": 14,
+  "short": "Réseaux pluvial et assainissement rue de Metz",
+  "blurb": "Collecteurs et regards posés en tranchée blindée, en pleine rue commerçante."
+ },
+ {
+  "slug": "grande-rue-saint-michel-pluvial",
+  "cats": "assainissement complexes",
+  "focus": "50% 45%",
+  "span": 4,
+  "mono": "Réseau pluvial · Toulouse",
+  "title": "Pose d'un réseau pluvial, Grande-Rue Saint-Michel",
+  "desc": "Pose d'un réseau d'eaux pluviales en milieu urbain : fonçage de palplanches au vibrofonceur, tranchée blindée et travaux de nuit pour limiter la gêne sur cet axe très fréquenté.",
+  "photos": [
+   {
+    "w": 1050,
+    "h": 1400,
+    "sizes": {
+     "1400": [
+      1050,
+      1400
+     ],
+     "800": [
+      600,
+      800
+     ],
+     "1200": [
+      900,
+      1200
+     ]
+    }
+   },
+   {
+    "w": 1050,
+    "h": 1400,
+    "sizes": {
+     "1400": [
+      1050,
+      1400
+     ]
+    }
+   },
+   {
+    "w": 1050,
+    "h": 1400,
+    "sizes": {
+     "1400": [
+      1050,
+      1400
+     ]
+    }
+   },
+   {
+    "w": 1050,
+    "h": 1400,
+    "sizes": {
+     "1400": [
+      1050,
+      1400
+     ]
+    }
+   }
+  ],
+  "count": 4,
+  "short": "Réseau pluvial Grande-Rue Saint-Michel",
+  "blurb": "Palplanches foncées au vibrofonceur et travaux de nuit sur un axe très fréquenté."
+ }
+]

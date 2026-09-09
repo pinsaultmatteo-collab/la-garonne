@@ -197,33 +197,78 @@ page("entreprise.html", "L'entreprise — SA LA GARONNE, Toulouse depuis 1956",
      crumbs=[("L'entreprise", None)])
 
 # ---------------------------------------------------------------- RÉALISATIONS
-def work(cat, catlabel, title, text, img, sizes_w, span="", sizes="(max-width: 960px) 100vw, 50vw"):
-    return f'<article class="work {span}" data-cat="{cat}" data-reveal>{pic(img, sizes_w, title, sizes)}<div class="work__cap"><span class="mono">{catlabel}</span><strong>{title}</strong><span>{text}</span></div></article>'
+import json as _json
+MAN = _json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "realisations.json"), encoding="utf-8"))
+R = "assets/img/realisations"
+
+def project_card(pr):
+    """Carte d'un chantier client : couverture + galerie complète dans un <template> (ouverte en plein écran)."""
+    slug, ph, n = pr["slug"], pr["photos"], len(pr["photos"])
+    w8, h8 = ph[0]["sizes"]["800"]
+    sizes = "(max-width: 960px) 100vw, " + ("66vw" if pr["span"] == 8 else "33vw")
+    cover = (f'<picture><source type="image/webp" srcset="{R}/{slug}-01-800.webp 800w, {R}/{slug}-01-1200.webp 1200w" sizes="{sizes}">'
+             f'<img src="{R}/{slug}-01-800.jpg" srcset="{R}/{slug}-01-800.jpg 800w, {R}/{slug}-01-1200.jpg 1200w" sizes="{sizes}" alt="{pr["title"]}" loading="lazy" width="{w8}" height="{h8}" style="object-position:{pr["focus"]}"></picture>')
+    tpl = "".join(f'<img src="{R}/{slug}-{i:02d}-1400.webp" alt="{pr["title"]}" width="{x["w"]}" height="{x["h"]}">' for i, x in enumerate(ph, 1))
+    tpl += pr.get("extra", "")
+    n += pr.get("extra_count", 0)
+    count = f'<span class="work__count"><b>{n}</b> {"photos" if n > 1 else "photo"}</span>'
+    return (f'<article class="work project span-{pr["span"]}" id="{slug}" data-cat="{pr["cats"]}" data-reveal tabindex="0" role="button" aria-label="{pr["title"]}" data-desc="{pr["desc"]}" data-cursor="Voir">'
+            f'{cover}<div class="work__cap"><span class="mono">{pr["mono"]}</span><strong>{pr["short"]}</strong><span>{pr["blurb"]}</span>{count}</div>'
+            f'<template class="work__photos">{tpl}</template></article>')
+
+def legacy_card(id_, name, sizes_w, cats, mono, short, blurb, desc, span=4, sizes="(max-width: 960px) 100vw, 33vw"):
+    """Réalisation à photo unique (photos livrées avant septembre 2026)."""
+    big = max(sizes_w)
+    from PIL import Image as _I
+    _w, _h = _I.open(os.path.join(ROOT, f"assets/img/{name}-{big}.jpg")).size
+    tpl = f'<img src="assets/img/{name}-{big}.webp" alt="{desc}" width="{_w}" height="{_h}">'
+    return (f'<article class="work project span-{span}" id="{id_}" data-cat="{cats}" data-reveal tabindex="0" role="button" aria-label="{short}" data-desc="{desc}" data-cursor="Voir">'
+            f'{pic(name, sizes_w, short, sizes)}<div class="work__cap"><span class="mono">{mono}</span><strong>{short}</strong><span>{blurb}</span><span class="work__count"><b>1</b> photo</span></div>'
+            f'<template class="work__photos">{tpl}</template></article>')
+
+# la photo « tranchée blindée devant le monument » rejoint la galerie François-Verdier
+for _p in MAN:
+    if _p["slug"] == "francois-verdier-tranchee-profonde":
+        _p["extra"] = '<img src="assets/img/tranchee-blindee-monument-529.webp" alt="Tranchée blindée SA LA GARONNE devant le monument aux morts de Toulouse" width="529" height="770">'
+        _p["extra_count"] = 1
+
+LEGACY = [
+ ("intervention-hypercentre", "chantier-capitole-engins", [480,768,1024,1280,1440,1920], "complexes", "Travaux complexes · Toulouse", "Intervention en hypercentre", "Logistique lourde, emprise maîtrisée et coordination fine au cœur de Toulouse, sous les arcades du Capitole.", "Camions SA LA GARONNE sous les arcades de la place du Capitole", 8, "(max-width: 960px) 100vw, 66vw"),
+ ("intervention-regard", "chantier-hydrocurage-equipe", [480,768,1024,1280,1440,1920], "assainissement complexes", "Réseau en service", "Intervention sur regard d'assainissement", "Équipe et matériel dédiés en centre-ville : continuité de service assurée pendant l'intervention.", "Équipe SA LA GARONNE intervenant sur un regard d'assainissement en ville", 4, "(max-width: 960px) 100vw, 33vw"),
+ ("renouvellement-secteur-pieton", "chantier-tranchee-centre-ville", [480,768,1024,1280,1440,1920], "assainissement", "Assainissement · centre-ville", "Renouvellement de réseau en secteur piéton", "Tranchée, lit de pose et réfection de voirie à l'identique, dans un secteur commerçant très fréquenté.", "Tranchée ouverte en centre-ville, équipe au travail", 4, "(max-width: 960px) 100vw, 33vw"),
+ ("unite-mobile-rehabilitation", "camion-rehabilitation-sans-tranchee", [800], "sans-tranchee", "Sans tranchée", "Unité mobile de réhabilitation", "Chemisage et interventions robotisées pilotées depuis la surface, sans ouverture de la chaussée.", "Camion SA LA GARONNE — réhabilitation de canalisations sans tranchée", 4, "(max-width: 960px) 100vw, 33vw"),
+ ("collecteur-visitable-fouille", "collecteur-visitable-profondeur", [536], "assainissement complexes", "Grande profondeur", "Collecteur visitable en fouille blindée", "Réhabilitation d'un ouvrage visitable : accès par fouille blindée, intervention en sécurité à grande profondeur.", "Canalisateur SA LA GARONNE dans un collecteur visitable en grande profondeur, tranchée blindée", 4, "(max-width: 960px) 100vw, 33vw"),
+ ("raccordement-fonte", "aep-raccordement-fonte", [768], "eau-potable", "Eau potable", "Raccordement de conduites en fonte", "Pose de pièces de raccord et de vannes sur une conduite d'adduction : précision d'assemblage et essais avant remise en eau.", "Raccordement de conduites d'eau potable en fonte dans une tranchée", 4, "(max-width: 960px) 100vw, 33vw"),
+ ("inspection-collecteur", "equipe-reunion-inspection", [768,1280,1600], "sans-tranchee complexes", "Diagnostic & inspection", "Inspection télévisée de collecteur", "Analyse en équipe des relevés caméra avant intervention : la préparation est la première étape de tout chantier.", "Réunion d'équipe SA LA GARONNE devant une inspection vidéo de canalisation", 4, "(max-width: 960px) 100vw, 33vw"),
+ ("ric-robot", "ric-robot-inspection", [768,1024], "sans-tranchee", "Innovation", "RIC, robot d'inspection breveté", "Télé-visualisation 4K à 360° des ouvrages d'assainissement, conçue par La Garonne : plus de 120 km inspectés à Toulouse.", "Le RIC, robot d'inspection conçu par SA LA GARONNE", 8, "(max-width: 960px) 100vw, 66vw"),
+]
+
 body = hero(
     ["Réalisations"],
     "Réalisations",
     "Sur le terrain, à Toulouse et autour.",
-    "Un aperçu de nos interventions sur les infrastructures essentielles de l'agglomération toulousaine : assainissement, eau potable, réhabilitation sans tranchée et chantiers complexes.",
-    [("Territoire", "Toulouse Métropole & agglomération"), ("Cadre", "Marchés publics & privés"), ("Depuis", "1956")],
-    bg="chantier-tranchee-centre-ville", bgalt="Chantier SA LA GARONNE en centre-ville de Toulouse"
+    "Nos chantiers récents, photographiés par nos équipes : assainissement, eau potable, réhabilitation sans tranchée, génie civil et interventions complexes à Toulouse et dans son agglomération.",
+    [("Chantiers documentés", str(len(MAN) + len(LEGACY))), ("Photos", str(sum(len(x["photos"]) + x.get("extra_count", 0) for x in MAN) + len(LEGACY))), ("Territoire", "Toulouse Métropole & agglomération"), ("Cadre", "Marchés publics & privés")],
+    bg="parc-engins", bgalt="Parc d'engins SA LA GARONNE sur un chantier de terrassement"
 )
-body += f'''<section class="section"><div class="container"><div class="section-head"><div><p class="eyebrow" data-reveal>Galerie</p><h2 class="h2" data-split>Nos chantiers en images.</h2></div><div class="filters" data-reveal><button class="is-active" data-filter="all">Tous</button><button data-filter="assainissement">Assainissement</button><button data-filter="eau-potable">Eau potable</button><button data-filter="sans-tranchee">Sans tranchée</button><button data-filter="complexes">Travaux complexes</button></div></div>
+cards = "".join(project_card(x) for x in MAN) + "".join(legacy_card(*l) for l in LEGACY)
+body += f'''<section class="section"><div class="container"><div class="section-head"><div><p class="eyebrow" data-reveal>Galerie</p><h2 class="h2" data-split>Nos chantiers en images.</h2></div><div data-reveal><div class="filters"><button class="is-active" data-filter="all">Tous</button><button data-filter="assainissement">Assainissement</button><button data-filter="eau-potable">Eau potable</button><button data-filter="sans-tranchee">Sans tranchée</button><button data-filter="complexes">Travaux complexes</button><button data-filter="genie-civil">Génie civil</button></div><p class="muted" style="margin-top:14px;font-size:.9rem">Cliquez sur un chantier pour parcourir toutes ses photos.</p></div></div>
 <div class="gallery">
-{work("complexes", "Travaux complexes · Toulouse", "Intervention en hypercentre", "Logistique lourde, emprise maîtrisée et coordination fine au cœur de Toulouse, sous les arcades du Capitole.", "chantier-capitole-engins", [768,1280,1920], "span-8", "(max-width: 960px) 100vw, 66vw")}
-{work("assainissement complexes", "Réseau en service", "Intervention sur regard d'assainissement", "Équipe et matériel dédiés en centre-ville : continuité de service assurée pendant l'intervention.", "chantier-hydrocurage-equipe", [768,1280,1920], "span-4", "(max-width: 960px) 100vw, 33vw")}
-{work("assainissement", "Assainissement · centre-ville", "Renouvellement de réseau en secteur piéton", "Tranchée, lit de pose et réfection de voirie à l'identique, dans un secteur commerçant très fréquenté.", "chantier-tranchee-centre-ville", [768,1280,1920], "", "(max-width: 960px) 100vw, 50vw")}
-{work("sans-tranchee", "Sans tranchée", "Unité mobile de réhabilitation", "Chemisage et interventions robotisées pilotées depuis la surface, sans ouverture de la chaussée.", "camion-rehabilitation-sans-tranchee", [800], "", "(max-width: 960px) 100vw, 50vw")}
-{work("sans-tranchee complexes", "Diagnostic & inspection", "Inspection télévisée de collecteur", "Analyse en équipe des relevés caméra avant intervention : la préparation est la première étape de tout chantier.", "equipe-reunion-inspection", [768,1280,1600], "span-8", "(max-width: 960px) 100vw, 66vw")}
-{work("assainissement complexes", "Grande profondeur", "Collecteur visitable en fouille blindée", "Réhabilitation d'un ouvrage visitable : accès par fouille blindée, intervention en sécurité à grande profondeur.", "collecteur-visitable-profondeur", [536], "span-4", "(max-width: 960px) 100vw, 33vw")}
-{work("complexes", "Secteur sensible · Toulouse", "Fouille blindée devant un monument", "Blindage lourd au pied du monument aux morts, dans un carrefour très fréquenté, circulation et cheminements maintenus.", "tranchee-blindee-monument", [529], "span-4", "(max-width: 960px) 100vw, 33vw")}
-{work("eau-potable", "Eau potable", "Raccordement de conduites en fonte", "Pose de pièces de raccord et de vannes sur une conduite d'adduction : précision d'assemblage et essais avant remise en eau.", "aep-raccordement-fonte", [768], "span-4", "(max-width: 960px) 100vw, 33vw")}
-{work("sans-tranchee", "Innovation", "RIC, robot d'inspection breveté", "Télé-visualisation 4K à 360° des ouvrages d'assainissement, conçue par La Garonne : plus de 120 km inspectés à Toulouse.", "ric-robot-inspection", [768,1024], "span-8", "(max-width: 960px) 100vw, 66vw")}
+{cards}
 <article class="work work--text span-4" data-reveal><span class="mono accent-blue">Références</span><span class="h3">Vous souhaitez consulter nos références détaillées ?</span><a class="link-arrow" href="contact.html"><span>Nous contacter</span>{LARROW}</a></article>
-</div></div></section>'''
+</div></div></section>
+<div class="lightbox" hidden role="dialog" aria-modal="true" aria-label="Galerie photos">
+  <div class="lightbox__backdrop"></div>
+  <button class="lightbox__close" type="button" aria-label="Fermer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  <button class="lightbox__nav lightbox__prev" type="button" aria-label="Photo précédente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button>
+  <button class="lightbox__nav lightbox__next" type="button" aria-label="Photo suivante"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></button>
+  <div class="lightbox__stage"><div class="lightbox__slide"></div></div>
+  <div class="lightbox__bar"><div><span class="mono lightbox__kicker"></span><strong class="lightbox__title"></strong><span class="lightbox__desc"></span></div><span class="mono lightbox__counter"></span></div>
+</div>'''
 body += f'''<section class="section section--tight bg-white"><div class="container">{section_head("Donneurs d'ordre", "Nous intervenons pour", "Un environnement B2B et marchés publics, aux côtés des acteurs qui exploitent et font vivre les infrastructures de l'eau.")}<ul class="clients stagger"><li class="client"><span>Collectivités & métropoles</span><span class="mono">Marchés publics</span></li><li class="client"><span>Exploitants de réseaux</span><span class="mono">Régies · délégataires</span></li><li class="client"><span>Acteurs publics & aménageurs</span><span class="mono">Infrastructures</span></li><li class="client"><span>Professionnels du cycle de l'eau</span><span class="mono">Ingénierie · entreprises</span></li></ul></div></section>'''
 body += CTA
 page("realisations.html", "Réalisations — chantiers SA LA GARONNE à Toulouse",
-     "Nos chantiers d'assainissement, d'eau potable et de réhabilitation sans tranchée à Toulouse et dans son agglomération, en images.", body, "chantier-tranchee-centre-ville-1280.jpg",
+     "Nos chantiers d'assainissement, d'eau potable et de réhabilitation sans tranchée à Toulouse et dans son agglomération, en images.", body, "realisations/francois-verdier-tranchee-profonde-01-1200.jpg",
      crumbs=[("Réalisations", None)])
 
 # ---------------------------------------------------------------- CONTACT

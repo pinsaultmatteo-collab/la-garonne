@@ -70,7 +70,7 @@ def pic(name, sizes_w, alt, sizes="100vw", loading="lazy", cls=""):
     return f'<picture><source type="image/webp" srcset="{webp}" sizes="{sizes}"><img src="assets/img/{name}-{ws[-1]}.jpg" srcset="{jpg}" sizes="{sizes}" alt="{alt}" loading="{loading}" width="{_w}" height="{_h}"{(" class=" + chr(34) + cls + chr(34)) if cls else ""}></picture>'
 
 def hero(crumbs, eyebrow, title, lead, meta, bg=None, bgalt=""):
-    SIZES = {"equipe-reunion-inspection": [768,1280,1600], "collecteur-visitable-profondeur": [536], "aep-raccordement-fonte": [768], "tranchee-blindee-monument": [529], "chantier-hydrocurage-equipe": [480,768,1024,1280,1440,1920], "chantier-capitole-engins": [480,768,1024,1280,1440,1920], "chantier-tranchee-centre-ville": [480,768,1024,1280,1440,1920]}
+    SIZES = {"equipe-reunion-inspection": [768,1280,1600], "collecteur-visitable-profondeur": [536], "aep-raccordement-fonte": [768], "tranchee-blindee-monument": [529], "chantier-hydrocurage-equipe": [480,768,1024,1280,1440,1920], "chantier-capitole-engins": [480,768,1024,1280,1440,1920], "chantier-tranchee-centre-ville": [480,768,1024,1280,1440,1920], "parc-engins": [768,1280,1920]}
     bgh = f'<div class="hero-page__bg">{pic(bg, SIZES.get(bg, [480,768,1024,1280,1440,1920]), bgalt, loading="eager")}</div>' if bg else ""
     crumb_html = ' <span>/</span> '.join(crumbs)
     meta_html = "".join(f'<span class="strip-item">{k} <b>{v}</b></span>' for k, v in meta)
