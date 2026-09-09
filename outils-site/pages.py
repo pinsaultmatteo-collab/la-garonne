@@ -212,9 +212,9 @@ def project_card(pr):
     tpl += pr.get("extra", "")
     n += pr.get("extra_count", 0)
     count = f'<span class="work__count"><b>{n}</b> {"photos" if n > 1 else "photo"}</span>'
-    return (f'<article class="work project span-{pr["span"]}" id="{slug}" data-cat="{pr["cats"]}" data-reveal tabindex="0" role="button" aria-label="{pr["title"]}" data-desc="{pr["desc"]}" data-cursor="Voir">'
+    return (f'<div class="work project span-{pr["span"]}" id="{slug}" data-cat="{pr["cats"]}" data-reveal tabindex="0" role="button" aria-label="{pr["title"]}" data-desc="{pr["desc"]}" data-cursor="Voir">'
             f'{cover}<div class="work__cap"><span class="mono">{pr["mono"]}</span><strong>{pr["short"]}</strong><span>{pr["blurb"]}</span>{count}</div>'
-            f'<template class="work__photos">{tpl}</template></article>')
+            f'<template class="work__photos">{tpl}</template></div>')
 
 def legacy_card(id_, name, sizes_w, cats, mono, short, blurb, desc, span=4, sizes="(max-width: 960px) 100vw, 33vw"):
     """Réalisation à photo unique (photos livrées avant septembre 2026)."""
@@ -222,9 +222,9 @@ def legacy_card(id_, name, sizes_w, cats, mono, short, blurb, desc, span=4, size
     from PIL import Image as _I
     _w, _h = _I.open(os.path.join(ROOT, f"assets/img/{name}-{big}.jpg")).size
     tpl = f'<img src="assets/img/{name}-{big}.webp" alt="{desc}" width="{_w}" height="{_h}">'
-    return (f'<article class="work project span-{span}" id="{id_}" data-cat="{cats}" data-reveal tabindex="0" role="button" aria-label="{short}" data-desc="{desc}" data-cursor="Voir">'
+    return (f'<div class="work project span-{span}" id="{id_}" data-cat="{cats}" data-reveal tabindex="0" role="button" aria-label="{short}" data-desc="{desc}" data-cursor="Voir">'
             f'{pic(name, sizes_w, short, sizes)}<div class="work__cap"><span class="mono">{mono}</span><strong>{short}</strong><span>{blurb}</span><span class="work__count"><b>1</b> photo</span></div>'
-            f'<template class="work__photos">{tpl}</template></article>')
+            f'<template class="work__photos">{tpl}</template></div>')
 
 # la photo « tranchée blindée devant le monument » rejoint la galerie François-Verdier
 for _p in MAN:
