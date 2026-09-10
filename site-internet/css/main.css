@@ -1300,9 +1300,9 @@ html[lang="zh-Hans"] .lightbox__title { letter-spacing: .02em; line-height: 1.2;
 
   /* 02 Expertises : contenu centré, picto à côté du nom pour des cartes plus basses */
   .exp-card { display: flex; flex-flow: row wrap; justify-content: center; align-items: center; text-align: center; padding: 22px 18px 24px; }
-  .exp-card__num, .exp-card__desc, .exp-card__more { flex: 0 0 100%; }
+  .exp-card > .exp-card__num, .exp-card__desc, .exp-card__more { flex: 0 0 100%; }
   .exp-card__ico { flex: none; width: 40px; height: 40px; margin: 14px 12px 0 0; }
-  .exp-card__title { flex: 0 1 auto; min-width: 0; max-width: calc(100% - 52px); margin-top: 14px; padding-top: 0; font-size: 1.45rem; text-align: left; }
+  .exp-card__title { flex: 0 1 auto; min-width: 0; max-width: calc(100% - 52px); margin-top: 14px; padding-top: 0; font-size: 1.45rem; text-align: center; }
   .exp-card__desc { margin-top: 12px; }
   .exp-card__more { justify-content: center; margin-top: 16px; }
 
