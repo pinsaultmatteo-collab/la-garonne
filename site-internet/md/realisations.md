@@ -2,7 +2,7 @@
 
 > Nos chantiers d'assainissement, d'eau potable et de réhabilitation sans tranchée à Toulouse et dans son agglomération, en images.
 
-Source : https://www.sa-la-garonne.fr/realisations.html
+Source : https://www.sa-la-garonne.fr/realisations
 
 Galerie
 

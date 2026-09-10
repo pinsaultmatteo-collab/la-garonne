@@ -161,45 +161,23 @@
   }
 
   // Lien actif
-  const path = location.pathname.split('/').pop() || 'index.html';
+  // Nom de page sans extension (URL propres : /contact, /blog/, ...)
+  const path = (location.pathname.split('/').pop() || '').replace(/\.html$/, '') || 'index';
+  const clean = h => (h || '').replace(/\.html$/, '').replace(/\/$/, '/index') || 'index';
   $$('.nav__link[href], .menu__list a[href]').forEach(a => {
-    const href = a.getAttribute('href');
-    if (href === path || (path === '' && href === 'index.html')) a.classList.add('is-active');
+    const href = clean(a.getAttribute('href'));
+    if (href === path) a.classList.add('is-active');
     if (a.dataset.group && path.startsWith(a.dataset.group)) a.classList.add('is-active');
   });
-  const expertisePages = ['assainissement.html', 'eau-potable.html', 'rehabilitation-sans-tranchee.html', 'travaux-complexes.html'];
+  const expertisePages = ['assainissement', 'eau-potable', 'rehabilitation-sans-tranchee', 'travaux-complexes'];
   if (expertisePages.includes(path)) $$('.nav__link[data-group="expertises"]').forEach(a => a.classList.add('is-active'));
-  if (['entreprise.html', 'recrutement.html'].includes(path)) $$('.nav__link[data-group="entreprise"]').forEach(a => a.classList.add('is-active'));
+  if (['entreprise', 'recrutement'].includes(path)) $$('.nav__link[data-group="entreprise"]').forEach(a => a.classList.add('is-active'));
   if (location.pathname.includes('/blog/')) $$('.nav__link[data-group="blog"]').forEach(a => a.classList.add('is-active'));
 
   /* ------------------------------------------------------------------
      5. Curseur personnalisé & boutons magnétiques
   ------------------------------------------------------------------ */
   if (!coarse && !reduced) {
-    const dot = document.createElement('div'); dot.className = 'cursor';
-    const ring = document.createElement('div'); ring.className = 'cursor-ring';
-    const lbl = document.createElement('span'); ring.appendChild(lbl);
-    document.body.append(dot, ring);
-    let mx = innerWidth / 2, my = innerHeight / 2, rx = mx, ry = my, shown = false;
-    addEventListener('mousemove', e => {
-      mx = e.clientX; my = e.clientY;
-      if (!shown) { shown = true; rx = mx; ry = my; }
-    }, { passive: true });
-    const loop = () => {
-      rx = lerp(rx, mx, 0.16); ry = lerp(ry, my, 0.16);
-      dot.style.transform = `translate(${mx}px, ${my}px) translate(-50%,-50%)`;
-      ring.style.transform = `translate(${rx}px, ${ry}px) translate(-50%,-50%)`;
-      requestAnimationFrame(loop);
-    };
-    loop();
-    document.addEventListener('mouseover', e => {
-      const t = e.target.closest('a, button, [data-cursor], input, textarea, select, label');
-      document.body.classList.toggle('cur-hover', !!t);
-      const view = e.target.closest('[data-cursor]');
-      document.body.classList.toggle('cur-view', !!view);
-      if (view) lbl.textContent = view.dataset.cursor || 'Voir';
-    });
-
     // Magnétisme
     $$('.btn, .burger').forEach(btn => {
       btn.addEventListener('mousemove', e => {

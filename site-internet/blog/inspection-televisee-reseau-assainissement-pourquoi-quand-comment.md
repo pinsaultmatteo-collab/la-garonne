@@ -2,7 +2,7 @@
 
 > L'inspection télévisée (ITV) est la base de toute décision sur un réseau d'assainissement. Ce qu'elle révèle, quand la programmer, comment elle se déroule, et ce qu'apporte un robot d'inspection 4K à 360° comme le RIC.
 
-Publié le 9 septembre 2026 par L'équipe SA LA GARONNE · Catégorie : Assainissement · Source : https://www.sa-la-garonne.fr/blog/inspection-televisee-reseau-assainissement-pourquoi-quand-comment.html
+Publié le 9 septembre 2026 par L'équipe SA LA GARONNE · Catégorie : Assainissement · Source : https://www.sa-la-garonne.fr/blog/inspection-televisee-reseau-assainissement-pourquoi-quand-comment
 
 On ne répare pas ce que l'on ne voit pas. Un réseau d'assainissement est enterré, souvent ancien, et ses défauts restent invisibles depuis la surface jusqu'au jour où ils provoquent un affaissement, un débordement ou une pollution. L'inspection télévisée, ou ITV, est l'outil qui permet de voir avant de décider. Voici ce qu'elle apporte, quand la programmer et comment elle se déroule.
 
@@ -16,7 +16,7 @@ Une caméra tractée ou motorisée parcourt la conduite de regard en regard et e
 - **les défauts de géométrie** : contre-pentes, flaches, ovalisations ;
 - **les branchements** : position, état, raccordement conforme ou non.
 
-Chaque observation est localisée précisément sur le linéaire. C'est ce relevé qui permet de décider de la suite : surveillance, curage, réparation ponctuelle, [réhabilitation sans tranchée](https://www.sa-la-garonne.fr/rehabilitation-sans-tranchee.html) ou renouvellement en tranchée.
+Chaque observation est localisée précisément sur le linéaire. C'est ce relevé qui permet de décider de la suite : surveillance, curage, réparation ponctuelle, [réhabilitation sans tranchée](https://www.sa-la-garonne.fr/rehabilitation-sans-tranchee) ou renouvellement en tranchée.
 
 ## Quand programmer une inspection
 
@@ -53,7 +53,7 @@ Depuis sa mise en service, le RIC a permis d'inspecter plus de 120 kilomètres d
 
 ## Inspection et bureau d'études : le tandem
 
-Une inspection ne vaut que par l'analyse qui la suit. Chez SA LA GARONNE, les relevés sont exploités par notre [bureau d'études intégré](https://www.sa-la-garonne.fr/entreprise.html), géomètre-dessinateur et chargé d'études, qui les confronte aux plans, propose la technique de réparation adaptée et prépare les plans d'exécution. Cette continuité entre le diagnostic et les travaux évite les pertes d'information et accélère la décision.
+Une inspection ne vaut que par l'analyse qui la suit. Chez SA LA GARONNE, les relevés sont exploités par notre [bureau d'études intégré](https://www.sa-la-garonne.fr/entreprise), géomètre-dessinateur et chargé d'études, qui les confronte aux plans, propose la technique de réparation adaptée et prépare les plans d'exécution. Cette continuité entre le diagnostic et les travaux évite les pertes d'information et accélère la décision.
 
 ## Questions fréquentes
 
@@ -75,4 +75,4 @@ Il n'y a pas de règle unique. Les tronçons anciens, très sollicités ou situ�
 
 ## En résumé
 
-L'inspection télévisée est la base de toute gestion sérieuse d'un réseau d'assainissement : elle permet de voir, de décider et de suivre. Vous souhaitez connaître l'état d'un tronçon ou planifier une campagne de diagnostic à Toulouse et dans son agglomération ? [Contactez nos équipes](https://www.sa-la-garonne.fr/contact.html).
+L'inspection télévisée est la base de toute gestion sérieuse d'un réseau d'assainissement : elle permet de voir, de décider et de suivre. Vous souhaitez connaître l'état d'un tronçon ou planifier une campagne de diagnostic à Toulouse et dans son agglomération ? [Contactez nos équipes](https://www.sa-la-garonne.fr/contact).

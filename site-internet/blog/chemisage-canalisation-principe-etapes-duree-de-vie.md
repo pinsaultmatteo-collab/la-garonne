@@ -2,9 +2,9 @@
 
 > Le chemisage de canalisation expliqué simplement : comment une gaine polymérisée en place forme une conduite neuve dans l'ancienne, les étapes du chantier, les contrôles et la durée de vie attendue.
 
-Publié le 9 septembre 2026 par L'équipe SA LA GARONNE · Catégorie : Réhabilitation sans tranchée · Source : https://www.sa-la-garonne.fr/blog/chemisage-canalisation-principe-etapes-duree-de-vie.html
+Publié le 9 septembre 2026 par L'équipe SA LA GARONNE · Catégorie : Réhabilitation sans tranchée · Source : https://www.sa-la-garonne.fr/blog/chemisage-canalisation-principe-etapes-duree-de-vie
 
-Le chemisage est la technique phare de la [réhabilitation sans tranchée](https://www.sa-la-garonne.fr/rehabilitation-sans-tranchee.html). Son nom vient de l'image : on habille l'intérieur d'une canalisation existante d'une nouvelle chemise, qui devient une conduite à part entière. Derrière cette image simple se cache un procédé précis, avec ses règles de dimensionnement, ses étapes obligatoires et ses contrôles. Voici comment il fonctionne, et ce que l'on peut en attendre.
+Le chemisage est la technique phare de la [réhabilitation sans tranchée](https://www.sa-la-garonne.fr/rehabilitation-sans-tranchee). Son nom vient de l'image : on habille l'intérieur d'une canalisation existante d'une nouvelle chemise, qui devient une conduite à part entière. Derrière cette image simple se cache un procédé précis, avec ses règles de dimensionnement, ses étapes obligatoires et ses contrôles. Voici comment il fonctionne, et ce que l'on peut en attendre.
 
 ## Le principe en une phrase
 
@@ -75,4 +75,4 @@ Dans l'usage courant, les deux termes sont proches. Le chemisage désigne le plu
 
 ## Pour aller plus loin
 
-Le chemisage est l'un des procédés que SA LA GARONNE met en œuvre à Toulouse, avec le fraisage robotisé et l'inspection télévisée par robot RIC. Pour savoir si votre réseau s'y prête, [contactez nos équipes](https://www.sa-la-garonne.fr/contact.html) : un diagnostic préalable permet de vous proposer la solution la plus adaptée.
+Le chemisage est l'un des procédés que SA LA GARONNE met en œuvre à Toulouse, avec le fraisage robotisé et l'inspection télévisée par robot RIC. Pour savoir si votre réseau s'y prête, [contactez nos équipes](https://www.sa-la-garonne.fr/contact) : un diagnostic préalable permet de vous proposer la solution la plus adaptée.

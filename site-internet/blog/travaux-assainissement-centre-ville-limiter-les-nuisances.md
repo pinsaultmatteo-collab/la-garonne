@@ -2,7 +2,7 @@
 
 > Phasage, emprises réduites, travaux de nuit, information des riverains, techniques sans tranchée : les leviers concrets pour réaliser des travaux d'assainissement en centre-ville tout en préservant la vie du quartier.
 
-Publié le 9 septembre 2026 par L'équipe SA LA GARONNE · Catégorie : Assainissement · Source : https://www.sa-la-garonne.fr/blog/travaux-assainissement-centre-ville-limiter-les-nuisances.html
+Publié le 9 septembre 2026 par L'équipe SA LA GARONNE · Catégorie : Assainissement · Source : https://www.sa-la-garonne.fr/blog/travaux-assainissement-centre-ville-limiter-les-nuisances
 
 Un chantier d'assainissement en plein centre-ville concentre toutes les contraintes : une rue commerçante, des livraisons, des terrasses, des bus, des piétons, des réseaux enchevêtrés sous la chaussée. Pourtant, ces réseaux doivent être renouvelés, et souvent là où la ville est la plus dense. Comment intervenir sans mettre le quartier à l'arrêt ? Voici les leviers que nous mobilisons, chantier après chantier, à Toulouse.
 
@@ -10,7 +10,7 @@ Un chantier d'assainissement en plein centre-ville concentre toutes les contrain
 
 La première protection des riverains, c'est un chantier bien découpé. Plutôt que d'ouvrir une rue entière, nous travaillons par tronçons courts, de quelques dizaines de mètres, ouverts, traités et refermés avant de passer au suivant. Chaque phase est calée sur la vie du quartier : jours de marché, livraisons, événements, périodes de forte fréquentation.
 
-Le phasage se prépare en amont avec la collectivité et les services de la ville : plan de circulation, itinéraires piétons, maintien des accès aux commerces et aux immeubles, positionnement des emprises. Cette préparation est faite par notre [bureau d'études intégré](https://www.sa-la-garonne.fr/entreprise.html), qui produit les plans d'exécution et de phasage avant le démarrage.
+Le phasage se prépare en amont avec la collectivité et les services de la ville : plan de circulation, itinéraires piétons, maintien des accès aux commerces et aux immeubles, positionnement des emprises. Cette préparation est faite par notre [bureau d'études intégré](https://www.sa-la-garonne.fr/entreprise), qui produit les plans d'exécution et de phasage avant le démarrage.
 
 ## Réduire l'emprise au strict nécessaire
 
@@ -20,11 +20,11 @@ Des passerelles maintiennent les accès piétons et les entrées de commerces au
 
 ## Maintenir le service pendant les travaux
 
-Renouveler un collecteur ne signifie pas interrompre l'assainissement du quartier. Les eaux usées continuent d'être évacuées grâce à un pompage ou à une dérivation provisoire, mise en place avant l'intervention sur le tronçon. C'est un principe que nous appliquons sur tous nos chantiers de [réseaux en service](https://www.sa-la-garonne.fr/travaux-complexes.html) : les riverains ne doivent pas percevoir de différence.
+Renouveler un collecteur ne signifie pas interrompre l'assainissement du quartier. Les eaux usées continuent d'être évacuées grâce à un pompage ou à une dérivation provisoire, mise en place avant l'intervention sur le tronçon. C'est un principe que nous appliquons sur tous nos chantiers de [réseaux en service](https://www.sa-la-garonne.fr/travaux-complexes) : les riverains ne doivent pas percevoir de différence.
 
 ## Choisir la bonne technique
 
-Dans un centre historique, la question n'est pas seulement de bien creuser, mais de savoir s'il faut creuser. Lorsque le diagnostic le permet, la [réhabilitation sans tranchée](https://www.sa-la-garonne.fr/rehabilitation-sans-tranchee.html) rénove la conduite depuis les regards existants, sans ouvrir la chaussée. Le chantier se réduit alors à une unité mobile stationnée dans la rue et à quelques regards balisés. Pour une rue piétonne ou une ruelle étroite, la différence est considérable.
+Dans un centre historique, la question n'est pas seulement de bien creuser, mais de savoir s'il faut creuser. Lorsque le diagnostic le permet, la [réhabilitation sans tranchée](https://www.sa-la-garonne.fr/rehabilitation-sans-tranchee) rénove la conduite depuis les regards existants, sans ouvrir la chaussée. Le chantier se réduit alors à une unité mobile stationnée dans la rue et à quelques regards balisés. Pour une rue piétonne ou une ruelle étroite, la différence est considérable.
 
 Lorsque la tranchée ouverte s'impose, augmentation de diamètre, effondrement, modification de tracé, c'est le phasage et la réduction d'emprise qui prennent le relais.
 
@@ -62,4 +62,4 @@ Un interlocuteur de l'entreprise est identifié sur chaque chantier. Les coordon
 
 ## En résumé
 
-Un chantier d'assainissement en centre-ville réussi se reconnaît à ce qu'il ne laisse pas de mauvais souvenirs. Phasage, emprises réduites, continuité de service, choix de la technique et information des riverains sont les cinq leviers que nous activons sur chaque intervention. Vous préparez des travaux de réseaux dans un secteur contraint ? [Contactez-nous](https://www.sa-la-garonne.fr/contact.html) pour en parler dès la phase d'étude.
+Un chantier d'assainissement en centre-ville réussi se reconnaît à ce qu'il ne laisse pas de mauvais souvenirs. Phasage, emprises réduites, continuité de service, choix de la technique et information des riverains sont les cinq leviers que nous activons sur chaque intervention. Vous préparez des travaux de réseaux dans un secteur contraint ? [Contactez-nous](https://www.sa-la-garonne.fr/contact) pour en parler dès la phase d'étude.

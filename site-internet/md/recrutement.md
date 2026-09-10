@@ -2,7 +2,7 @@
 
 > SA LA GARONNE recrute canalisateurs, chefs de chantier, conducteurs d'engins et opérateurs de réhabilitation à Toulouse. Entreprise familiale, sécurité, formation, candidature spontanée bienvenue.
 
-Source : https://www.sa-la-garonne.fr/recrutement.html
+Source : https://www.sa-la-garonne.fr/recrutement
 
 Pourquoi nous rejoindre
 

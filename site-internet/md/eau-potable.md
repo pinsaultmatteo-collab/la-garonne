@@ -2,7 +2,7 @@
 
 > Pose et renouvellement de conduites d'eau potable, branchements et ouvrages hydrauliques à Toulouse, avec coupures limitées. SA LA GARONNE, depuis 1956.
 
-Source : https://www.sa-la-garonne.fr/eau-potable.html
+Source : https://www.sa-la-garonne.fr/eau-potable
 
 Notre approche
 

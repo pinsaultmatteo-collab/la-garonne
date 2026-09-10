@@ -2,7 +2,7 @@
 
 > Mentions légales du site de SA LA GARONNE, société de travaux publics à Toulouse : éditeur, hébergement, données personnelles.
 
-Source : https://www.sa-la-garonne.fr/mentions-legales.html
+Source : https://www.sa-la-garonne.fr/mentions-legales
 
 # Mentions légales
 

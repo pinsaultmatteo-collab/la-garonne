@@ -2,7 +2,7 @@
 
 > Contactez SA LA GARONNE : devis, consultation de marché public ou question technique. 63 chemin de Guilhermy, 31100 Toulouse. Tél. 05 62 13 07 80.
 
-Source : https://www.sa-la-garonne.fr/contact.html
+Source : https://www.sa-la-garonne.fr/contact
 
 Coordonnées
 

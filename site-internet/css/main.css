@@ -322,15 +322,7 @@ body.no-loader .loader { display: none; }
 @keyframes vt-in { from { opacity: 0; } }
 @media (prefers-reduced-motion: reduce) { ::view-transition-old(root), ::view-transition-new(root) { animation: none; } }
 
-/* ---------- 5. Curseur ---------- */
-.cursor, .cursor-ring { position: fixed; top: 0; left: 0; pointer-events: none; z-index: 300; border-radius: 50%; transform: translate(-50%, -50%); mix-blend-mode: difference; }
-.cursor { width: 8px; height: 8px; background: #fff; }
-.cursor-ring { width: 40px; height: 40px; border: 1.5px solid rgba(255,255,255,.9); transition: width .4s var(--ease), height .4s var(--ease), background .3s; display: grid; place-items: center; }
-.cursor-ring span { font-family: var(--font-mono); font-size: .6rem; letter-spacing: .12em; text-transform: uppercase; color: #fff; opacity: 0; transition: opacity .3s; }
-body.cur-hover .cursor-ring { width: 64px; height: 64px; background: rgba(255,255,255,.1); }
-body.cur-view .cursor-ring { width: 96px; height: 96px; background: rgba(255,255,255,.12); }
-body.cur-view .cursor-ring span { opacity: 1; }
-@media (pointer: coarse), (prefers-reduced-motion: reduce) { .cursor, .cursor-ring { display: none; } }
+/* ---------- 5. (curseur personnalisé retiré) ---------- */
 
 /* ---------- 6. Révélations ---------- */
 [data-reveal] { opacity: 0; transform: translateY(36px); transition: opacity 1s var(--ease), transform 1.2s var(--ease); will-change: transform, opacity; }
@@ -432,11 +424,11 @@ body.cur-view .cursor-ring span { opacity: 1; }
 .hero-page__rings { position: absolute; right: -4%; top: 50%; width: clamp(280px, 34vw, 560px); transform: translateY(-50%); opacity: .25; z-index: -1; pointer-events: none; }
 
 /* ---------- 8. Marquee ---------- */
-.marquee { overflow: hidden; padding-block: 26px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--bone); }
+.marquee { overflow: hidden; padding-block: 18px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--bone); }
 .marquee__track { display: flex; width: max-content; gap: 0; animation: marquee 40s linear infinite; }
 .marquee:hover .marquee__track { animation-play-state: paused; }
-.marquee__item { display: inline-flex; align-items: center; gap: 28px; padding-inline: 28px; font-family: var(--font-display); font-weight: 700; text-transform: uppercase; font-size: clamp(1.6rem, 3vw, 2.6rem); line-height: 1; color: var(--navy); white-space: nowrap; }
-.marquee__item i { width: 10px; height: 10px; border-radius: 50%; background: var(--cyan); box-shadow: 0 0 0 5px rgba(10,148,242,.15); flex: none; }
+.marquee__item { display: inline-flex; align-items: center; gap: 22px; padding-inline: 22px; font-family: var(--font-display); font-weight: 700; text-transform: uppercase; font-size: clamp(.95rem, 1.35vw, 1.25rem); letter-spacing: .06em; line-height: 1; color: var(--navy); white-space: nowrap; }
+.marquee__item i { width: 7px; height: 7px; border-radius: 50%; background: var(--cyan); box-shadow: 0 0 0 4px rgba(10,148,242,.15); flex: none; }
 .marquee--dark { background: var(--deep); border-color: var(--line-light); }
 .marquee--dark .marquee__item { color: rgba(255,255,255,.85); }
 @keyframes marquee { to { transform: translateX(-50%); } }
@@ -920,6 +912,7 @@ html[lang="zh-Hans"] .brand__sub { letter-spacing: .3em; }
 .work__count::before { content: ""; width: 11px; height: 11px; border: 1.5px solid currentColor; border-radius: 2px; box-shadow: 3px -3px 0 -1px currentColor; margin: 2px 2px 0 0; opacity: .85; }
 .work__count b { font-weight: 600; }
 
+.lightbox[hidden] { display: none !important; }
 .lightbox { position: fixed; inset: 0; z-index: 250; display: grid; grid-template-rows: minmax(0, 1fr) auto; opacity: 0; transition: opacity .35s var(--ease); }
 .lightbox.is-open { opacity: 1; }
 .lightbox__backdrop { position: absolute; inset: 0; background: rgba(8,39,67,.96); }

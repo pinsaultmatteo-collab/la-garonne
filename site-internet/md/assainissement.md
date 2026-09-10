@@ -2,7 +2,7 @@
 
 > Construction, renouvellement et réhabilitation de réseaux d'assainissement à Toulouse : collecteurs, branchements, réseaux en service, grande profondeur.
 
-Source : https://www.sa-la-garonne.fr/assainissement.html
+Source : https://www.sa-la-garonne.fr/assainissement
 
 Notre approche
 

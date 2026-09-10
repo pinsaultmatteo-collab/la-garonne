@@ -2,7 +2,7 @@
 
 > Trois générations Pascual, 35 collaborateurs, bureau d'études intégré et robot d'inspection breveté : l'histoire et les valeurs de SA LA GARONNE.
 
-Source : https://www.sa-la-garonne.fr/entreprise.html
+Source : https://www.sa-la-garonne.fr/entreprise
 
 Qui nous sommes
 
@@ -128,7 +128,7 @@ Nous rejoindre
 
 Canalisateur, chef de chantier, conducteur d'engins, opérateur de réhabilitation : nous recrutons régulièrement des profils de terrain, débutants comme expérimentés.
 
-[Découvrir le recrutement ](https://www.sa-la-garonne.fr/recrutement.html)
+[Découvrir le recrutement ](https://www.sa-la-garonne.fr/recrutement)
 
 Fiche d'identité
 
@@ -158,4 +158,4 @@ Contact
 
 Parlons de votre projet. Nos équipes vous répondent avec précision, sur la base de 70 ans de chantiers.
 
-Téléphone+33 5 62 13 07 80Emailcontact@lagaronnetp.org[Nous contacter ](https://www.sa-la-garonne.fr/contact.html)
+Téléphone+33 5 62 13 07 80Emailcontact@lagaronnetp.org[Nous contacter ](https://www.sa-la-garonne.fr/contact)

@@ -2,7 +2,7 @@
 
 > Chemisage, gainage, fraisage robotisé et inspection par robot RIC : rénover les canalisations sans ouvrir la voirie. SA LA GARONNE, Toulouse.
 
-Source : https://www.sa-la-garonne.fr/rehabilitation-sans-tranchee.html
+Source : https://www.sa-la-garonne.fr/rehabilitation-sans-tranchee
 
 Notre approche
 
@@ -36,7 +36,7 @@ La réhabilitation sans tranchée rénove les réseaux existants depuis l'intér
 
 **Remise en service**Réouverture des branchements, contrôles, remise en eau. La rue n'a pas été ouverte.
 
-[Étudier votre réseau avec nous](https://www.sa-la-garonne.fr/contact.html)
+[Étudier votre réseau avec nous](https://www.sa-la-garonne.fr/contact)
 
 Techniques
 
@@ -116,7 +116,7 @@ Autres expertises
 
 ## Un savoir-faire complet sur les réseaux d'eau.
 
-[Réseaux d'eaux usées et pluviales**Assainissement**](https://www.sa-la-garonne.fr/assainissement.html)[Conduites, branchements, ouvrages**Adduction d'eau potable**](https://www.sa-la-garonne.fr/eau-potable.html)[Réseaux en service, grande profondeur**Travaux complexes**](https://www.sa-la-garonne.fr/travaux-complexes.html)
+[Réseaux d'eaux usées et pluviales**Assainissement**](https://www.sa-la-garonne.fr/assainissement)[Conduites, branchements, ouvrages**Adduction d'eau potable**](https://www.sa-la-garonne.fr/eau-potable)[Réseaux en service, grande profondeur**Travaux complexes**](https://www.sa-la-garonne.fr/travaux-complexes)
 
 Contact
 
@@ -124,4 +124,4 @@ Contact
 
 Parlons de votre projet. Nos équipes vous répondent avec précision, sur la base de 70 ans de chantiers.
 
-Téléphone+33 5 62 13 07 80Emailcontact@lagaronnetp.org[Nous contacter ](https://www.sa-la-garonne.fr/contact.html)
+Téléphone+33 5 62 13 07 80Emailcontact@lagaronnetp.org[Nous contacter ](https://www.sa-la-garonne.fr/contact)

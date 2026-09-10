@@ -2,7 +2,7 @@
 
 > Comment la réhabilitation sans tranchée permet de rénover un collecteur d'assainissement depuis l'intérieur, sans ouvrir la chaussée : techniques, étapes, cas d'usage et limites, vus de Toulouse.
 
-Publié le 9 septembre 2026 par L'équipe SA LA GARONNE · Catégorie : Réhabilitation sans tranchée · Source : https://www.sa-la-garonne.fr/blog/rehabilitation-sans-tranchee-renover-un-reseau-sans-ouvrir-la-rue.html
+Publié le 9 septembre 2026 par L'équipe SA LA GARONNE · Catégorie : Réhabilitation sans tranchée · Source : https://www.sa-la-garonne.fr/blog/rehabilitation-sans-tranchee-renover-un-reseau-sans-ouvrir-la-rue
 
 Un collecteur d'assainissement fissuré sous une rue commerçante, des racines qui pénètrent une conduite dans un quartier résidentiel, un branchement qui fuit sous une chaussée refaite l'an dernier : dans chacun de ces cas, la première question du maître d'ouvrage est la même. Faut-il ouvrir la rue ? De plus en plus souvent, la réponse est non. La **réhabilitation sans tranchée** rénove le réseau depuis l'intérieur, à partir des regards existants, et laisse la voirie intacte.
 
@@ -29,7 +29,7 @@ Le terme « sans tranchée » regroupe plusieurs procédés, choisis selon l'ét
 
 ### Le chemisage continu
 
-C'est la technique la plus connue. Une gaine souple imprégnée de résine est introduite dans la conduite existante, plaquée contre la paroi, puis polymérisée sur place, à l'eau chaude, à la vapeur ou aux ultraviolets. Une fois durcie, elle forme une conduite neuve, continue et étanche, à l'intérieur de l'ancienne. Nous détaillons ce procédé dans notre article sur [le chemisage de canalisation](https://www.sa-la-garonne.fr/blog/chemisage-canalisation-principe-etapes-duree-de-vie.html).
+C'est la technique la plus connue. Une gaine souple imprégnée de résine est introduite dans la conduite existante, plaquée contre la paroi, puis polymérisée sur place, à l'eau chaude, à la vapeur ou aux ultraviolets. Une fois durcie, elle forme une conduite neuve, continue et étanche, à l'intérieur de l'ancienne. Nous détaillons ce procédé dans notre article sur [le chemisage de canalisation](https://www.sa-la-garonne.fr/blog/chemisage-canalisation-principe-etapes-duree-de-vie).
 
 ### Le gainage partiel et les manchettes
 
@@ -41,7 +41,7 @@ Avant tout chemisage, la conduite doit être propre et libre de tout obstacle. L
 
 ### L'inspection télévisée
 
-Elle encadre toute l'opération : diagnostic avant travaux pour choisir la technique, contrôle après travaux pour valider le résultat. Pour les ouvrages d'assainissement, nous utilisons notamment le [RIC](https://www.sa-la-garonne.fr/rehabilitation-sans-tranchee.html), robot de télé-visualisation en 4K et à 360° conçu et breveté par SA LA GARONNE.
+Elle encadre toute l'opération : diagnostic avant travaux pour choisir la technique, contrôle après travaux pour valider le résultat. Pour les ouvrages d'assainissement, nous utilisons notamment le [RIC](https://www.sa-la-garonne.fr/rehabilitation-sans-tranchee), robot de télé-visualisation en 4K et à 360° conçu et breveté par SA LA GARONNE.
 
 ## Quand la technique est adaptée, et quand elle ne l'est pas
 
@@ -65,7 +65,7 @@ Sur la plupart des tronçons, l'ensemble se déroule en quelques jours, là où 
 
 Pour une collectivité ou un exploitant de réseau, l'intérêt se mesure sur plusieurs plans. Le **coût global** est maîtrisé : moins de terrassement, pas de remblai, pas de réfection de voirie, moins de mesures de circulation. Les **délais** sont réduits, ce qui limite la durée d'exposition des riverains et des commerces. La **durée de vie** de l'ouvrage est prolongée de plusieurs décennies. Et la **voirie**, souvent refaite récemment, reste intacte.
 
-C'est pour ces raisons que la réhabilitation sans tranchée représente aujourd'hui une part croissante de nos interventions à Toulouse et dans son agglomération, aux côtés des travaux d'[assainissement](https://www.sa-la-garonne.fr/assainissement.html) en tranchée que nous continuons de réaliser quand c'est la bonne solution.
+C'est pour ces raisons que la réhabilitation sans tranchée représente aujourd'hui une part croissante de nos interventions à Toulouse et dans son agglomération, aux côtés des travaux d'[assainissement](https://www.sa-la-garonne.fr/assainissement) en tranchée que nous continuons de réaliser quand c'est la bonne solution.
 
 ## Questions fréquentes
 
@@ -87,4 +87,4 @@ La technique s'applique aux réseaux d'assainissement gravitaires, visitables ou
 
 ## En résumé
 
-La réhabilitation sans tranchée n'est pas une astuce pour éviter les travaux : c'est une méthode complète, du diagnostic au contrôle, qui rénove durablement un réseau en respectant la ville qui vit au-dessus. Vous gérez un réseau vieillissant à Toulouse ou dans son agglomération ? [Parlons de votre réseau](https://www.sa-la-garonne.fr/contact.html) : nos équipes établissent un diagnostic et vous proposent la technique adaptée.
+La réhabilitation sans tranchée n'est pas une astuce pour éviter les travaux : c'est une méthode complète, du diagnostic au contrôle, qui rénove durablement un réseau en respectant la ville qui vit au-dessus. Vous gérez un réseau vieillissant à Toulouse ou dans son agglomération ? [Parlons de votre réseau](https://www.sa-la-garonne.fr/contact) : nos équipes établissent un diagnostic et vous proposent la technique adaptée.

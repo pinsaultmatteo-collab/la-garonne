@@ -9,4 +9,5 @@ python3 outils-site/lqip.py       >/dev/null   # vignettes floutées
 python3 outils-site/sitemap.py                 # plan du site
 python3 outils-site/llms.py                    # llms.txt, llms-full.txt, md/, robots.txt
 python3 outils-site/version.py                 # empreinte anti-cache sur main.css et main.js
+python3 outils-site/urls.py                    # liens internes sans .html (cleanUrls Vercel)
 echo "site régénéré"

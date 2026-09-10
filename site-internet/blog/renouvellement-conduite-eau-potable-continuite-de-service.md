@@ -2,7 +2,7 @@
 
 > Renouveler une conduite d'eau potable sans priver les abonnés d'eau : coordination avec l'exploitant, phasage des coupures, raccordements, désinfection et essais avant remise en eau. La méthode appliquée à Toulouse.
 
-Publié le 9 septembre 2026 par L'équipe SA LA GARONNE · Catégorie : Eau potable · Source : https://www.sa-la-garonne.fr/blog/renouvellement-conduite-eau-potable-continuite-de-service.html
+Publié le 9 septembre 2026 par L'équipe SA LA GARONNE · Catégorie : Eau potable · Source : https://www.sa-la-garonne.fr/blog/renouvellement-conduite-eau-potable-continuite-de-service
 
 Une conduite d'eau potable se renouvelle parce qu'elle fuit, parce qu'elle casse, parce que son matériau a vieilli ou parce que le quartier a grandi. Mais contrairement à un réseau d'assainissement, elle est sous pression et alimente en continu des habitations, des commerces, des écoles, parfois des établissements de santé. Le renouveler sans priver les abonnés d'eau, et sans dégrader la qualité de celle qui arrive au robinet, est une affaire de méthode.
 
@@ -15,11 +15,11 @@ Un réseau d'eau potable est exploité, par une régie ou un délégataire, qui 
 - les **coupures** nécessaires, leur durée, leur horaire et les abonnés concernés ;
 - les **abonnés sensibles** à prévenir ou à alimenter autrement.
 
-Cette coordination se poursuit pendant toute l'opération. Sur nos chantiers d'[eau potable](https://www.sa-la-garonne.fr/eau-potable.html) à Toulouse, un interlocuteur de l'exploitant est associé à chaque phase de coupure et de remise en eau.
+Cette coordination se poursuit pendant toute l'opération. Sur nos chantiers d'[eau potable](https://www.sa-la-garonne.fr/eau-potable) à Toulouse, un interlocuteur de l'exploitant est associé à chaque phase de coupure et de remise en eau.
 
 ## Phaser pour réduire les coupures
 
-Le principe est le même que pour tout [chantier en centre-ville](https://www.sa-la-garonne.fr/blog/travaux-assainissement-centre-ville-limiter-les-nuisances.html) : travailler par tronçons courts. Mais il s'y ajoute une logique propre au réseau sous pression. Dans la mesure du possible, la conduite neuve est posée en parallèle de l'ancienne, essayée et désinfectée, avant d'être raccordée. La coupure ne concerne alors que le basculement des raccordements, et non toute la durée de la pose.
+Le principe est le même que pour tout [chantier en centre-ville](https://www.sa-la-garonne.fr/blog/travaux-assainissement-centre-ville-limiter-les-nuisances) : travailler par tronçons courts. Mais il s'y ajoute une logique propre au réseau sous pression. Dans la mesure du possible, la conduite neuve est posée en parallèle de l'ancienne, essayée et désinfectée, avant d'être raccordée. La coupure ne concerne alors que le basculement des raccordements, et non toute la durée de la pose.
 
 Lorsque la pose en parallèle n'est pas possible, les coupures sont programmées aux heures de moindre consommation, annoncées aux abonnés et limitées à la durée strictement nécessaire. Une alimentation provisoire, conduite de surface ou citerne, peut être mise en place pour les usagers qui ne peuvent pas subir de coupure.
 
@@ -44,7 +44,7 @@ Un renouvellement est souvent l'occasion de moderniser les ouvrages associés : 
 
 ## La remise en état de la voirie
 
-Le chantier ne s'arrête pas à la remise en eau. Le remblaiement est contrôlé par couches compactées, la voirie et les trottoirs sont refaits à l'identique, et le dossier de récolement, plans de la conduite posée et de ses ouvrages, est remis à l'exploitant. Sur nos chantiers, ces plans sont produits par notre [bureau d'études intégré](https://www.sa-la-garonne.fr/entreprise.html), à partir des levés hebdomadaires réalisés par notre géomètre-dessinateur.
+Le chantier ne s'arrête pas à la remise en eau. Le remblaiement est contrôlé par couches compactées, la voirie et les trottoirs sont refaits à l'identique, et le dossier de récolement, plans de la conduite posée et de ses ouvrages, est remis à l'exploitant. Sur nos chantiers, ces plans sont produits par notre [bureau d'études intégré](https://www.sa-la-garonne.fr/entreprise), à partir des levés hebdomadaires réalisés par notre géomètre-dessinateur.
 
 ## Questions fréquentes
 
@@ -66,4 +66,4 @@ Les matériaux courants sont la fonte ductile et le polyéthylène haute densit�
 
 ## En résumé
 
-Renouveler une conduite d'eau potable, c'est conjuguer les exigences d'un chantier de réseau et celles de la distribution d'une eau de qualité, sans interruption durable. Coordination avec l'exploitant, phasage, désinfection et essais en sont les piliers. Vous préparez le renouvellement d'un réseau d'eau potable à Toulouse ou dans son agglomération ? [Contactez-nous](https://www.sa-la-garonne.fr/contact.html) pour en parler dès la phase d'étude.
+Renouveler une conduite d'eau potable, c'est conjuguer les exigences d'un chantier de réseau et celles de la distribution d'une eau de qualité, sans interruption durable. Coordination avec l'exploitant, phasage, désinfection et essais en sont les piliers. Vous préparez le renouvellement d'un réseau d'eau potable à Toulouse ou dans son agglomération ? [Contactez-nous](https://www.sa-la-garonne.fr/contact) pour en parler dès la phase d'étude.

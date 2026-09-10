@@ -2,7 +2,7 @@
 
 > Réseaux en service, tranchées jusqu'à 7 m, canalisations Ø 2000 mm, hypercentre : des chantiers contraints maîtrisés par SA LA GARONNE à Toulouse.
 
-Source : https://www.sa-la-garonne.fr/travaux-complexes.html
+Source : https://www.sa-la-garonne.fr/travaux-complexes
 
 Notre approche
 

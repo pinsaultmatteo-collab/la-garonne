@@ -2,7 +2,7 @@
 
 > SA LA GARONNE est une PME familiale de travaux publics fondée à Toulouse en 1956, spécialisée dans les réseaux d'eau et d'assainissement : construction, renouvellement et réhabilitation de réseaux d'assainissement, adduction d'eau potable, réhabilitation sans tranchée (chemisage, gainage, fraisage robotisé) et travaux complexes (réseaux en service, tranchées jusqu'à 7 m, canalisations jusqu'à Ø 2000 mm). 35 collaborateurs, quatre équipes de chantier, un atelier et un bureau d'études intégré (géomètre-dessinateur et chargé d'études). Dirigée par Nicolas Pascual, troisième génération. Robot d'inspection RIC (4K, 360°) breveté en 2018. Zone d'intervention : Toulouse Métropole et son agglomération. Clients : collectivités, exploitants de réseaux, acteurs publics, professionnels du cycle de l'eau.
 
-Site principal en français ; versions anglaise (https://www.sa-la-garonne.fr/en/) et chinoise (https://www.sa-la-garonne.fr/zh/) des pages principales. Coordonnées : 63 chemin de Guilhermy, 31100 Toulouse, France · +33 5 62 13 07 80 · contact@lagaronnetp.org. Dernière génération : 2026-09-09.
+Site principal en français ; versions anglaise (https://www.sa-la-garonne.fr/en/) et chinoise (https://www.sa-la-garonne.fr/zh/) des pages principales. Coordonnées : 63 chemin de Guilhermy, 31100 Toulouse, France · +33 5 62 13 07 80 · contact@lagaronnetp.org. Dernière génération : 2026-09-10.
 
 ## Pages
 
@@ -41,7 +41,7 @@ Site principal en français ; versions anglaise (https://www.sa-la-garonne.fr/en
 
 > PME familiale de travaux publics à Toulouse depuis 1956 : assainissement, eau potable, réhabilitation sans tranchée et chantiers urbains complexes.
 
-Source : https://www.sa-la-garonne.fr/index.html
+Source : https://www.sa-la-garonne.fr/
 
 
 
@@ -52,7 +52,7 @@ Source : https://www.sa-la-garonne.fr/index.html
 
 > Construction, renouvellement et réhabilitation de réseaux d'assainissement à Toulouse : collecteurs, branchements, réseaux en service, grande profondeur.
 
-Source : https://www.sa-la-garonne.fr/assainissement.html
+Source : https://www.sa-la-garonne.fr/assainissement
 
 Notre approche
 
@@ -113,7 +113,7 @@ Essais d'étanchéité, inspection télévisée, remblaiement contrôlé et réf
 
 > Pose et renouvellement de conduites d'eau potable, branchements et ouvrages hydrauliques à Toulouse, avec coupures limitées. SA LA GARONNE, depuis 1956.
 
-Source : https://www.sa-la-garonne.fr/eau-potable.html
+Source : https://www.sa-la-garonne.fr/eau-potable
 
 Notre approche
 
@@ -174,7 +174,7 @@ Remblaiement contrôlé, réfection de voirie et de trottoirs à l'identique, do
 
 > Chemisage, gainage, fraisage robotisé et inspection par robot RIC : rénover les canalisations sans ouvrir la voirie. SA LA GARONNE, Toulouse.
 
-Source : https://www.sa-la-garonne.fr/rehabilitation-sans-tranchee.html
+Source : https://www.sa-la-garonne.fr/rehabilitation-sans-tranchee
 
 Notre approche
 
@@ -208,7 +208,7 @@ La réhabilitation sans tranchée rénove les réseaux existants depuis l'intér
 
 **Remise en service**Réouverture des branchements, contrôles, remise en eau. La rue n'a pas été ouverte.
 
-[Étudier votre réseau avec nous](https://www.sa-la-garonne.fr/contact.html)
+[Étudier votre réseau avec nous](https://www.sa-la-garonne.fr/contact)
 
 Techniques
 
@@ -288,7 +288,7 @@ Autres expertises
 
 ## Un savoir-faire complet sur les réseaux d'eau.
 
-[Réseaux d'eaux usées et pluviales**Assainissement**](https://www.sa-la-garonne.fr/assainissement.html)[Conduites, branchements, ouvrages**Adduction d'eau potable**](https://www.sa-la-garonne.fr/eau-potable.html)[Réseaux en service, grande profondeur**Travaux complexes**](https://www.sa-la-garonne.fr/travaux-complexes.html)
+[Réseaux d'eaux usées et pluviales**Assainissement**](https://www.sa-la-garonne.fr/assainissement)[Conduites, branchements, ouvrages**Adduction d'eau potable**](https://www.sa-la-garonne.fr/eau-potable)[Réseaux en service, grande profondeur**Travaux complexes**](https://www.sa-la-garonne.fr/travaux-complexes)
 
 Contact
 
@@ -296,7 +296,7 @@ Contact
 
 Parlons de votre projet. Nos équipes vous répondent avec précision, sur la base de 70 ans de chantiers.
 
-Téléphone+33 5 62 13 07 80Emailcontact@lagaronnetp.org[Nous contacter ](https://www.sa-la-garonne.fr/contact.html)
+Téléphone+33 5 62 13 07 80Emailcontact@lagaronnetp.org[Nous contacter ](https://www.sa-la-garonne.fr/contact)
 
 
 ---
@@ -305,7 +305,7 @@ Téléphone+33 5 62 13 07 80Emailcontact@lagaronnetp.org[Nous contacter ](https:
 
 > Réseaux en service, tranchées jusqu'à 7 m, canalisations Ø 2000 mm, hypercentre : des chantiers contraints maîtrisés par SA LA GARONNE à Toulouse.
 
-Source : https://www.sa-la-garonne.fr/travaux-complexes.html
+Source : https://www.sa-la-garonne.fr/travaux-complexes
 
 Notre approche
 
@@ -366,7 +366,7 @@ Travaux de nuit, phases courtes, interventions planifiées autour d'événements
 
 > Nos chantiers d'assainissement, d'eau potable et de réhabilitation sans tranchée à Toulouse et dans son agglomération, en images.
 
-Source : https://www.sa-la-garonne.fr/realisations.html
+Source : https://www.sa-la-garonne.fr/realisations
 
 Galerie
 
@@ -381,7 +381,7 @@ Cliquez sur un chantier pour parcourir toutes ses photos.
 
 > Trois générations Pascual, 35 collaborateurs, bureau d'études intégré et robot d'inspection breveté : l'histoire et les valeurs de SA LA GARONNE.
 
-Source : https://www.sa-la-garonne.fr/entreprise.html
+Source : https://www.sa-la-garonne.fr/entreprise
 
 Qui nous sommes
 
@@ -507,7 +507,7 @@ Nous rejoindre
 
 Canalisateur, chef de chantier, conducteur d'engins, opérateur de réhabilitation : nous recrutons régulièrement des profils de terrain, débutants comme expérimentés.
 
-[Découvrir le recrutement ](https://www.sa-la-garonne.fr/recrutement.html)
+[Découvrir le recrutement ](https://www.sa-la-garonne.fr/recrutement)
 
 Fiche d'identité
 
@@ -537,7 +537,7 @@ Contact
 
 Parlons de votre projet. Nos équipes vous répondent avec précision, sur la base de 70 ans de chantiers.
 
-Téléphone+33 5 62 13 07 80Emailcontact@lagaronnetp.org[Nous contacter ](https://www.sa-la-garonne.fr/contact.html)
+Téléphone+33 5 62 13 07 80Emailcontact@lagaronnetp.org[Nous contacter ](https://www.sa-la-garonne.fr/contact)
 
 
 ---
@@ -546,7 +546,7 @@ Téléphone+33 5 62 13 07 80Emailcontact@lagaronnetp.org[Nous contacter ](https:
 
 > SA LA GARONNE recrute canalisateurs, chefs de chantier, conducteurs d'engins et opérateurs de réhabilitation à Toulouse. Entreprise familiale, sécurité, formation, candidature spontanée bienvenue.
 
-Source : https://www.sa-la-garonne.fr/recrutement.html
+Source : https://www.sa-la-garonne.fr/recrutement
 
 Pourquoi nous rejoindre
 
@@ -675,7 +675,7 @@ SA LA GARONNE 63 chemin de Guilhermy 31100 Toulouse
 
 > Contactez SA LA GARONNE : devis, consultation de marché public ou question technique. 63 chemin de Guilhermy, 31100 Toulouse. Tél. 05 62 13 07 80.
 
-Source : https://www.sa-la-garonne.fr/contact.html
+Source : https://www.sa-la-garonne.fr/contact
 
 Coordonnées
 
@@ -700,7 +700,7 @@ SA LA GARONNE 63 chemin de Guilhermy 31100 Toulouse
 
 > Mentions légales du site de SA LA GARONNE, société de travaux publics à Toulouse : éditeur, hébergement, données personnelles.
 
-Source : https://www.sa-la-garonne.fr/mentions-legales.html
+Source : https://www.sa-la-garonne.fr/mentions-legales
 
 # Mentions légales
 
@@ -749,7 +749,7 @@ Le présent site est soumis au droit français. Tout litige relatif à son utili
 
 > Phasage, emprises réduites, travaux de nuit, information des riverains, techniques sans tranchée : les leviers concrets pour réaliser des travaux d'assainissement en centre-ville tout en préservant la vie du quartier.
 
-Publié le 9 septembre 2026 par L'équipe SA LA GARONNE · Catégorie : Assainissement · Source : https://www.sa-la-garonne.fr/blog/travaux-assainissement-centre-ville-limiter-les-nuisances.html
+Publié le 9 septembre 2026 par L'équipe SA LA GARONNE · Catégorie : Assainissement · Source : https://www.sa-la-garonne.fr/blog/travaux-assainissement-centre-ville-limiter-les-nuisances
 
 Un chantier d'assainissement en plein centre-ville concentre toutes les contraintes : une rue commerçante, des livraisons, des terrasses, des bus, des piétons, des réseaux enchevêtrés sous la chaussée. Pourtant, ces réseaux doivent être renouvelés, et souvent là où la ville est la plus dense. Comment intervenir sans mettre le quartier à l'arrêt ? Voici les leviers que nous mobilisons, chantier après chantier, à Toulouse.
 
@@ -757,7 +757,7 @@ Un chantier d'assainissement en plein centre-ville concentre toutes les contrain
 
 La première protection des riverains, c'est un chantier bien découpé. Plutôt que d'ouvrir une rue entière, nous travaillons par tronçons courts, de quelques dizaines de mètres, ouverts, traités et refermés avant de passer au suivant. Chaque phase est calée sur la vie du quartier : jours de marché, livraisons, événements, périodes de forte fréquentation.
 
-Le phasage se prépare en amont avec la collectivité et les services de la ville : plan de circulation, itinéraires piétons, maintien des accès aux commerces et aux immeubles, positionnement des emprises. Cette préparation est faite par notre [bureau d'études intégré](https://www.sa-la-garonne.fr/entreprise.html), qui produit les plans d'exécution et de phasage avant le démarrage.
+Le phasage se prépare en amont avec la collectivité et les services de la ville : plan de circulation, itinéraires piétons, maintien des accès aux commerces et aux immeubles, positionnement des emprises. Cette préparation est faite par notre [bureau d'études intégré](https://www.sa-la-garonne.fr/entreprise), qui produit les plans d'exécution et de phasage avant le démarrage.
 
 ## Réduire l'emprise au strict nécessaire
 
@@ -767,11 +767,11 @@ Des passerelles maintiennent les accès piétons et les entrées de commerces au
 
 ## Maintenir le service pendant les travaux
 
-Renouveler un collecteur ne signifie pas interrompre l'assainissement du quartier. Les eaux usées continuent d'être évacuées grâce à un pompage ou à une dérivation provisoire, mise en place avant l'intervention sur le tronçon. C'est un principe que nous appliquons sur tous nos chantiers de [réseaux en service](https://www.sa-la-garonne.fr/travaux-complexes.html) : les riverains ne doivent pas percevoir de différence.
+Renouveler un collecteur ne signifie pas interrompre l'assainissement du quartier. Les eaux usées continuent d'être évacuées grâce à un pompage ou à une dérivation provisoire, mise en place avant l'intervention sur le tronçon. C'est un principe que nous appliquons sur tous nos chantiers de [réseaux en service](https://www.sa-la-garonne.fr/travaux-complexes) : les riverains ne doivent pas percevoir de différence.
 
 ## Choisir la bonne technique
 
-Dans un centre historique, la question n'est pas seulement de bien creuser, mais de savoir s'il faut creuser. Lorsque le diagnostic le permet, la [réhabilitation sans tranchée](https://www.sa-la-garonne.fr/rehabilitation-sans-tranchee.html) rénove la conduite depuis les regards existants, sans ouvrir la chaussée. Le chantier se réduit alors à une unité mobile stationnée dans la rue et à quelques regards balisés. Pour une rue piétonne ou une ruelle étroite, la différence est considérable.
+Dans un centre historique, la question n'est pas seulement de bien creuser, mais de savoir s'il faut creuser. Lorsque le diagnostic le permet, la [réhabilitation sans tranchée](https://www.sa-la-garonne.fr/rehabilitation-sans-tranchee) rénove la conduite depuis les regards existants, sans ouvrir la chaussée. Le chantier se réduit alors à une unité mobile stationnée dans la rue et à quelques regards balisés. Pour une rue piétonne ou une ruelle étroite, la différence est considérable.
 
 Lorsque la tranchée ouverte s'impose, augmentation de diamètre, effondrement, modification de tracé, c'est le phasage et la réduction d'emprise qui prennent le relais.
 
@@ -809,7 +809,7 @@ Un interlocuteur de l'entreprise est identifié sur chaque chantier. Les coordon
 
 ## En résumé
 
-Un chantier d'assainissement en centre-ville réussi se reconnaît à ce qu'il ne laisse pas de mauvais souvenirs. Phasage, emprises réduites, continuité de service, choix de la technique et information des riverains sont les cinq leviers que nous activons sur chaque intervention. Vous préparez des travaux de réseaux dans un secteur contraint ? [Contactez-nous](https://www.sa-la-garonne.fr/contact.html) pour en parler dès la phase d'étude.
+Un chantier d'assainissement en centre-ville réussi se reconnaît à ce qu'il ne laisse pas de mauvais souvenirs. Phasage, emprises réduites, continuité de service, choix de la technique et information des riverains sont les cinq leviers que nous activons sur chaque intervention. Vous préparez des travaux de réseaux dans un secteur contraint ? [Contactez-nous](https://www.sa-la-garonne.fr/contact) pour en parler dès la phase d'étude.
 
 
 ---
@@ -818,7 +818,7 @@ Un chantier d'assainissement en centre-ville réussi se reconnaît à ce qu'il n
 
 > Comment se réalise une tranchée de 6 à 7 mètres de profondeur en milieu urbain : blindages, gestion de la nappe, pose de canalisations de grand diamètre, sécurité des équipes et organisation du chantier.
 
-Publié le 9 septembre 2026 par L'équipe SA LA GARONNE · Catégorie : Travaux complexes · Source : https://www.sa-la-garonne.fr/blog/tranchee-grande-profondeur-blindage-securite-methode.html
+Publié le 9 septembre 2026 par L'équipe SA LA GARONNE · Catégorie : Travaux complexes · Source : https://www.sa-la-garonne.fr/blog/tranchee-grande-profondeur-blindage-securite-methode
 
 Poser un collecteur à sept mètres sous une chaussée n'a rien à voir avec une tranchée de branchement à un mètre cinquante. La pression des terres, la présence d'eau, l'accès au fond de fouille, le levage des tuyaux, la sécurité des hommes qui y travaillent : tout change d'échelle. Voici comment nous abordons ces chantiers, qui constituent l'une de nos spécialités reconnues à Toulouse et dans son agglomération.
 
@@ -860,11 +860,11 @@ Ces règles sont formalisées dans le plan de prévention, présentées à l'acc
 
 ## Organiser le chantier en ville
 
-Une tranchée profonde en milieu urbain cumule les contraintes de la profondeur et celles du centre-ville : emprise réduite, réseaux voisins, riverains, circulation. Le phasage par tronçons, la réduction de l'emprise, le maintien des accès et l'information des riverains s'appliquent ici comme sur tout [chantier en centre-ville](https://www.sa-la-garonne.fr/blog/travaux-assainissement-centre-ville-limiter-les-nuisances.html). S'y ajoute une logistique de levage particulière : les engins de forte capacité doivent pouvoir s'installer et manœuvrer, ce qui se prépare avec les services de la ville.
+Une tranchée profonde en milieu urbain cumule les contraintes de la profondeur et celles du centre-ville : emprise réduite, réseaux voisins, riverains, circulation. Le phasage par tronçons, la réduction de l'emprise, le maintien des accès et l'information des riverains s'appliquent ici comme sur tout [chantier en centre-ville](https://www.sa-la-garonne.fr/blog/travaux-assainissement-centre-ville-limiter-les-nuisances). S'y ajoute une logistique de levage particulière : les engins de forte capacité doivent pouvoir s'installer et manœuvrer, ce qui se prépare avec les services de la ville.
 
 ## Ce que nous apportons
 
-SA LA GARONNE dispose de l'identification professionnelle FNTP 5141 pour les tranchées à fortes profondeurs et 5161 pour les canalisations de grand diamètre. Nos équipes réalisent régulièrement des fouilles de six à sept mètres, en caissons superposés ou en palplanches, en centre-ville comme en périphérie. Notre [bureau d'études intégré](https://www.sa-la-garonne.fr/entreprise.html) prépare les plans d'exécution et de phasage, et nos [travaux complexes](https://www.sa-la-garonne.fr/travaux-complexes.html) sont documentés dans nos réalisations.
+SA LA GARONNE dispose de l'identification professionnelle FNTP 5141 pour les tranchées à fortes profondeurs et 5161 pour les canalisations de grand diamètre. Nos équipes réalisent régulièrement des fouilles de six à sept mètres, en caissons superposés ou en palplanches, en centre-ville comme en périphérie. Notre [bureau d'études intégré](https://www.sa-la-garonne.fr/entreprise) prépare les plans d'exécution et de phasage, et nos [travaux complexes](https://www.sa-la-garonne.fr/travaux-complexes) sont documentés dans nos réalisations.
 
 ## Questions fréquentes
 
@@ -886,7 +886,7 @@ Le moins longtemps possible. Le phasage vise à ouvrir, poser, contrôler et rem
 
 ## En résumé
 
-La grande profondeur ne s'improvise pas : elle se prépare en étude, se sécurise par le blindage et la gestion de l'eau, et s'exécute avec des équipes et des moyens dimensionnés. Vous avez un collecteur profond à renouveler ou à prolonger ? [Parlons-en](https://www.sa-la-garonne.fr/contact.html) dès la phase de conception.
+La grande profondeur ne s'improvise pas : elle se prépare en étude, se sécurise par le blindage et la gestion de l'eau, et s'exécute avec des équipes et des moyens dimensionnés. Vous avez un collecteur profond à renouveler ou à prolonger ? [Parlons-en](https://www.sa-la-garonne.fr/contact) dès la phase de conception.
 
 
 ---
@@ -895,7 +895,7 @@ La grande profondeur ne s'improvise pas : elle se prépare en étude, se sécuri
 
 > Renouveler une conduite d'eau potable sans priver les abonnés d'eau : coordination avec l'exploitant, phasage des coupures, raccordements, désinfection et essais avant remise en eau. La méthode appliquée à Toulouse.
 
-Publié le 9 septembre 2026 par L'équipe SA LA GARONNE · Catégorie : Eau potable · Source : https://www.sa-la-garonne.fr/blog/renouvellement-conduite-eau-potable-continuite-de-service.html
+Publié le 9 septembre 2026 par L'équipe SA LA GARONNE · Catégorie : Eau potable · Source : https://www.sa-la-garonne.fr/blog/renouvellement-conduite-eau-potable-continuite-de-service
 
 Une conduite d'eau potable se renouvelle parce qu'elle fuit, parce qu'elle casse, parce que son matériau a vieilli ou parce que le quartier a grandi. Mais contrairement à un réseau d'assainissement, elle est sous pression et alimente en continu des habitations, des commerces, des écoles, parfois des établissements de santé. Le renouveler sans priver les abonnés d'eau, et sans dégrader la qualité de celle qui arrive au robinet, est une affaire de méthode.
 
@@ -908,11 +908,11 @@ Un réseau d'eau potable est exploité, par une régie ou un délégataire, qui 
 - les **coupures** nécessaires, leur durée, leur horaire et les abonnés concernés ;
 - les **abonnés sensibles** à prévenir ou à alimenter autrement.
 
-Cette coordination se poursuit pendant toute l'opération. Sur nos chantiers d'[eau potable](https://www.sa-la-garonne.fr/eau-potable.html) à Toulouse, un interlocuteur de l'exploitant est associé à chaque phase de coupure et de remise en eau.
+Cette coordination se poursuit pendant toute l'opération. Sur nos chantiers d'[eau potable](https://www.sa-la-garonne.fr/eau-potable) à Toulouse, un interlocuteur de l'exploitant est associé à chaque phase de coupure et de remise en eau.
 
 ## Phaser pour réduire les coupures
 
-Le principe est le même que pour tout [chantier en centre-ville](https://www.sa-la-garonne.fr/blog/travaux-assainissement-centre-ville-limiter-les-nuisances.html) : travailler par tronçons courts. Mais il s'y ajoute une logique propre au réseau sous pression. Dans la mesure du possible, la conduite neuve est posée en parallèle de l'ancienne, essayée et désinfectée, avant d'être raccordée. La coupure ne concerne alors que le basculement des raccordements, et non toute la durée de la pose.
+Le principe est le même que pour tout [chantier en centre-ville](https://www.sa-la-garonne.fr/blog/travaux-assainissement-centre-ville-limiter-les-nuisances) : travailler par tronçons courts. Mais il s'y ajoute une logique propre au réseau sous pression. Dans la mesure du possible, la conduite neuve est posée en parallèle de l'ancienne, essayée et désinfectée, avant d'être raccordée. La coupure ne concerne alors que le basculement des raccordements, et non toute la durée de la pose.
 
 Lorsque la pose en parallèle n'est pas possible, les coupures sont programmées aux heures de moindre consommation, annoncées aux abonnés et limitées à la durée strictement nécessaire. Une alimentation provisoire, conduite de surface ou citerne, peut être mise en place pour les usagers qui ne peuvent pas subir de coupure.
 
@@ -937,7 +937,7 @@ Un renouvellement est souvent l'occasion de moderniser les ouvrages associés : 
 
 ## La remise en état de la voirie
 
-Le chantier ne s'arrête pas à la remise en eau. Le remblaiement est contrôlé par couches compactées, la voirie et les trottoirs sont refaits à l'identique, et le dossier de récolement, plans de la conduite posée et de ses ouvrages, est remis à l'exploitant. Sur nos chantiers, ces plans sont produits par notre [bureau d'études intégré](https://www.sa-la-garonne.fr/entreprise.html), à partir des levés hebdomadaires réalisés par notre géomètre-dessinateur.
+Le chantier ne s'arrête pas à la remise en eau. Le remblaiement est contrôlé par couches compactées, la voirie et les trottoirs sont refaits à l'identique, et le dossier de récolement, plans de la conduite posée et de ses ouvrages, est remis à l'exploitant. Sur nos chantiers, ces plans sont produits par notre [bureau d'études intégré](https://www.sa-la-garonne.fr/entreprise), à partir des levés hebdomadaires réalisés par notre géomètre-dessinateur.
 
 ## Questions fréquentes
 
@@ -959,7 +959,7 @@ Les matériaux courants sont la fonte ductile et le polyéthylène haute densit�
 
 ## En résumé
 
-Renouveler une conduite d'eau potable, c'est conjuguer les exigences d'un chantier de réseau et celles de la distribution d'une eau de qualité, sans interruption durable. Coordination avec l'exploitant, phasage, désinfection et essais en sont les piliers. Vous préparez le renouvellement d'un réseau d'eau potable à Toulouse ou dans son agglomération ? [Contactez-nous](https://www.sa-la-garonne.fr/contact.html) pour en parler dès la phase d'étude.
+Renouveler une conduite d'eau potable, c'est conjuguer les exigences d'un chantier de réseau et celles de la distribution d'une eau de qualité, sans interruption durable. Coordination avec l'exploitant, phasage, désinfection et essais en sont les piliers. Vous préparez le renouvellement d'un réseau d'eau potable à Toulouse ou dans son agglomération ? [Contactez-nous](https://www.sa-la-garonne.fr/contact) pour en parler dès la phase d'étude.
 
 
 ---
@@ -968,7 +968,7 @@ Renouveler une conduite d'eau potable, c'est conjuguer les exigences d'un chanti
 
 > Comment la réhabilitation sans tranchée permet de rénover un collecteur d'assainissement depuis l'intérieur, sans ouvrir la chaussée : techniques, étapes, cas d'usage et limites, vus de Toulouse.
 
-Publié le 9 septembre 2026 par L'équipe SA LA GARONNE · Catégorie : Réhabilitation sans tranchée · Source : https://www.sa-la-garonne.fr/blog/rehabilitation-sans-tranchee-renover-un-reseau-sans-ouvrir-la-rue.html
+Publié le 9 septembre 2026 par L'équipe SA LA GARONNE · Catégorie : Réhabilitation sans tranchée · Source : https://www.sa-la-garonne.fr/blog/rehabilitation-sans-tranchee-renover-un-reseau-sans-ouvrir-la-rue
 
 Un collecteur d'assainissement fissuré sous une rue commerçante, des racines qui pénètrent une conduite dans un quartier résidentiel, un branchement qui fuit sous une chaussée refaite l'an dernier : dans chacun de ces cas, la première question du maître d'ouvrage est la même. Faut-il ouvrir la rue ? De plus en plus souvent, la réponse est non. La **réhabilitation sans tranchée** rénove le réseau depuis l'intérieur, à partir des regards existants, et laisse la voirie intacte.
 
@@ -995,7 +995,7 @@ Le terme « sans tranchée » regroupe plusieurs procédés, choisis selon l'ét
 
 ### Le chemisage continu
 
-C'est la technique la plus connue. Une gaine souple imprégnée de résine est introduite dans la conduite existante, plaquée contre la paroi, puis polymérisée sur place, à l'eau chaude, à la vapeur ou aux ultraviolets. Une fois durcie, elle forme une conduite neuve, continue et étanche, à l'intérieur de l'ancienne. Nous détaillons ce procédé dans notre article sur [le chemisage de canalisation](https://www.sa-la-garonne.fr/blog/chemisage-canalisation-principe-etapes-duree-de-vie.html).
+C'est la technique la plus connue. Une gaine souple imprégnée de résine est introduite dans la conduite existante, plaquée contre la paroi, puis polymérisée sur place, à l'eau chaude, à la vapeur ou aux ultraviolets. Une fois durcie, elle forme une conduite neuve, continue et étanche, à l'intérieur de l'ancienne. Nous détaillons ce procédé dans notre article sur [le chemisage de canalisation](https://www.sa-la-garonne.fr/blog/chemisage-canalisation-principe-etapes-duree-de-vie).
 
 ### Le gainage partiel et les manchettes
 
@@ -1007,7 +1007,7 @@ Avant tout chemisage, la conduite doit être propre et libre de tout obstacle. L
 
 ### L'inspection télévisée
 
-Elle encadre toute l'opération : diagnostic avant travaux pour choisir la technique, contrôle après travaux pour valider le résultat. Pour les ouvrages d'assainissement, nous utilisons notamment le [RIC](https://www.sa-la-garonne.fr/rehabilitation-sans-tranchee.html), robot de télé-visualisation en 4K et à 360° conçu et breveté par SA LA GARONNE.
+Elle encadre toute l'opération : diagnostic avant travaux pour choisir la technique, contrôle après travaux pour valider le résultat. Pour les ouvrages d'assainissement, nous utilisons notamment le [RIC](https://www.sa-la-garonne.fr/rehabilitation-sans-tranchee), robot de télé-visualisation en 4K et à 360° conçu et breveté par SA LA GARONNE.
 
 ## Quand la technique est adaptée, et quand elle ne l'est pas
 
@@ -1031,7 +1031,7 @@ Sur la plupart des tronçons, l'ensemble se déroule en quelques jours, là où 
 
 Pour une collectivité ou un exploitant de réseau, l'intérêt se mesure sur plusieurs plans. Le **coût global** est maîtrisé : moins de terrassement, pas de remblai, pas de réfection de voirie, moins de mesures de circulation. Les **délais** sont réduits, ce qui limite la durée d'exposition des riverains et des commerces. La **durée de vie** de l'ouvrage est prolongée de plusieurs décennies. Et la **voirie**, souvent refaite récemment, reste intacte.
 
-C'est pour ces raisons que la réhabilitation sans tranchée représente aujourd'hui une part croissante de nos interventions à Toulouse et dans son agglomération, aux côtés des travaux d'[assainissement](https://www.sa-la-garonne.fr/assainissement.html) en tranchée que nous continuons de réaliser quand c'est la bonne solution.
+C'est pour ces raisons que la réhabilitation sans tranchée représente aujourd'hui une part croissante de nos interventions à Toulouse et dans son agglomération, aux côtés des travaux d'[assainissement](https://www.sa-la-garonne.fr/assainissement) en tranchée que nous continuons de réaliser quand c'est la bonne solution.
 
 ## Questions fréquentes
 
@@ -1053,7 +1053,7 @@ La technique s'applique aux réseaux d'assainissement gravitaires, visitables ou
 
 ## En résumé
 
-La réhabilitation sans tranchée n'est pas une astuce pour éviter les travaux : c'est une méthode complète, du diagnostic au contrôle, qui rénove durablement un réseau en respectant la ville qui vit au-dessus. Vous gérez un réseau vieillissant à Toulouse ou dans son agglomération ? [Parlons de votre réseau](https://www.sa-la-garonne.fr/contact.html) : nos équipes établissent un diagnostic et vous proposent la technique adaptée.
+La réhabilitation sans tranchée n'est pas une astuce pour éviter les travaux : c'est une méthode complète, du diagnostic au contrôle, qui rénove durablement un réseau en respectant la ville qui vit au-dessus. Vous gérez un réseau vieillissant à Toulouse ou dans son agglomération ? [Parlons de votre réseau](https://www.sa-la-garonne.fr/contact) : nos équipes établissent un diagnostic et vous proposent la technique adaptée.
 
 
 ---
@@ -1062,7 +1062,7 @@ La réhabilitation sans tranchée n'est pas une astuce pour éviter les travaux 
 
 > L'inspection télévisée (ITV) est la base de toute décision sur un réseau d'assainissement. Ce qu'elle révèle, quand la programmer, comment elle se déroule, et ce qu'apporte un robot d'inspection 4K à 360° comme le RIC.
 
-Publié le 9 septembre 2026 par L'équipe SA LA GARONNE · Catégorie : Assainissement · Source : https://www.sa-la-garonne.fr/blog/inspection-televisee-reseau-assainissement-pourquoi-quand-comment.html
+Publié le 9 septembre 2026 par L'équipe SA LA GARONNE · Catégorie : Assainissement · Source : https://www.sa-la-garonne.fr/blog/inspection-televisee-reseau-assainissement-pourquoi-quand-comment
 
 On ne répare pas ce que l'on ne voit pas. Un réseau d'assainissement est enterré, souvent ancien, et ses défauts restent invisibles depuis la surface jusqu'au jour où ils provoquent un affaissement, un débordement ou une pollution. L'inspection télévisée, ou ITV, est l'outil qui permet de voir avant de décider. Voici ce qu'elle apporte, quand la programmer et comment elle se déroule.
 
@@ -1076,7 +1076,7 @@ Une caméra tractée ou motorisée parcourt la conduite de regard en regard et e
 - **les défauts de géométrie** : contre-pentes, flaches, ovalisations ;
 - **les branchements** : position, état, raccordement conforme ou non.
 
-Chaque observation est localisée précisément sur le linéaire. C'est ce relevé qui permet de décider de la suite : surveillance, curage, réparation ponctuelle, [réhabilitation sans tranchée](https://www.sa-la-garonne.fr/rehabilitation-sans-tranchee.html) ou renouvellement en tranchée.
+Chaque observation est localisée précisément sur le linéaire. C'est ce relevé qui permet de décider de la suite : surveillance, curage, réparation ponctuelle, [réhabilitation sans tranchée](https://www.sa-la-garonne.fr/rehabilitation-sans-tranchee) ou renouvellement en tranchée.
 
 ## Quand programmer une inspection
 
@@ -1113,7 +1113,7 @@ Depuis sa mise en service, le RIC a permis d'inspecter plus de 120 kilomètres d
 
 ## Inspection et bureau d'études : le tandem
 
-Une inspection ne vaut que par l'analyse qui la suit. Chez SA LA GARONNE, les relevés sont exploités par notre [bureau d'études intégré](https://www.sa-la-garonne.fr/entreprise.html), géomètre-dessinateur et chargé d'études, qui les confronte aux plans, propose la technique de réparation adaptée et prépare les plans d'exécution. Cette continuité entre le diagnostic et les travaux évite les pertes d'information et accélère la décision.
+Une inspection ne vaut que par l'analyse qui la suit. Chez SA LA GARONNE, les relevés sont exploités par notre [bureau d'études intégré](https://www.sa-la-garonne.fr/entreprise), géomètre-dessinateur et chargé d'études, qui les confronte aux plans, propose la technique de réparation adaptée et prépare les plans d'exécution. Cette continuité entre le diagnostic et les travaux évite les pertes d'information et accélère la décision.
 
 ## Questions fréquentes
 
@@ -1135,7 +1135,7 @@ Il n'y a pas de règle unique. Les tronçons anciens, très sollicités ou situ�
 
 ## En résumé
 
-L'inspection télévisée est la base de toute gestion sérieuse d'un réseau d'assainissement : elle permet de voir, de décider et de suivre. Vous souhaitez connaître l'état d'un tronçon ou planifier une campagne de diagnostic à Toulouse et dans son agglomération ? [Contactez nos équipes](https://www.sa-la-garonne.fr/contact.html).
+L'inspection télévisée est la base de toute gestion sérieuse d'un réseau d'assainissement : elle permet de voir, de décider et de suivre. Vous souhaitez connaître l'état d'un tronçon ou planifier une campagne de diagnostic à Toulouse et dans son agglomération ? [Contactez nos équipes](https://www.sa-la-garonne.fr/contact).
 
 
 ---
@@ -1144,9 +1144,9 @@ L'inspection télévisée est la base de toute gestion sérieuse d'un réseau d'
 
 > Le chemisage de canalisation expliqué simplement : comment une gaine polymérisée en place forme une conduite neuve dans l'ancienne, les étapes du chantier, les contrôles et la durée de vie attendue.
 
-Publié le 9 septembre 2026 par L'équipe SA LA GARONNE · Catégorie : Réhabilitation sans tranchée · Source : https://www.sa-la-garonne.fr/blog/chemisage-canalisation-principe-etapes-duree-de-vie.html
+Publié le 9 septembre 2026 par L'équipe SA LA GARONNE · Catégorie : Réhabilitation sans tranchée · Source : https://www.sa-la-garonne.fr/blog/chemisage-canalisation-principe-etapes-duree-de-vie
 
-Le chemisage est la technique phare de la [réhabilitation sans tranchée](https://www.sa-la-garonne.fr/rehabilitation-sans-tranchee.html). Son nom vient de l'image : on habille l'intérieur d'une canalisation existante d'une nouvelle chemise, qui devient une conduite à part entière. Derrière cette image simple se cache un procédé précis, avec ses règles de dimensionnement, ses étapes obligatoires et ses contrôles. Voici comment il fonctionne, et ce que l'on peut en attendre.
+Le chemisage est la technique phare de la [réhabilitation sans tranchée](https://www.sa-la-garonne.fr/rehabilitation-sans-tranchee). Son nom vient de l'image : on habille l'intérieur d'une canalisation existante d'une nouvelle chemise, qui devient une conduite à part entière. Derrière cette image simple se cache un procédé précis, avec ses règles de dimensionnement, ses étapes obligatoires et ses contrôles. Voici comment il fonctionne, et ce que l'on peut en attendre.
 
 ## Le principe en une phrase
 
@@ -1217,4 +1217,4 @@ Dans l'usage courant, les deux termes sont proches. Le chemisage désigne le plu
 
 ## Pour aller plus loin
 
-Le chemisage est l'un des procédés que SA LA GARONNE met en œuvre à Toulouse, avec le fraisage robotisé et l'inspection télévisée par robot RIC. Pour savoir si votre réseau s'y prête, [contactez nos équipes](https://www.sa-la-garonne.fr/contact.html) : un diagnostic préalable permet de vous proposer la solution la plus adaptée.
+Le chemisage est l'un des procédés que SA LA GARONNE met en œuvre à Toulouse, avec le fraisage robotisé et l'inspection télévisée par robot RIC. Pour savoir si votre réseau s'y prête, [contactez nos équipes](https://www.sa-la-garonne.fr/contact) : un diagnostic préalable permet de vous proposer la solution la plus adaptée.

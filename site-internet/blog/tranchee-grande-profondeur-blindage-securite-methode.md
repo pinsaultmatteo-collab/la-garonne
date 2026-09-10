@@ -2,7 +2,7 @@
 
 > Comment se réalise une tranchée de 6 à 7 mètres de profondeur en milieu urbain : blindages, gestion de la nappe, pose de canalisations de grand diamètre, sécurité des équipes et organisation du chantier.
 
-Publié le 9 septembre 2026 par L'équipe SA LA GARONNE · Catégorie : Travaux complexes · Source : https://www.sa-la-garonne.fr/blog/tranchee-grande-profondeur-blindage-securite-methode.html
+Publié le 9 septembre 2026 par L'équipe SA LA GARONNE · Catégorie : Travaux complexes · Source : https://www.sa-la-garonne.fr/blog/tranchee-grande-profondeur-blindage-securite-methode
 
 Poser un collecteur à sept mètres sous une chaussée n'a rien à voir avec une tranchée de branchement à un mètre cinquante. La pression des terres, la présence d'eau, l'accès au fond de fouille, le levage des tuyaux, la sécurité des hommes qui y travaillent : tout change d'échelle. Voici comment nous abordons ces chantiers, qui constituent l'une de nos spécialités reconnues à Toulouse et dans son agglomération.
 
@@ -44,11 +44,11 @@ Ces règles sont formalisées dans le plan de prévention, présentées à l'acc
 
 ## Organiser le chantier en ville
 
-Une tranchée profonde en milieu urbain cumule les contraintes de la profondeur et celles du centre-ville : emprise réduite, réseaux voisins, riverains, circulation. Le phasage par tronçons, la réduction de l'emprise, le maintien des accès et l'information des riverains s'appliquent ici comme sur tout [chantier en centre-ville](https://www.sa-la-garonne.fr/blog/travaux-assainissement-centre-ville-limiter-les-nuisances.html). S'y ajoute une logistique de levage particulière : les engins de forte capacité doivent pouvoir s'installer et manœuvrer, ce qui se prépare avec les services de la ville.
+Une tranchée profonde en milieu urbain cumule les contraintes de la profondeur et celles du centre-ville : emprise réduite, réseaux voisins, riverains, circulation. Le phasage par tronçons, la réduction de l'emprise, le maintien des accès et l'information des riverains s'appliquent ici comme sur tout [chantier en centre-ville](https://www.sa-la-garonne.fr/blog/travaux-assainissement-centre-ville-limiter-les-nuisances). S'y ajoute une logistique de levage particulière : les engins de forte capacité doivent pouvoir s'installer et manœuvrer, ce qui se prépare avec les services de la ville.
 
 ## Ce que nous apportons
 
-SA LA GARONNE dispose de l'identification professionnelle FNTP 5141 pour les tranchées à fortes profondeurs et 5161 pour les canalisations de grand diamètre. Nos équipes réalisent régulièrement des fouilles de six à sept mètres, en caissons superposés ou en palplanches, en centre-ville comme en périphérie. Notre [bureau d'études intégré](https://www.sa-la-garonne.fr/entreprise.html) prépare les plans d'exécution et de phasage, et nos [travaux complexes](https://www.sa-la-garonne.fr/travaux-complexes.html) sont documentés dans nos réalisations.
+SA LA GARONNE dispose de l'identification professionnelle FNTP 5141 pour les tranchées à fortes profondeurs et 5161 pour les canalisations de grand diamètre. Nos équipes réalisent régulièrement des fouilles de six à sept mètres, en caissons superposés ou en palplanches, en centre-ville comme en périphérie. Notre [bureau d'études intégré](https://www.sa-la-garonne.fr/entreprise) prépare les plans d'exécution et de phasage, et nos [travaux complexes](https://www.sa-la-garonne.fr/travaux-complexes) sont documentés dans nos réalisations.
 
 ## Questions fréquentes
 
@@ -70,4 +70,4 @@ Le moins longtemps possible. Le phasage vise à ouvrir, poser, contrôler et rem
 
 ## En résumé
 
-La grande profondeur ne s'improvise pas : elle se prépare en étude, se sécurise par le blindage et la gestion de l'eau, et s'exécute avec des équipes et des moyens dimensionnés. Vous avez un collecteur profond à renouveler ou à prolonger ? [Parlons-en](https://www.sa-la-garonne.fr/contact.html) dès la phase de conception.
+La grande profondeur ne s'improvise pas : elle se prépare en étude, se sécurise par le blindage et la gestion de l'eau, et s'exécute avec des équipes et des moyens dimensionnés. Vous avez un collecteur profond à renouveler ou à prolonger ? [Parlons-en](https://www.sa-la-garonne.fr/contact) dès la phase de conception.
