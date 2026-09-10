@@ -280,8 +280,17 @@ body.menu-open .menu__list li:nth-child(3) { transition-delay: .39s; }
 body.menu-open .menu__list li:nth-child(4) { transition-delay: .46s; }
 body.menu-open .menu__list li:nth-child(5) { transition-delay: .53s; }
 body.menu-open .menu__list li:nth-child(6) { transition-delay: .6s; }
-.menu__sub { display: flex; flex-wrap: wrap; gap: 10px 26px; margin-top: 30px; }
-.menu__sub a { font-family: var(--font-mono); font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--cyan); }
+.menu__toggle { display: flex; align-items: center; gap: .3em; width: 100%; font-family: var(--font-display); font-weight: 700; text-transform: uppercase; font-size: clamp(2.1rem, 8vw, 4.2rem); line-height: 1; padding: 8px 0; color: inherit; text-align: left; transition: color .3s; }
+.menu__toggle.is-active { color: var(--cyan); }
+.menu__chev { width: .46em; height: .46em; flex: none; opacity: .7; transition: transform .5s var(--ease), color .3s; }
+.menu__group.is-open .menu__chev { transform: rotate(180deg); opacity: 1; color: var(--cyan); }
+.menu__panel { display: grid; grid-template-rows: 0fr; opacity: 0; visibility: hidden; transition: grid-template-rows .55s var(--ease), opacity .3s, visibility 0s .55s; }
+.menu__panel > ul { overflow: hidden; min-height: 0; margin-left: 3px; padding-left: 20px; border-left: 1px solid var(--line-light); }
+.menu__group.is-open > .menu__panel { grid-template-rows: 1fr; opacity: 1; visibility: visible; transition: grid-template-rows .55s var(--ease), opacity .45s .08s, visibility 0s; }
+.menu__panel a { font-family: var(--font-body); font-weight: 500; text-transform: none; font-size: 1.05rem; line-height: 1.3; padding: 11px 0; color: rgba(255,255,255,.78); }
+.menu__panel a:hover { color: var(--cyan); }
+.menu__panel a.is-active { color: var(--white); }
+.menu__panel a.is-active::before { content: ""; display: inline-block; width: 14px; height: 1.5px; background: var(--cyan); vertical-align: middle; margin-right: 10px; }
 .menu__foot { margin-top: auto; padding-top: 30px; display: flex; flex-wrap: wrap; gap: 20px 40px; border-top: 1px solid var(--line-light); font-size: .9rem; color: rgba(255,255,255,.7); }
 .menu__foot strong { color: var(--white); display: block; margin-bottom: 4px; }
 .menu__close { position: fixed; top: calc(var(--nav-h) / 2 - 22px); right: 14px; z-index: 2; width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; color: var(--white); box-shadow: inset 0 0 0 1.5px rgba(255,255,255,.4); opacity: 0; transform: rotate(-90deg) scale(.5); transition: opacity .4s, transform .7s var(--ease), background .3s; }
@@ -1174,9 +1183,10 @@ html[lang="zh-Hans"] .lightbox__title { letter-spacing: .02em; line-height: 1.2;
   .process__item > .mono { order: -2; }
   .process__item .picto { order: -1; margin: 14px 0 0; padding-top: 0; width: 36px; height: 36px; }
   .process__item strong { margin-top: 14px; font-size: 1.08rem; }
-  .related a { display: grid; grid-template-columns: 40px 1fr; gap: 4px 16px; align-items: center; min-height: 0; padding: 18px 20px; }
-  .related .picto { grid-row: 1 / 3; }
-  .related strong { margin-top: 0; font-size: 1.25rem; }
+  .related a { display: flex; flex-flow: row wrap; justify-content: center; align-items: center; gap: 0; text-align: center; min-height: 0; padding: 18px 20px; }
+  .related .mono { order: -1; flex: 0 0 100%; margin-bottom: 8px; }
+  .related .picto { flex: none; width: 34px; height: 34px; margin-right: 12px; }
+  .related strong { margin-top: 0; font-size: 1.25rem; max-width: calc(100% - 46px); }
   .panel__facts { gap: 18px 28px; padding-top: 24px; }
   .client { flex-direction: column; align-items: flex-start; gap: 4px; padding: 16px 0; font-size: 1.05rem; }
   .spec, .id-card .spec { grid-template-columns: 1fr; gap: 4px; padding: 14px 0; }
@@ -1199,7 +1209,7 @@ html[lang="zh-Hans"] .lightbox__title { letter-spacing: .02em; line-height: 1.2;
   .lang { padding: 10px 7px; }
   .crumbs a { padding: 11px 0; }
   .toc a { padding: 10px 0; }
-  .link-arrow { padding: 9px 0; }
+  .link-arrow { padding: 10px 0; }
   .blog-toolbar__rss { padding: 11px 0; }
   .cta-band__contact a, .hero-page__meta a, .menu__foot a { display: inline-block; padding: 9px 0; margin: -9px 0; }
   .footer address a { padding: 9px 0; }
@@ -1219,9 +1229,9 @@ html[lang="zh-Hans"] .lightbox__title { letter-spacing: .02em; line-height: 1.2;
 /* ---------- 35. Accueil mobile : contenus centrés ---------- */
 @media (max-width: 640px) {
   /* Surtitres centrés : filet symétrique de part et d'autre */
-  .hero__eyebrow, .section-head .eyebrow, .scrub__head .eyebrow, .feature__body .eyebrow, .panel--white .eyebrow, .hscroll__head .eyebrow, .contact-home .eyebrow, .labels .eyebrow { justify-content: center; text-align: center; }
-  .hero__eyebrow::before, .section-head .eyebrow::before, .scrub__head .eyebrow::before, .feature__body .eyebrow::before, .panel--white .eyebrow::before, .hscroll__head .eyebrow::before, .contact-home .eyebrow::before, .labels .eyebrow::before { flex: none; }
-  .hero__eyebrow::after, .section-head .eyebrow::after, .scrub__head .eyebrow::after, .feature__body .eyebrow::after, .panel--white .eyebrow::after, .hscroll__head .eyebrow::after, .contact-home .eyebrow::after, .labels .eyebrow::after { content: ""; flex: none; width: 28px; height: 2px; background: currentColor; border-radius: 2px; }
+  .eyebrow { justify-content: center; text-align: center; }
+  .eyebrow::before { flex: none; }
+  .eyebrow::after { content: ""; flex: none; width: 28px; height: 2px; background: currentColor; border-radius: 2px; }
 
   /* Hero : contenu centré dans la hauteur disponible, bandeau technique en ligne continue */
   .hero__inner { margin-block: auto; padding-top: 24px; padding-bottom: 32px; text-align: center; }
@@ -1272,12 +1282,12 @@ html[lang="zh-Hans"] .lightbox__title { letter-spacing: .02em; line-height: 1.2;
   .labels { text-align: center; justify-items: center; gap: 16px; }
   .labels .muted { margin-inline: auto; }
   .labels__list { justify-content: center; gap: 8px; }
-  .labels__list span { padding: 9px 13px; font-size: .7rem; }
+  .labels__list span { padding: 9px 13px; font-size: .72rem; }
 
   /* 09 Donneurs d'ordre : quatre cartes centrées */
   .clients { grid-template-columns: 1fr 1fr; gap: 10px; border-top: 0; }
   .clients .client, .clients .client:nth-child(odd), .clients .client:nth-child(even) { flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 8px; padding: 22px 12px; border: 0; border-radius: var(--radius-sm); background: var(--bone); box-shadow: inset 0 0 0 1px var(--line); font-size: 1rem; line-height: 1.3; }
-  .client .mono { font-size: .68rem; }
+  .client .mono { font-size: .72rem; }
 
   /* 10 Contact : titre centré, formulaire sous le titre, coordonnées compactes en dessous */
   .contact-home > div:first-child { display: contents; }
@@ -1307,9 +1317,6 @@ html[lang="zh-Hans"] .lightbox__title { letter-spacing: .02em; line-height: 1.2;
   .exp-card__more { justify-content: center; margin-top: 16px; }
 
   /* 05 : carte RIC centrée comme la carte bureau d'études */
-  .panel--navy .eyebrow { justify-content: center; }
-  .panel--navy .eyebrow::before { flex: none; }
-  .panel--navy .eyebrow::after { content: ""; flex: none; width: 28px; height: 2px; background: currentColor; border-radius: 2px; }
   .panel--navy .panel__title, .panel--navy > .lead { text-align: center; margin-inline: auto; max-width: none; }
 
   /* 07 : contenu des engagements centré */
@@ -1320,4 +1327,56 @@ html[lang="zh-Hans"] .lightbox__title { letter-spacing: .02em; line-height: 1.2;
   .footer__logo, .footer__tagline { margin-inline: auto; }
   .footer__bottom { flex-direction: column; align-items: center; text-align: center; gap: 16px; }
   .footer__right { flex-direction: column; gap: 12px; }
+}
+
+/* ---------- 37. Pages internes mobile : titres et contenus centrés ---------- */
+@media (max-width: 640px) {
+  /* Hero des pages internes (expertises, entreprise, réalisations, recrutement, contact, blog, articles) */
+  .hero-page .crumbs { justify-content: center; }
+  .hero-page .h1, .hero-page .lead { margin-inline: auto; text-align: center; }
+  .hero-page__meta { justify-content: center; text-align: center; }
+
+  /* Chapeau de page */
+  .intro { text-align: center; }
+  .intro .h2 { max-width: none; margin-inline: auto; }
+
+  /* Blocs en deux colonnes (repères techniques, fiche d'identité) */
+  .grid-5-7 > div, .grid-7-5 > div { text-align: center; }
+  .grid-5-7 .lead, .grid-7-5 .lead { margin-inline: auto; }
+  .chips { justify-content: center; }
+  .spec, .id-card .spec { text-align: center; }
+  .spec b { display: block; }
+
+  /* Cartes prestations et métiers */
+  .service { text-align: center; align-items: center; }
+  .job__profile { text-align: center; width: 100%; }
+
+  /* Étapes (méthode de chantier, parcours de recrutement) */
+  .process__item { text-align: center; align-items: center; }
+  .process__item .picto { margin-inline: auto; }
+
+  /* Bandeau de contact en fin de page */
+  .cta-band { text-align: center; }
+  .cta-band .h2, .cta-band .lead { margin-inline: auto; }
+  .cta-band__side { justify-items: center; }
+
+  /* Pages contact et recrutement */
+  .contact-grid > div { text-align: center; }
+  .contact-grid .h2, .contact-grid .lead { margin-inline: auto; }
+  .contact-grid .contact-list, .contact-grid .form { text-align: left; }
+  .hq { text-align: center; }
+
+  /* Réalisations : filtres centrés */
+  .filters { justify-content: center; }
+
+  /* Blog : article à la une, cartes, barre de filtres */
+  .feature-post__body { justify-items: center; text-align: center; }
+  .post__body { text-align: center; align-items: center; }
+  .post__meta { justify-content: center; }
+  .post .link-arrow { align-self: center; }
+  .blog-toolbar { justify-content: center; }
+  /* Le corps des articles reste aligné à gauche : c'est du texte long, la lecture prime */
+  .article__foot { justify-items: center; text-align: center; }
+  .article__share { justify-content: center; }
+  .aside-card--navy { justify-items: center; text-align: center; }
 }

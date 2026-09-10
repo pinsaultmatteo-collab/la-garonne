@@ -183,7 +183,12 @@ rester lisibles. Points de repère :
   insécable, les engagements et les donneurs d'ordre passent en 2 × 2, et le bloc contact enchaîne
   titre → formulaire → coordonnées compactes (`display: contents` + `order`).
 - **Menu plein écran** : croix de fermeture (`.menu__close`, dans `index.html` donc sur toutes les pages)
-  ; la touche Échap ferme aussi le menu.
+  ; la touche Échap ferme aussi le menu. « Expertises » et « L'entreprise » sont des `.menu__group`
+  dépliants (`.menu__toggle` + `.menu__panel`) : le sous-menu contenant la page courante s'ouvre seul
+  et le lien actif y est marqué.
+- **Pages internes** (section 37 de `css/main.css`) : hero, chapeau, têtes de blocs, cartes prestations,
+  étapes, repères techniques, bandeau de contact, cartes du blog et filtres sont centrés sur téléphone.
+  Le corps des articles et les listes à puces restent alignés à gauche : c'est du texte long, la lecture prime.
 - **Animations** : sur mobile la coupe « sans tranchée » n'est plus pilotée par le défilement mais se
   joue en boucle (14 s + pause) tant qu'elle est à l'écran ; filets des surtitres et pictos des cartes se
   tracent à l'apparition ; halos des encarts bleu marine respirent lentement. Tout est neutralisé par

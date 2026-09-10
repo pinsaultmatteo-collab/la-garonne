@@ -160,6 +160,12 @@
       burger.setAttribute('aria-expanded', 'false');
     };
     $$('.menu a').forEach(a => a.addEventListener('click', closeMenu));
+    // Sous-menus dépliants (Expertises, L'entreprise)
+    $$('.menu__toggle').forEach(b => b.addEventListener('click', () => {
+      const group = b.closest('.menu__group');
+      const open = group.classList.toggle('is-open');
+      b.setAttribute('aria-expanded', open);
+    }));
     const menuClose = $('.menu__close');
     if (menuClose) menuClose.addEventListener('click', () => { closeMenu(); burger.focus(); });
     document.addEventListener('keydown', e => { if (e.key === 'Escape' && document.body.classList.contains('menu-open')) closeMenu(); });
@@ -178,6 +184,14 @@
   if (expertisePages.includes(path)) $$('.nav__link[data-group="expertises"]').forEach(a => a.classList.add('is-active'));
   if (['entreprise', 'recrutement'].includes(path)) $$('.nav__link[data-group="entreprise"]').forEach(a => a.classList.add('is-active'));
   if (location.pathname.includes('/blog/')) $$('.nav__link[data-group="blog"]').forEach(a => a.classList.add('is-active'));
+  // Menu mobile : le sous-menu contenant la page courante s'ouvre d'emblée
+  $$('.menu__group').forEach(g => {
+    const hit = $$('a[href]', g).some(a => clean(a.getAttribute('href')) === path);
+    if (!hit) return;
+    g.classList.add('is-open');
+    const b = $('.menu__toggle', g);
+    if (b) { b.setAttribute('aria-expanded', 'true'); b.classList.add('is-active'); }
+  });
 
   /* ------------------------------------------------------------------
      5. Curseur personnalisé & boutons magnétiques
