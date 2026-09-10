@@ -178,6 +178,10 @@ rester lisibles. Points de repère :
   se referme quand on choisit une section) ; l'encart contact passe après l'article.
 - **Cartes** (expertises, prestations, étapes, valeurs, expertises liées) : marges et pictos
   réduits, plus de hauteur minimale, donc moins de vide vertical à faire défiler.
+- **Accueil centré** (section 35 de `css/main.css`) : sur téléphone, le hero et les têtes de blocs sont
+  centrés (surtitres avec filet symétrique), le bandeau technique du hero devient une ligne continue
+  insécable, les engagements et les donneurs d'ordre passent en 2 × 2, et le bloc contact enchaîne
+  titre → formulaire → coordonnées compactes (`display: contents` + `order`).
 - **Retour tactile** : halo système désactivé, légère pression à l'appui, aucun état de survol
   figé après un toucher.
 - **Lisibilité** : libellés techniques à 12 px minimum, liens et boutons à 40 px minimum,
