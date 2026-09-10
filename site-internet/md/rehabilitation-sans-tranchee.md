@@ -36,7 +36,7 @@ La réhabilitation sans tranchée rénove les réseaux existants depuis l'intér
 
 **Remise en service**Réouverture des branchements, contrôles, remise en eau. La rue n'a pas été ouverte.
 
-[Étudier votre réseau avec nous](https://www.sa-la-garonne.fr/contact)
+[Découvrir la réhabilitation sans tranchée](https://www.sa-la-garonne.fr/rehabilitation-sans-tranchee)
 
 Techniques
 

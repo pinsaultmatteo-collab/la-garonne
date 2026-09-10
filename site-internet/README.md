@@ -162,6 +162,30 @@ Trois mécanismes se combinent pour qu'aucun bloc n'apparaisse vide :
 Le préchargement de l'image du hero utilise `imagesrcset` et `imagesizes` identiques à ceux de la
 balise `img` : sans cela le navigateur télécharge deux variantes de la même photo.
 
+## Expérience mobile
+
+Les règles propres aux petits écrans sont regroupées en fin de `css/main.css` (section 34) pour
+rester lisibles. Points de repère :
+
+- **En-tête** : sous 640 px les cibles font au moins 36 px ; sous 400 px le bouton « Appeler »
+  ne garde que le pictogramme (le libellé reste lu par les lecteurs d'écran). Tout tient sur un
+  écran de 360 px, burger compris.
+- **Menu plein écran** : centré quand la hauteur le permet, défilable depuis le haut sinon
+  (pas de contenu coupé sur les petits téléphones en paysage).
+- **Réalisations de l'accueil** : sur mobile, le bloc épinglé devient un carrousel à balayage
+  horizontal avec accroche (`scroll-snap`) ; la barre de progression suit le geste.
+- **Articles** : le sommaire devient un bloc repliable en tête de texte (fermé au chargement,
+  se referme quand on choisit une section) ; l'encart contact passe après l'article.
+- **Cartes** (expertises, prestations, étapes, valeurs, expertises liées) : marges et pictos
+  réduits, plus de hauteur minimale, donc moins de vide vertical à faire défiler.
+- **Retour tactile** : halo système désactivé, légère pression à l'appui, aucun état de survol
+  figé après un toucher.
+- **Lisibilité** : libellés techniques à 12 px minimum, liens et boutons à 40 px minimum,
+  champs de formulaire à 16 px (pas de zoom automatique sur iOS).
+
+Contrôle après modification : le site ne doit jamais défiler horizontalement (largeur de page
+= largeur d'écran à 360 et 390 px), et Lighthouse mobile doit rester à 100 en accessibilité.
+
 ## Éléments à valider avec le client
 
 - Coordonnées : téléphone +33 5 62 13 07 80, email contact@lagaronnetp.org (issus de la charte et de l'annuaire Guide de l'eau), domaine `sa-la-garonne.fr`.

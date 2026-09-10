@@ -126,7 +126,7 @@ def article_page(a, all_articles):
 <article class="article prose" itemscope itemtype="https://schema.org/BlogPosting">{body_html}
 <footer class="article__foot"><p class="mono" style="color:var(--steel-text)">Mots-clés</p><div class="chips">{tags_html}</div><div class="article__share"><span class="mono" style="color:var(--steel-text)">Partager</span><a class="btn btn--ghost btn--sm" href="https://www.linkedin.com/sharing/share-offsite/?url={SITE}blog/{a["slug"]}.html" target="_blank" rel="noopener">LinkedIn</a><a class="btn btn--ghost btn--sm" href="mailto:?subject={H.escape(a["title"], quote=True)}&amp;body={SITE}blog/{a["slug"]}.html">Email</a></div></footer></article>
 <aside class="article__aside"><div class="aside-sticky">
-<div class="aside-card"><p class="mono aside-card__title">Sommaire</p><ol class="toc">{toc_html}</ol></div>
+<details class="aside-card aside-card--toc" open><summary class="mono aside-card__title">Sommaire</summary><ol class="toc">{toc_html}</ol></details>
 <div class="aside-card aside-card--navy"><p class="eyebrow eyebrow--light">Votre projet</p><strong>Un réseau à construire, entretenir ou réhabiliter ?</strong><p>Nos équipes vous répondent avec précision, sur la base de 70 ans de chantiers à Toulouse.</p><a class="btn btn--light btn--sm" href="contact.html">Nous contacter {B.ARROW}</a></div>
 <div class="aside-card"><p class="mono aside-card__title">Expertise liée</p><a class="link-arrow" href="{cat_href}"><span>{H.escape(a["category"])}</span>{B.LARROW}</a></div>
 </div></aside></div></section>

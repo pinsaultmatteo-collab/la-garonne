@@ -222,8 +222,9 @@
     scrubs.forEach(el => {
       const r = el.getBoundingClientRect();
       if (r.bottom < 0 || r.top > vh) return;
-      const p = matchMedia('(max-width: 960px)').matches ? 1 : progressOf(el);
-      el.style.setProperty('--p', p.toFixed(4));
+      const mobile = matchMedia('(max-width: 960px)').matches;
+      const p = mobile ? 1 : progressOf(el);
+      if (!(mobile && el.dataset.scrub === 'hscroll')) el.style.setProperty('--p', p.toFixed(4));
       const h = handlers[el.dataset.scrub];
       if (h) h(el, p);
     });
@@ -255,7 +256,15 @@
   handlers.hscroll = (el, p) => {
     const track = $('.hscroll__track', el);
     if (!track) return;
-    if (matchMedia('(max-width: 960px)').matches) { track.style.transform = ''; return; }
+    if (matchMedia('(max-width: 960px)').matches) {
+      track.style.transform = '';
+      if (!track.dataset.swipe) {
+        track.dataset.swipe = '1';
+        const onSwipe = () => el.style.setProperty('--p', clamp(track.scrollLeft / Math.max(1, track.scrollWidth - track.clientWidth), 0, 1).toFixed(3));
+        track.addEventListener('scroll', onSwipe, { passive: true }); onSwipe();
+      }
+      return;
+    }
     const max = track.scrollWidth - innerWidth + 24;
     track.style.transform = `translate3d(${(-p * max).toFixed(1)}px, 0, 0)`;
   };
@@ -484,6 +493,13 @@
       tocLinks.forEach(a => a.classList.toggle('is-active', current && a.getAttribute('href') === '#' + current));
     };
     addEventListener('scroll', onRead, { passive: true }); onRead();
+    // Sommaire repliable sur mobile : fermé au chargement, se referme dès qu'une section est choisie
+    const tocBox = $('.aside-card--toc');
+    const narrow = matchMedia('(max-width: 960px)');
+    if (tocBox) {
+      if (narrow.matches) tocBox.open = false;
+      tocBox.addEventListener('click', e => { if (e.target.closest('a') && narrow.matches) tocBox.open = false; });
+    }
   }
 
   // Formulaire de contact
