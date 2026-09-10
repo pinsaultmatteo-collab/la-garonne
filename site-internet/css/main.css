@@ -1228,8 +1228,10 @@ html[lang="zh-Hans"] .lightbox__title { letter-spacing: .02em; line-height: 1.2;
 
 /* ---------- 35. Accueil mobile : contenus centrés ---------- */
 @media (max-width: 640px) {
-  /* Surtitres centrés : filet symétrique de part et d'autre */
-  .eyebrow { justify-content: center; text-align: center; }
+  /* Surtitres centrés : filet symétrique de part et d'autre.
+     display: flex (et non inline-flex) pour que le bloc occupe toute la largeur :
+     le surtitre reste centré même quand le conteneur parent aligne à gauche (hero des pages internes). */
+  .eyebrow { display: flex; justify-content: center; text-align: center; }
   .eyebrow::before { flex: none; }
   .eyebrow::after { content: ""; flex: none; width: 28px; height: 2px; background: currentColor; border-radius: 2px; }
 
