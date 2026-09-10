@@ -182,6 +182,12 @@ rester lisibles. Points de repère :
   centrés (surtitres avec filet symétrique), le bandeau technique du hero devient une ligne continue
   insécable, les engagements et les donneurs d'ordre passent en 2 × 2, et le bloc contact enchaîne
   titre → formulaire → coordonnées compactes (`display: contents` + `order`).
+- **Menu plein écran** : croix de fermeture (`.menu__close`, dans `index.html` donc sur toutes les pages)
+  ; la touche Échap ferme aussi le menu.
+- **Animations** : sur mobile la coupe « sans tranchée » n'est plus pilotée par le défilement mais se
+  joue en boucle (14 s + pause) tant qu'elle est à l'écran ; filets des surtitres et pictos des cartes se
+  tracent à l'apparition ; halos des encarts bleu marine respirent lentement. Tout est neutralisé par
+  `prefers-reduced-motion`.
 - **Retour tactile** : halo système désactivé, légère pression à l'appui, aucun état de survol
   figé après un toucher.
 - **Lisibilité** : libellés techniques à 12 px minimum, liens et boutons à 40 px minimum,

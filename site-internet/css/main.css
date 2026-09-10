@@ -284,6 +284,10 @@ body.menu-open .menu__list li:nth-child(6) { transition-delay: .6s; }
 .menu__sub a { font-family: var(--font-mono); font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--cyan); }
 .menu__foot { margin-top: auto; padding-top: 30px; display: flex; flex-wrap: wrap; gap: 20px 40px; border-top: 1px solid var(--line-light); font-size: .9rem; color: rgba(255,255,255,.7); }
 .menu__foot strong { color: var(--white); display: block; margin-bottom: 4px; }
+.menu__close { position: fixed; top: calc(var(--nav-h) / 2 - 22px); right: 14px; z-index: 2; width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; color: var(--white); box-shadow: inset 0 0 0 1.5px rgba(255,255,255,.4); opacity: 0; transform: rotate(-90deg) scale(.5); transition: opacity .4s, transform .7s var(--ease), background .3s; }
+.menu__close svg { width: 18px; height: 18px; }
+.menu__close:hover { background: rgba(255,255,255,.12); }
+body.menu-open .menu__close { opacity: 1; transform: none; transition-delay: .3s; }
 .menu-lines { position: absolute; right: -10%; bottom: -8%; width: 70%; opacity: .35; pointer-events: none; }
 
 @media (max-width: 1240px) {
@@ -341,6 +345,22 @@ body.no-loader .loader { display: none; }
 .stagger.is-in > *:nth-child(6) { transition-delay: .40s; }
 .stagger.is-in > *:nth-child(7) { transition-delay: .48s; }
 .stagger.is-in > *:nth-child(8) { transition-delay: .56s; }
+.stagger.is-in > *:nth-child(9) { transition-delay: .64s; }
+.stagger.is-in > *:nth-child(10) { transition-delay: .72s; }
+.stagger.is-in > *:nth-child(11) { transition-delay: .8s; }
+.stagger.is-in > *:nth-child(12) { transition-delay: .88s; }
+/* Pictos qui se tracent à l'apparition des cartes (les cartes expertises ont leur propre tracé .dr) */
+.stagger .picto path:not(.dr), .stagger .picto circle { stroke-dasharray: 140; stroke-dashoffset: 140; transition: stroke-dashoffset 1.3s var(--ease) .3s; }
+.stagger.is-in .picto path:not(.dr), .stagger.is-in .picto circle { stroke-dashoffset: 0; }
+/* Filet des surtitres qui se dessine */
+.eyebrow[data-reveal]::before, .eyebrow[data-reveal]::after { transform: scaleX(0); transform-origin: left; transition: transform 1s var(--ease) .2s; }
+.eyebrow[data-reveal]::after { transform-origin: right; }
+.eyebrow[data-reveal].is-in::before, .eyebrow[data-reveal].is-in::after { transform: scaleX(1); }
+/* Halos lumineux qui respirent lentement */
+@keyframes breathe { from { opacity: .6; transform: scale(1); } to { opacity: 1; transform: scale(1.08); } }
+.cta-band::before, .panel--navy::before, .aside-card--navy::before { animation: breathe 7s ease-in-out infinite alternate; }
+.cta-band::before { transform-origin: 100% 100%; }
+.panel--navy::before, .aside-card--navy::before { transform-origin: 100% 0%; }
 
 /* Split text (mots) */
 [data-split] .w { display: inline-block; overflow: hidden; vertical-align: top; padding-bottom: .08em; margin-bottom: -.08em; }
@@ -523,7 +543,9 @@ body.no-loader .loader { display: none; }
   .scrub { height: auto; }
   .scrub__stage { position: relative; height: auto; padding-block: var(--section); overflow: visible; }
   .scrub__grid { grid-template-columns: 1fr; }
-  .step { opacity: 1; }
+  .step { opacity: .55; }
+  .step.is-active { opacity: 1; }
+  .step.is-active strong { color: var(--cyan); }
   .step span { max-height: none; }
   .scrub__progress { display: none; }
 }
@@ -1269,4 +1291,33 @@ html[lang="zh-Hans"] .lightbox__title { letter-spacing: .02em; line-height: 1.2;
   .contact-list li:last-child { border-bottom: 0; }
   .contact-list .mono { padding-top: 0; font-size: .68rem; }
   .contact-list a { padding: 7px 0; }
+}
+
+/* ---------- 36. Accueil mobile, second passage : expertises, RIC, engagements, pied de page ---------- */
+@media (max-width: 640px) {
+  /* 01 : « Sous la ville, » / « l'essentiel. » */
+  .manifesto .h2 { max-width: none; }
+
+  /* 02 Expertises : contenu centré, picto à côté du nom pour des cartes plus basses */
+  .exp-card { display: flex; flex-flow: row wrap; justify-content: center; align-items: center; text-align: center; padding: 22px 18px 24px; }
+  .exp-card__num, .exp-card__desc, .exp-card__more { flex: 0 0 100%; }
+  .exp-card__ico { flex: none; width: 40px; height: 40px; margin: 14px 12px 0 0; }
+  .exp-card__title { flex: 0 1 auto; min-width: 0; max-width: calc(100% - 52px); margin-top: 14px; padding-top: 0; font-size: 1.45rem; text-align: left; }
+  .exp-card__desc { margin-top: 12px; }
+  .exp-card__more { justify-content: center; margin-top: 16px; }
+
+  /* 05 : carte RIC centrée comme la carte bureau d'études */
+  .panel--navy .eyebrow { justify-content: center; }
+  .panel--navy .eyebrow::before { flex: none; }
+  .panel--navy .eyebrow::after { content: ""; flex: none; width: 28px; height: 2px; background: currentColor; border-radius: 2px; }
+  .panel--navy .panel__title, .panel--navy > .lead { text-align: center; margin-inline: auto; max-width: none; }
+
+  /* 07 : contenu des engagements centré */
+  .value { text-align: center; align-items: center; }
+
+  /* Pied de page centré */
+  .footer__grid > div { text-align: center; }
+  .footer__logo, .footer__tagline { margin-inline: auto; }
+  .footer__bottom { flex-direction: column; align-items: center; text-align: center; gap: 16px; }
+  .footer__right { flex-direction: column; gap: 12px; }
 }

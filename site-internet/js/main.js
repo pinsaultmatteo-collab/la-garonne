@@ -155,9 +155,14 @@
       burger.setAttribute('aria-expanded', open);
       nav && nav.classList.remove('is-hidden');
     });
-    $$('.menu a').forEach(a => a.addEventListener('click', () => {
+    const closeMenu = () => {
       document.body.classList.remove('menu-open', 'is-locked');
-    }));
+      burger.setAttribute('aria-expanded', 'false');
+    };
+    $$('.menu a').forEach(a => a.addEventListener('click', closeMenu));
+    const menuClose = $('.menu__close');
+    if (menuClose) menuClose.addEventListener('click', () => { closeMenu(); burger.focus(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape' && document.body.classList.contains('menu-open')) closeMenu(); });
   }
 
   // Lien actif
@@ -283,14 +288,11 @@
       steps = $$('.step', el); lblLive = $('#lblLive', el); lblState = $('#lblState', el);
       ready = true; return true;
     };
-    return (el, p) => {
-      if (!ready && !init(el)) return;
-      const mobile = matchMedia('(max-width: 960px)').matches;
-      if (mobile) p = 0.999; // vue finale sur mobile : conduite réhabilitée
+    const render = (el, p, all) => {
       const phase = Math.min(PH - 1, Math.floor(p * PH));
       const lp = clamp((p * PH) - phase, 0, 1); // progression locale
       steps.forEach((s, i) => {
-        s.classList.toggle('is-active', i === phase || mobile);
+        s.classList.toggle('is-active', i === phase || all);
         s.style.setProperty('--sp', i < phase ? 1 : i === phase ? lp : 0);
       });
       // Position de l'engin
@@ -319,6 +321,30 @@
       flow.style.opacity = phase === 3 ? clamp(lp * 1.6, 0, 1) : 0;
       if (lblLive) lblLive.style.opacity = phase === 3 ? 1 : 0;
       if (lblState) lblState.textContent = COUPE_LABELS[phase];
+    };
+    // Sur mobile la section n'est pas épinglée : l'intervention se joue en boucle
+    // (14 s, puis 2,5 s sur la conduite réhabilitée) tant que la section est à l'écran.
+    const DUR = 14000, HOLD = 2500;
+    let auto = null;
+    const startAuto = el => {
+      if (auto) return;
+      auto = { on: false, t0: 0, raf: 0 };
+      const loop = now => {
+        if (!auto.on) return;
+        const t = (now - auto.t0) % (DUR + HOLD);
+        render(el, Math.min(0.999, t / DUR), false);
+        auto.raf = requestAnimationFrame(loop);
+      };
+      new IntersectionObserver(entries => entries.forEach(e => {
+        if (e.isIntersecting && !auto.on) { auto.on = true; auto.t0 = performance.now(); auto.raf = requestAnimationFrame(loop); }
+        else if (!e.isIntersecting && auto.on) { auto.on = false; cancelAnimationFrame(auto.raf); }
+      }), { threshold: 0.15 }).observe(el);
+    };
+    return (el, p) => {
+      if (!ready && !init(el)) return;
+      const mobile = matchMedia('(max-width: 960px)').matches;
+      if (mobile && !reduced) { startAuto(el); return; }
+      render(el, mobile ? 0.999 : p, mobile); // mouvement réduit : vue finale, toutes les étapes
     };
   })();
 

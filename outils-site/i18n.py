@@ -39,6 +39,7 @@ add({
 "Appeler": ("Call us", "致电"),
 "Nous contacter": ("Get in touch", "联系我们"),
 "Ouvrir le menu": ("Open menu", "打开菜单"),
+"Fermer le menu": ("Close menu", "关闭菜单"),
 "Menu": ("Menu", "菜单"),
 "Accueil": ("Home", "首页"),
 "Eau potable": ("Drinking water", "饮用水"),
