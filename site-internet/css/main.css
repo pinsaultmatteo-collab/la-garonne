@@ -1227,6 +1227,17 @@ html[lang="zh-Hans"] .lightbox__title { letter-spacing: .02em; line-height: 1.2;
 }
 
 /* ---------- 35. Accueil mobile : contenus centrés ---------- */
+/* Le dégradé du hero est pensé pour le bureau : sombre à gauche, où se tient le texte.
+   Sur petit écran le texte occupe toute la largeur et passait sur des zones claires de la photo :
+   le voile devient homogène, un peu plus dense, pour garder le texte lisible. */
+@media (max-width: 960px) {
+  .hero__shade {
+    background:
+      linear-gradient(180deg, rgba(8,39,67,.9) 0%, rgba(8,39,67,.66) 34%, rgba(8,39,67,.74) 70%, rgba(8,39,67,.97) 100%),
+      linear-gradient(90deg, rgba(8,39,67,.36), rgba(8,39,67,.26) 50%, rgba(8,39,67,.36));
+  }
+}
+
 @media (max-width: 640px) {
   /* Surtitres centrés : filet symétrique de part et d'autre.
      display: flex (et non inline-flex) pour que le bloc occupe toute la largeur :
